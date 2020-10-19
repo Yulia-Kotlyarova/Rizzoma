@@ -1,1 +1,4 @@
 node_modules
+pug/ui_kit/color_type/dist
+style/dist
+text.txt

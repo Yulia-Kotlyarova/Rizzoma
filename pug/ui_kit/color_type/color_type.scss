@@ -1,0 +1,50 @@
+@import '../../../style/const.scss';
+@import '../../../style/style.scss';
+
+.logo-icon {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+}
+
+.color-type__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 145px 191px 145px 150px;
+
+    .color-box {
+        &__text-box {
+            padding: 0 0 0 40px;
+
+        }
+        &__item {
+            display: flex;
+            list-style: none;
+            padding: 20px 0;
+            .square {
+                width: 70px;
+                height: 70px;
+                border-radius: 6px;
+            }
+        }
+    }
+    
+    .font-box {
+        width: 403px;
+        &__list {
+            list-style: none;
+        }
+        &__text-box {
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            padding-bottom: 50px;
+            p {
+                padding-left: 30px;
+            }
+        }
+    }
+}
+
+

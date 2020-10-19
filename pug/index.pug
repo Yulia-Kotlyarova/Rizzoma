@@ -1,6 +1,48 @@
-html(lang="ru")
-  head
-    meta(charset="utf-8")
-    title= "Учимся работать с шаблонизатором Pug"
-  body
-      h1 Hello, World!
+//- extend ui_kit/color_type/color_type.pug
+
+extend main
+
+block variables
+    //- - var text = 'abddddc'
+
+mixin color_mode(color, colorText, opacity)
+    li.color-box__item 
+        .square(style= 'background:' + color +''+ ';'+'opacity:' + opacity)
+        .color-box__text-box
+            h2= colorText
+            p= color
+
+mixin font_mode(fontType, fontExample)
+    li.font-box__text-box
+        span= fontType
+        p(class=fontType)= fontExample
+
+mixin logo
+    img.logo-icon(src='../assets/icons/logo.svg' alt="logo")
+
+
+block content
+    html(lang="ru")
+    head
+        meta(charset="utf-8")
+        title= "Учимся работать с шаблонизатором Pug"
+        <link rel="stylesheet" href="./ui_kit/color_type/dist/color_type.css">
+    body
+        h1
+        +logo
+        section.color-type__wrapper
+            .color-box
+                ul.color-box__list
+                    +color_mode("#1F2041", "Dark Shade 100%", "100%")
+                    +color_mode("#1F2041", "Dark Shade 75%", "75%")
+                    +color_mode("#1F2041", "Dark Shade 50%", "50%")
+                    +color_mode("#1F2041", "Dark Shade 25%", "25%")
+                    +color_mode("#1F2041", "Dark Shade 5%", "5%")
+                    +color_mode("#BC9CFF", "Purple")
+                    +color_mode("#6FCF97", "Green")
+            .font-box
+                ul.font-box__list
+                    +font_mode("H1", "This one is the sub-section or widget title")
+                    +font_mode("H2", "Next one is the item title inside widgets")
+                    +font_mode("H3", "This is a label or CTA text")
+                    +font_mode("body", "This is the body text which is used for most of the design, like paragraphs, lists, etc.")
