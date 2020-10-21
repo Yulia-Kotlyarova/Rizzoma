@@ -1,0 +1,11 @@
+mixin color_mode(color, colorText, opacity)
+    li.color-box__item 
+        .square(style= 'background:' + color +''+ ';'+'opacity:' + opacity)
+        .color-box__text-box
+            h2= colorText
+            p= color
+
+mixin font_mode(fontType, fontExample)
+    li.font-box__text-box
+        span= fontType
+        p(class=fontType)= fontExample

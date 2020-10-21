@@ -1,0 +1,41 @@
+mixin logo(path)
+    img.logo-icon(src= ""+path +"" alt="logo")
+
+mixin links(link1, link2)
+    link( rel="stylesheet" href="" + link1 +"")
+    link(rel="stylesheet" href="" + link2 +"")
+
+mixin input-action(clear= "очистить", save= "применить")
+    .form-elem__action
+        h3= clear
+        h3= save
+
+mixin input(title, subtitle, innerText, icon, className = "default")
+    form(action="")
+        .input__text-box
+            h3= title 
+            span= subtitle
+        input(class = ""+className+"" type = "text" placeholder = "" + innerText + "")
+        i(class="material-icons md-24")= icon
+
+mixin dropdown_extend_unit(extendTitle, quantity)
+    .form-elem__dropdown-unit
+        h3= extendTitle
+        .form-elem__change-box
+            .circle
+                span.change-number -
+            h3.quantity= quantity
+            .circle
+                span.change-number +
+
+mixin checkbox(text, id, checkedInput = false)
+    .checkbox__box
+        input(class ="form-elem__custom-checkbox" type= "checkbox" id=""+id+"" checked= checkedInput )
+        label(for=""+id+"")
+        span= text
+
+mixin radio-btn(sex, id,checkedInput = false)
+    .radio__box
+        input(class ="form-elem__custom-radio" name = "sex" type= "radio" id=""+id+"" checked= checkedInput )
+        label(for=""+id+"")
+        span= sex

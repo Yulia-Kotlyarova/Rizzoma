@@ -1,4 +1,5 @@
 @import './const.scss';
+@import './mixins';
 
 @font-face{
     font-family: 'Montserrat';
@@ -32,16 +33,39 @@
     font-style: normal;
     }
 
+    .material-icons {
+        font-family: 'Material Icons';
+        font-weight: normal;
+        font-style: normal;
+        font-size: 24px;  /* Preferred icon size */
+        display: inline-block;
+        line-height: 1;
+        text-transform: none;
+        letter-spacing: normal;
+        word-wrap: normal;
+        white-space: nowrap;
+        direction: ltr;
+      
+        /* Support for all WebKit browsers. */
+        -webkit-font-smoothing: antialiased;
+        /* Support for Safari and Chrome. */
+        text-rendering: optimizeLegibility;
+      
+        /* Support for Firefox. */
+        -moz-osx-font-smoothing: grayscale;
+      
+        /* Support for IE. */
+        font-feature-settings: 'liga';
+      }
+
 html {
     font-size: 10px;
 }
 
 body, .body {
-    box-sizing: border-box;
+    @include container(1440, 0);
     margin: 0 auto;
-    padding: 0;
-    max-width: 1440px;
-    color: $DarkShade75;
+    color: $DarkShade50;
     font-family: 'Montserrat', sans-serif;;
     font-style: normal;
     font-size: 1.4rem;
@@ -73,4 +97,14 @@ h3, .h3 {
     font-size: 1.2rem;
     line-height: 1.5rem;
     color: $DarkShade100;
+    margin: 0;
+}
+
+a {
+    color: inherit;
+    &:hover {
+        text-decoration: none;
+        font-style: normal;
+        color: inherit;
+    }
 }

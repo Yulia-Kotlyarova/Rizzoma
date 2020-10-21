@@ -1,0 +1,335 @@
+@font-face {
+  font-family: "Montserrat";
+  src: url("../assets/fonts/Montserrat/Montserrat-Regular.eot");
+  src: url("../assets/fonts/Montserrat/Montserrat-Regular.eot?iefix") format("eot"), url("../assets/fonts/Montserrat/Montserrat-Regular.woff") format("woff"), url("../assets/fonts/Montserrat/Montserrat-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("../assets/fonts/Montserrat/Montserrat-Bold.eot");
+  src: url("../assets/fonts/Montserrat/Montserrat-Bold.eot?iefix") format("eot"), url("../assets/fonts/Montserrat/Montserrat-Bold.woff") format("woff"), url("../assets/fonts/Montserrat/Montserrat-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Quicksand";
+  src: url("../assets/fonts/Quicksand/Quicksand-Bold.eot");
+  src: url("../assets/fonts/Quicksand/Quicksand-Bold.eot?iefix") format("eot"), url("../assets/fonts/Quicksand/Quicksand-Bold.woff") format("woff"), url("../assets/fonts/Quicksand/Quicksand-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+.material-icons {
+  font-family: "Material Icons";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+  /* Support for IE. */
+  font-feature-settings: "liga";
+}
+
+html {
+  font-size: 10px;
+}
+
+body, .body {
+  max-width: 1440;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0 auto;
+  color: rgba(31, 32, 65, 0.5);
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-size: 1.4rem;
+  line-height: 2.4rem;
+  font-weight: normal;
+}
+
+h1, .h1 {
+  font-family: "Quicksand", sans-serif;
+  font-weight: 700;
+  font-size: 2.4rem;
+  line-height: 3rem;
+  color: #1F2041;
+}
+
+h2, .h2 {
+  font-family: "Quicksand", sans-serif;
+  font-size: 1.9rem;
+  line-height: 2.4rem;
+  font-weight: 700;
+  color: #1F2041;
+}
+
+h3, .h3 {
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  color: #1F2041;
+  margin: 0;
+}
+
+a {
+  color: inherit;
+}
+a:hover {
+  text-decoration: none;
+  font-style: normal;
+  color: inherit;
+}
+
+.kit-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.form-elem__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  padding: 163px 141px 131px;
+}
+.form-elem__wrapper form .active {
+  border: 1px solid rgba(31, 32, 65, 0.5);
+}
+.form-elem__wrapper form .active::placeholder {
+  color: rgba(31, 32, 65, 0.5);
+  outline: none;
+}
+.form-elem__wrapper form {
+  position: relative;
+  width: 320px;
+  padding-bottom: 19.56px;
+}
+.form-elem__wrapper form .input__text-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding-bottom: 5px;
+  color: rgba(31, 32, 65, 0.25);
+}
+.form-elem__wrapper form .input__text-box h3 {
+  display: inline;
+}
+.form-elem__wrapper form .input__text-box span {
+  text-transform: uppercase;
+  color: rgba(31, 32, 65, 0.25);
+}
+.form-elem__wrapper form .material-icons {
+  position: absolute;
+  right: 10px;
+  bottom: 30px;
+  color: rgba(31, 32, 65, 0.5);
+}
+.form-elem__wrapper form input .active {
+  border: 1px solid rgba(31, 32, 65, 0.5);
+}
+.form-elem__wrapper form input .active::placeholder {
+  color: rgba(31, 32, 65, 0.5);
+  outline: none;
+}
+.form-elem__wrapper form input {
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  border-radius: 4px;
+  padding: 13px 15px;
+  width: 100%;
+  transition: 0.4s;
+  outline: none;
+}
+.form-elem__wrapper form input::placeholder {
+  color: rgba(31, 32, 65, 0.25);
+  transition: 0.4s;
+}
+.form-elem__wrapper form input:focus, .form-elem__wrapper form input:hover {
+  border: 1px solid rgba(31, 32, 65, 0.5);
+}
+.form-elem__wrapper form input:focus::placeholder, .form-elem__wrapper form input:hover::placeholder {
+  color: rgba(31, 32, 65, 0.5);
+  outline: none;
+}
+.form-elem__wrapper .form-elem__date-dropdown {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 320px;
+}
+.form-elem__wrapper .form-elem__date-dropdown h3 {
+  display: inline;
+}
+.form-elem__wrapper .form-elem__date-dropdown form {
+  width: 150px;
+}
+
+.form-elem__dropdown-wrapper {
+  width: 320px;
+  transition: 0.4s;
+}
+.form-elem__dropdown-wrapper form > input {
+  border-radius: 4px 4px 0 0;
+}
+.form-elem__dropdown-wrapper:hover, .form-elem__dropdown-wrapper:focus, .form-elem__dropdown-wrapper:active {
+  box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+}
+.form-elem__dropdown-unit {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 7px 0;
+}
+.form-elem__dropdown-unit h3 {
+  display: inline;
+}
+.form-elem__dropdown {
+  padding: 0 7px 13px 15px;
+  border: 1px solid rgba(31, 32, 65, 0.5);
+  border-radius: 0 0 4px 4px;
+}
+.form-elem__change-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 92px;
+}
+.form-elem__change-box .circle {
+  height: 30px;
+  width: 30px;
+  line-height: 30px;
+  border-radius: 50%;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  text-align: center;
+}
+.form-elem__change-box .circle:hover {
+  cursor: pointer;
+}
+.form-elem__change-box .change-number {
+  font-size: 1.8rem;
+  color: rgba(31, 32, 65, 0.25);
+}
+.form-elem__action {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding-top: 12px;
+}
+.form-elem__action h3 {
+  color: rgba(31, 32, 65, 0.5);
+}
+
+.dropdown-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.form-elem__checkbox-wrapper h3 {
+  padding-bottom: 16.56px;
+}
+.form-elem__checkbox-wrapper .checkbox__box {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-wrap: nowrap;
+  padding-bottom: 10px;
+  max-width: 220px;
+}
+.form-elem__checkbox-wrapper .checkbox__box span {
+  line-height: 1.8rem;
+  padding-left: 9.74px;
+}
+.form-elem__custom-checkbox {
+  display: none;
+}
+.form-elem__custom-checkbox + label {
+  display: inline-flex;
+  align-items: center;
+  user-select: none;
+}
+.form-elem__custom-checkbox + label::before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  box-sizing: border-box;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  border-radius: 4px;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.form-elem__custom-checkbox:checked + label::before {
+  background-image: url("../../../../assets/icons/check.svg");
+}
+
+.form-elem__custom-radio {
+  display: none;
+}
+.form-elem__custom-radio + label {
+  display: inline-flex;
+  align-items: center;
+  user-select: none;
+}
+.form-elem__custom-radio + label::before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  box-sizing: border-box;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  border-radius: 50%;
+}
+.form-elem__custom-radio:checked + label::after {
+  content: "";
+  position: absolute;
+  left: 4px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+}
+
+.radio__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 220px !important;
+}
+
+.radio__box {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-wrap: nowrap;
+  position: relative;
+}
+.radio__box span {
+  padding-left: 10px;
+}

@@ -1,0 +1,230 @@
+@import '../../../style/const.scss';
+@import '../../../style/style.scss';
+@import '../../../style/mixins';
+
+@mixin input-active () {
+    border: 1px solid $DarkShade50;
+    &::placeholder {
+        color: $DarkShade50;
+        outline: none;
+    }
+}
+
+.kit-main {
+    @include flex;
+}
+
+// input
+
+.form-elem__wrapper {
+    @include flex($align: flex-start);
+    padding: 163px 141px 131px;
+    form .active {
+        @include input-active();
+    }
+    form {
+        position: relative;
+        width: 320px;
+        padding-bottom: 19.56px;
+        .input__text-box {
+            @include flex;
+            padding-bottom: 5px;
+            color: $DarkShade25;
+            h3 {
+                display: inline;
+            }
+            span {
+                text-transform: uppercase;
+                color: $DarkShade25;
+            }
+        }
+        .material-icons {
+            position: absolute;
+            right: 10px;
+            bottom: 30px;
+            color: $DarkShade50;
+        }
+        input .active {
+            @include input-active();
+        }
+
+        input {
+            border: 1px solid $DarkShade25;
+            border-radius: 4px;
+            padding: 13px 15px;
+            width: 100%;
+            transition: $transition;
+            outline: none;
+            &::placeholder {
+                color: $DarkShade25;
+                transition: $transition;
+                
+            }
+            &:focus, 
+            &:hover {
+                @include input-active();
+            }
+        }
+    }
+    .form-elem__date-dropdown {
+        @include flex;
+        width: 320px;
+        h3 {
+            display: inline;
+        }
+        form {
+            width: 150px;
+        }
+    }
+}
+
+// dropdown
+
+.form-elem {
+    &__dropdown-wrapper{
+        width: 320px;
+        transition: $transition;
+        form > input {
+            border-radius:4px 4px 0 0 ;
+        }
+        &:hover, 
+        &:focus,
+        &:active {
+            box-shadow: 0px 10px 20px $DarkShade5;
+        }
+    }
+    &__dropdown-unit{
+        @include flex;
+        width: 100%;
+        box-sizing: border-box;
+        padding: 7px 0;
+        h3 {
+            display: inline;
+        }
+    }
+    &__dropdown{
+        padding: 0 7px 13px 15px;
+        border: 1px solid $DarkShade50;
+        border-radius: 0 0 4px 4px;
+    }
+    &__change-box {
+        @include flex;
+        width: 92px;
+        .circle {
+            height: 30px;
+            width: 30px;
+            line-height: 30px;
+            border-radius: 50%;
+            border:1px solid $DarkShade25;
+            text-align: center;
+            &:hover {
+                cursor: pointer;
+            }
+          }
+        .change-number {
+            font-size: 1.8rem;
+            color: $DarkShade25;
+        }
+    }
+    &__action {
+        @include flex;
+        padding-top: 12px;
+        h3 {
+            color: $DarkShade50;
+        }
+    }
+}
+
+.dropdown-section {
+    @include flex($align: flex-start);
+    width: 100%;
+}
+
+// checkbox
+
+.form-elem{
+    &__checkbox-wrapper {
+        h3 {
+            padding-bottom: 16.56px;
+        }
+        .checkbox {
+            &__box {
+                @include flex($justify: start, $wrap: nowrap);
+                padding-bottom: 10px;
+                max-width: 220px;
+                span {
+                    line-height: 1.8rem;
+                    padding-left: 9.74px;
+                }
+            }
+        }
+    }
+    &__custom-checkbox {
+        display: none;
+        &+label {
+            display: inline-flex;
+            align-items: center;
+            user-select: none;
+            &::before {
+                content: '';
+                display: inline-block;
+                width: 20px;
+                height: 20px;
+                box-sizing: border-box;
+                border: 1px solid $DarkShade25;
+                border-radius: 4px;
+                background-repeat: no-repeat;
+                background-position: center center;
+            }
+        }
+        &:checked+label::before {
+            background-image: url("../../../../assets/icons/check.svg");
+          }
+    }
+
+
+}
+
+// radio
+
+.form-elem {
+    &__custom-radio {
+        display: none;
+        &+label {
+            display: inline-flex;
+            align-items: center;
+            user-select: none;
+            &::before {
+                content: '';
+                display: inline-block;
+                width: 20px;
+                height: 20px;
+                box-sizing: border-box;
+                border: 1px solid $DarkShade25;
+                border-radius: 50%;
+            }
+        }
+        &:checked+label::after {
+            content: '';
+            position: absolute;
+            left: 4px;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            @include gradient;
+          }
+    }
+}
+
+.radio__wrapper {
+    @include flex;
+    width: 220px!important;
+}
+
+.radio__box {
+    @include flex($justify: start, $wrap: nowrap);
+    position: relative;
+    span {
+        padding-left: 10px;
+    }
+}
