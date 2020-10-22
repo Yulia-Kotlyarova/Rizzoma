@@ -111,15 +111,13 @@
         @include flex;
         width: 92px;
         .circle {
+            @include cursor-style;
             height: 30px;
             width: 30px;
             line-height: 30px;
             border-radius: 50%;
             border:1px solid $DarkShade25;
             text-align: center;
-            &:hover {
-                cursor: pointer;
-            }
           }
         .change-number {
             font-size: 1.8rem;
@@ -228,3 +226,57 @@
         padding-left: 10px;
     }
 }
+
+// like 
+
+.like {
+    &__wrapper {
+        @include flex;
+        width: 90px;
+    }
+    &__box {
+        @include flex($justify: space-around);
+        @include cursor-style;
+        position: relative;
+        width: 40px;
+        height: 20px;
+        box-sizing: border-box;
+        border-radius: 10px;
+        background: #fff;
+        background-clip: padding-box;
+        border: solid 1px transparent;
+        &:before {
+            // @include gradient;
+            content: '';
+            position: absolute;
+            top: 0; 
+            right: 0; 
+            bottom: 0; 
+            left: 0;
+            z-index: -1;
+            margin: -1px;
+            border-radius: inherit;
+          }
+        i {
+            color: $primary-color;
+            font-size: 1rem;
+        }
+        span {
+            font-size: 1rem;
+            line-height: 0;
+        }
+    }
+    &__with {
+        &:before {
+            @include gradient;
+          }
+    }
+    
+    &__without {
+        &:before {
+            background: $DarkShade25;
+            }
+    }
+}
+
+

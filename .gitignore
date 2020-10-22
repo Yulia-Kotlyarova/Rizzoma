@@ -1,4 +1,5 @@
 node_modules
 pug/ui_kit/color_type/dist
+pug/ui_kit/form_elem/dist
 style/dist
 text.txt

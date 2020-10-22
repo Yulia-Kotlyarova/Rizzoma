@@ -333,3 +333,53 @@ a:hover {
 .radio__box span {
   padding-left: 10px;
 }
+
+.like__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 90px;
+}
+.like__box {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  position: relative;
+  width: 40px;
+  height: 20px;
+  box-sizing: border-box;
+  border-radius: 10px;
+  background: #fff;
+  background-clip: padding-box;
+  border: solid 1px transparent;
+}
+.like__box:hover {
+  cursor: pointer;
+}
+.like__box:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  margin: -1px;
+  border-radius: inherit;
+}
+.like__box i {
+  color: #BC9CFF;
+  font-size: 1rem;
+}
+.like__box span {
+  font-size: 1rem;
+  line-height: 0;
+}
+.like__with:before {
+  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+}
+.like__without:before {
+  background: rgba(31, 32, 65, 0.25);
+}

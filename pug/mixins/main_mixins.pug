@@ -39,3 +39,8 @@ mixin radio-btn(sex, id,checkedInput = false)
         input(class ="form-elem__custom-radio" name = "sex" type= "radio" id=""+id+"" checked= checkedInput )
         label(for=""+id+"")
         span= sex
+
+mixin like(icon, quantity, className)
+    div(class = "like__box" + " "+className +"")
+       i(class="material-icons md-24 ")= icon
+       span= quantity

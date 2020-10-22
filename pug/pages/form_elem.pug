@@ -30,6 +30,11 @@ block content
             form.radio__wrapper
                 +radio-btn("Мужчина", "man", true)
                 +radio-btn("Женщина", "women")
+
+            h3 like button 
+            .like__wrapper
+                +like("favorite_border", "2", "like__without")
+                +like("favorite", "12", "like__with")
         section.dropdown-section
             .form-elem__dropdown-wrapper
                 +input("dropdown", "default", "2 спальни, 2 кровати...", "expand_more")
