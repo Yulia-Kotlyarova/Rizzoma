@@ -2,14 +2,6 @@
 @import '../../../style/style.scss';
 @import '../../../style/mixins';
 
-@mixin input-active () {
-    border: 1px solid $DarkShade50;
-    &::placeholder {
-        color: $DarkShade50;
-        outline: none;
-    }
-}
-
 .kit-main {
     @include flex;
 }
@@ -44,27 +36,6 @@
             bottom: 30px;
             color: $DarkShade50;
         }
-        .input__field .active {
-            @include input-active();
-        }
-
-        .input__field {
-            border: 1px solid $DarkShade25;
-            border-radius: 4px;
-            padding: 13px 15px;
-            width: 100%;
-            transition: $transition;
-            outline: none;
-            &::placeholder {
-                color: $DarkShade25;
-                transition: $transition;
-                
-            }
-            &:focus, 
-            &:hover {
-                @include input-active();
-            }
-        }
     }
     .form-elem__date-dropdown {
         @include flex;
@@ -74,6 +45,28 @@
         }
         form {
             width: 150px;
+        }
+    }
+
+    .input__field .active {
+        @include input-active();
+    }
+
+    .input__field {
+        border: 1px solid $DarkShade25;
+        border-radius: 4px;
+        padding: 13px 15px;
+        width: 100%;
+        transition: $transition;
+        outline: none;
+        &::placeholder {
+            color: $DarkShade25;
+            transition: $transition;
+            
+        }
+        &:focus, 
+        &:hover {
+            @include input-active();
         }
     }
 }
@@ -128,7 +121,7 @@
         @include flex;
         padding-top: 12px;
         h3 {
-            color: $DarkShade50;
+            color: $primary-color;
         }
     }
 }
@@ -304,5 +297,58 @@
             @include gradient;
             left: 22px;
         }
+    }
+}
+
+// rate 
+.rate__wrapper {
+    @include flex;
+    max-width: 260px;
+}
+.rate__box {
+    @include flex;
+    width: 120px;
+    transform: rotateY(180deg);
+    input {
+    display: none;
+    &:checked ~ label::after{
+        opacity: 1;
+    }
+    }
+    label {
+        position: relative;
+        display: block;
+        background: #fff;
+        width: 24px;
+        height: 24px;
+        &::before {
+            content: 'star_outline';
+            position: relative;
+            font-family: 'Material Icons';
+            font-size: 2.4rem;
+            @include gradient;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        &::after{
+            content: 'star';
+            position: absolute;
+            left: 0;
+            font-family: 'Material Icons';
+            font-size: 2.4rem;
+            @include gradient;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            opacity: 0;
+            transition: $transition;
+        }
+
+        &:hover::after {
+            opacity: 1;
+            @include cursor-style;
+        }
+    }
+    label:hover ~ label::after {
+        opacity: 1;
     }
 }

@@ -142,32 +142,6 @@ a:hover {
   bottom: 30px;
   color: rgba(31, 32, 65, 0.5);
 }
-.form-elem__wrapper form .input__field .active {
-  border: 1px solid rgba(31, 32, 65, 0.5);
-}
-.form-elem__wrapper form .input__field .active::placeholder {
-  color: rgba(31, 32, 65, 0.5);
-  outline: none;
-}
-.form-elem__wrapper form .input__field {
-  border: 1px solid rgba(31, 32, 65, 0.25);
-  border-radius: 4px;
-  padding: 13px 15px;
-  width: 100%;
-  transition: 0.4s;
-  outline: none;
-}
-.form-elem__wrapper form .input__field::placeholder {
-  color: rgba(31, 32, 65, 0.25);
-  transition: 0.4s;
-}
-.form-elem__wrapper form .input__field:focus, .form-elem__wrapper form .input__field:hover {
-  border: 1px solid rgba(31, 32, 65, 0.5);
-}
-.form-elem__wrapper form .input__field:focus::placeholder, .form-elem__wrapper form .input__field:hover::placeholder {
-  color: rgba(31, 32, 65, 0.5);
-  outline: none;
-}
 .form-elem__wrapper .form-elem__date-dropdown {
   display: flex;
   justify-content: space-between;
@@ -180,6 +154,32 @@ a:hover {
 }
 .form-elem__wrapper .form-elem__date-dropdown form {
   width: 150px;
+}
+.form-elem__wrapper .input__field .active {
+  border: 1px solid rgba(31, 32, 65, 0.5);
+}
+.form-elem__wrapper .input__field .active::placeholder {
+  color: rgba(31, 32, 65, 0.5);
+  outline: none;
+}
+.form-elem__wrapper .input__field {
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  border-radius: 4px;
+  padding: 13px 15px;
+  width: 100%;
+  transition: 0.4s;
+  outline: none;
+}
+.form-elem__wrapper .input__field::placeholder {
+  color: rgba(31, 32, 65, 0.25);
+  transition: 0.4s;
+}
+.form-elem__wrapper .input__field:focus, .form-elem__wrapper .input__field:hover {
+  border: 1px solid rgba(31, 32, 65, 0.5);
+}
+.form-elem__wrapper .input__field:focus::placeholder, .form-elem__wrapper .input__field:hover::placeholder {
+  color: rgba(31, 32, 65, 0.5);
+  outline: none;
 }
 
 .form-elem__dropdown-wrapper {
@@ -239,7 +239,7 @@ a:hover {
   padding-top: 12px;
 }
 .form-elem__action h3 {
-  color: rgba(31, 32, 65, 0.5);
+  color: #BC9CFF;
 }
 
 .dropdown-section {
@@ -423,4 +423,64 @@ a:hover {
 .toggle__box input:checked[type=checkbox]::before {
   background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
   left: 22px;
+}
+
+.rate__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 260px;
+}
+
+.rate__box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 120px;
+  transform: rotateY(180deg);
+}
+.rate__box input {
+  display: none;
+}
+.rate__box input:checked ~ label::after {
+  opacity: 1;
+}
+.rate__box label {
+  position: relative;
+  display: block;
+  background: #fff;
+  width: 24px;
+  height: 24px;
+}
+.rate__box label::before {
+  content: "star_outline";
+  position: relative;
+  font-family: "Material Icons";
+  font-size: 2.4rem;
+  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.rate__box label::after {
+  content: "star";
+  position: absolute;
+  left: 0;
+  font-family: "Material Icons";
+  font-size: 2.4rem;
+  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  opacity: 0;
+  transition: 0.4s;
+}
+.rate__box label:hover::after {
+  opacity: 1;
+}
+.rate__box label:hover::after:hover {
+  cursor: pointer;
+}
+.rate__box label:hover ~ label::after {
+  opacity: 1;
 }

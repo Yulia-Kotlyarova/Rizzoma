@@ -49,3 +49,14 @@ mixin like(icon, quantity, className)
     div(class = "like__box" + " "+className +"")
        i(class="material-icons md-24 ")= icon
        span= quantity
+
+mixin rate(idName, savedRate)
+    - var i = 1;
+    .rate__box
+            while i <= 5
+                -var number= i++
+                if number == savedRate
+                    input(name= idName type="radio" id = ""+ idName +""+number+"" checked)
+                else
+                    input(name= idName type="radio" id = ""+ idName +""+number+"")
+                label(for=""+ idName +""+number+"")
