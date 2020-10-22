@@ -31,6 +31,11 @@ block content
                 +radio-btn("Мужчина", "man", true)
                 +radio-btn("Женщина", "women")
 
+            h3 toggle
+            form.toggle__wrapper(action="")
+                +toggle("Получать спецпредложения", true)
+                +toggle("Получать спецпредложения")
+
             h3 like button 
             .like__wrapper
                 +like("favorite_border", "2", "like__without")

@@ -15,7 +15,7 @@ mixin input(title, subtitle, innerText, icon, className = "default")
         .input__text-box
             h3= title 
             span= subtitle
-        input(class = ""+className+"" type = "text" placeholder = "" + innerText + "")
+        input(class = ""+className+" " +"input__field" type = "text" placeholder = "" + innerText + "")
         i(class="material-icons md-24")= icon
 
 mixin dropdown_extend_unit(extendTitle, quantity)
@@ -39,6 +39,11 @@ mixin radio-btn(sex, id,checkedInput = false)
         input(class ="form-elem__custom-radio" name = "sex" type= "radio" id=""+id+"" checked= checkedInput )
         label(for=""+id+"")
         span= sex
+
+mixin toggle(text, checkedInput = false)
+    .toggle__box
+        input(class ="form-elem__custom-toggle" type= "checkbox" checked= checkedInput )
+        span= text
 
 mixin like(icon, quantity, className)
     div(class = "like__box" + " "+className +"")
