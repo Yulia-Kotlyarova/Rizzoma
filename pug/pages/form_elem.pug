@@ -2,9 +2,16 @@ extend ../main.pug
 
 block variables
 
-
 include ../mixins/color_type_mixins.pug
 include ../mixins/main_mixins.pug
+
+block prepend scripts
+  script(src= '../../../node_modules/jquery/dist/jquery.js')
+  script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js")
+
+block append scripts
+  script(src='./range.js')
+
 
 block content
     link(rel="stylesheet" href="../ui_kit/form_elem/dist/form_elem.css")
@@ -45,6 +52,10 @@ block content
             .rate__wrapper
                 +rate("rate1",2)
                 +rate("rate2",1)
+
+        .form-elem__button-wrapper   
+            +range-slider("Range Slider")
+
         section.dropdown-section
             .form-elem__dropdown-wrapper
                 +input("dropdown", "default", "2 спальни, 2 кровати...", "expand_more")

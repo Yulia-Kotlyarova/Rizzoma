@@ -1,9 +1,11 @@
 mixin logo(path)
     img.logo-icon(src= ""+path +"" alt="logo")
 
-mixin links(link1, link2)
+mixin links(link1, link2, link3, link4)
     link( rel="stylesheet" href="" + link1 +"")
     link(rel="stylesheet" href="" + link2 +"")
+    link(rel="stylesheet" href="" + link3 +"")
+    link(rel="stylesheet" href="" + link4+"")
 
 mixin input-action(clear= "очистить", save= "применить")
     .form-elem__action
@@ -60,3 +62,11 @@ mixin rate(idName, savedRate)
                 else
                     input(name= idName type="radio" id = ""+ idName +""+number+"")
                 label(for=""+ idName +""+number+"")
+
+mixin range-slider(title)
+    .range__textbox
+        h3= title
+        span.range__result-text
+    .range__wrapper
+        .range__range
+        input(type= "hidden" id= "range__result")

@@ -328,7 +328,7 @@
             font-size: 2.4rem;
             @include gradient;
             -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+            color: transparent;
         }
         &::after{
             content: 'star';
@@ -338,7 +338,7 @@
             font-size: 2.4rem;
             @include gradient;
             -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+            color: transparent;
             opacity: 0;
             transition: $transition;
         }
@@ -351,4 +351,70 @@
     label:hover ~ label::after {
         opacity: 1;
     }
+}
+
+.form-elem__button-wrapper {
+    min-width: 320px;
+}
+
+// range slider
+
+.range {
+    &__textbox {
+        @include flex;
+        max-width: 266px;
+        h3 {
+            display: inline;
+            padding: 0;
+        }
+        .range__result-text {
+            color: $DarkShade50;
+        }
+    }
+}
+
+.range__wrapper {
+    max-width: 266px;
+    padding: 20.44px 0 40.56px 0;
+    * {
+        box-sizing: border-box;
+        outline: none;
+    }
+    &::after {
+        content: "";
+        clear: both;
+        display: table;
+    }
+    .ui-slider {
+        position: relative;
+        height: 6px;
+        border-radius:3px;
+        transition: $transition;
+        .ui-slider-handle {
+            @include gradient($secondary-color, $primary-lightblue);
+            @include cursor-style;
+            position: absolute;
+            top: -5px;
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            border: 2px solid #fff;
+            margin: 0px 0px 0 -3px;
+            z-index: 2;
+        }
+        .ui-slider-handle:hover,
+        .ui-slider-handle:focus {
+            transform: scale(1.1);
+        }
+
+        .ui-slider-range {
+            @include gradient($secondary-color, $primary-lightblue);
+            position: absolute;
+            top: -1;
+            z-index: 1;
+            height: 6px;
+            border-radius:3px;
+        }
+    }
+
 }

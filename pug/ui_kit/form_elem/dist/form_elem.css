@@ -1,14 +1,14 @@
 @font-face {
   font-family: "Montserrat";
-  src: url("../assets/fonts/Montserrat/Montserrat-Regular.eot");
-  src: url("../assets/fonts/Montserrat/Montserrat-Regular.eot?iefix") format("eot"), url("../assets/fonts/Montserrat/Montserrat-Regular.woff") format("woff"), url("../assets/fonts/Montserrat/Montserrat-Regular.ttf") format("truetype");
+  src: url("../../../assets/fonts/Montserrat/Montserrat-Regular.eot");
+  src: url("../../../assets/fonts/Montserrat/Montserrat-Regular.eot?iefix") format("eot"), url("../../../assets/fonts/Montserrat/Montserrat-Regular.woff") format("woff"), url("../../../assets/fonts/Montserrat/Montserrat-Regular.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "Montserrat";
-  src: url("../assets/fonts/Montserrat/Montserrat-Bold.eot");
-  src: url("../assets/fonts/Montserrat/Montserrat-Bold.eot?iefix") format("eot"), url("../assets/fonts/Montserrat/Montserrat-Bold.woff") format("woff"), url("../assets/fonts/Montserrat/Montserrat-Bold.ttf") format("truetype");
+  src: url("../../../assets/fonts/Montserrat/Montserrat-Bold.eot");
+  src: url("../../../assets/fonts/Montserrat/Montserrat-Bold.eot?iefix") format("eot"), url("../../../assets/fonts/Montserrat/Montserrat-Bold.woff") format("woff"), url("../../../assets/fonts/Montserrat/Montserrat-Bold.ttf") format("truetype");
   font-weight: 700;
   font-style: normal;
 }
@@ -93,6 +93,10 @@ a:hover {
   text-decoration: none;
   font-style: normal;
   color: inherit;
+}
+
+p {
+  margin: 0;
 }
 
 .kit-main {
@@ -461,7 +465,7 @@ a:hover {
   font-size: 2.4rem;
   background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: transparent;
 }
 .rate__box label::after {
   content: "star";
@@ -471,7 +475,7 @@ a:hover {
   font-size: 2.4rem;
   background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: transparent;
   opacity: 0;
   transition: 0.4s;
 }
@@ -483,4 +487,69 @@ a:hover {
 }
 .rate__box label:hover ~ label::after {
   opacity: 1;
+}
+
+.form-elem__button-wrapper {
+  min-width: 320px;
+}
+
+.range__textbox {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 266px;
+}
+.range__textbox h3 {
+  display: inline;
+  padding: 0;
+}
+.range__textbox .range__result-text {
+  color: rgba(31, 32, 65, 0.5);
+}
+
+.range__wrapper {
+  max-width: 266px;
+  padding: 20.44px 0 40.56px 0;
+}
+.range__wrapper * {
+  box-sizing: border-box;
+  outline: none;
+}
+.range__wrapper::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+.range__wrapper .ui-slider {
+  position: relative;
+  height: 6px;
+  border-radius: 3px;
+  transition: 0.4s;
+}
+.range__wrapper .ui-slider .ui-slider-handle {
+  background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+  position: absolute;
+  top: -5px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  margin: 0px 0px 0 -3px;
+  z-index: 2;
+}
+.range__wrapper .ui-slider .ui-slider-handle:hover {
+  cursor: pointer;
+}
+.range__wrapper .ui-slider .ui-slider-handle:hover,
+.range__wrapper .ui-slider .ui-slider-handle:focus {
+  transform: scale(1.1);
+}
+.range__wrapper .ui-slider .ui-slider-range {
+  background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+  position: absolute;
+  top: -1;
+  z-index: 1;
+  height: 6px;
+  border-radius: 3px;
 }

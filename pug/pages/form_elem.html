@@ -1,11 +1,15 @@
 
-<title>UI kit</title><!DOCTYPE html>
+<title>UI kit</title>
+<script src="../../../node_modules/jquery/dist/jquery.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script><!DOCTYPE html>
 <html lang="ru">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <link rel="stylesheet" href="../ui_kit/color_type/dist/color_type.css"/>
     <link rel="stylesheet" href="../../style/dist/style.css"/>
+    <link rel="stylesheet" href="../../jquery/ui_style.css"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cute+Font|Inconsolata"/>
   </head>
   <body><img class="logo-icon" src="../../assets/icons/logo.svg" alt="logo"/>
     <link rel="stylesheet" href="../ui_kit/form_elem/dist/form_elem.css">
@@ -130,6 +134,15 @@
           </div>
         </div>
       </div>
+      <div class="form-elem__button-wrapper">  
+        <div class="range__textbox">
+          <h3>Range Slider</h3><span class="range__result-text"></span>
+        </div>
+        <div class="range__wrapper">
+          <div class="range__range"></div>
+          <input type="hidden" id="range__result"/>
+        </div>
+      </div>
       <section class="dropdown-section">
         <div class="form-elem__dropdown-wrapper">
           <form action="">
@@ -249,5 +262,8 @@
         </div>
       </section>
     </main>
+    <script src="../../jquery/ui_min.js"></script>
+    <script src="../../jquery/ui_touch.js"></script>
+    <script src="./range.js"> </script>
   </body>
 </html>
