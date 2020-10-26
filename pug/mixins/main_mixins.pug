@@ -84,7 +84,7 @@ mixin button-text(text, active= "")
 mixin list(title, className = "default", icon, active = "")
     div(class = "expandable__title"+ " "+ active+"")
         h3= title
-        i(class="material-icons md-24")= icon
+        i(class="material-icons md-24" + " "+ icon+ "")= icon
     
 mixin list-item(text, id, checkedInput = false)
     .expandable__list-item

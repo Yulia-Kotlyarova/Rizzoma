@@ -10,14 +10,16 @@
 
 .form-elem__wrapper {
     @include flex($align: flex-start);
-    padding: 163px 141px 131px;
+    padding: 144px 141px 131px;
     form .active {
         @include input-active();
+        border-radius: 4px 4px 0 0 ;
     }
     form {
         position: relative;
         width: 320px;
         padding-bottom: 19.56px;
+        margin: 0;
         .input__text-box {
             @include flex;
             padding-bottom: 5px;
@@ -28,6 +30,7 @@
             span {
                 text-transform: uppercase;
                 color: $DarkShade25;
+                line-height: 0;
             }
         }
         .material-icons {
@@ -45,6 +48,7 @@
     .form-elem__date-dropdown {
         @include flex;
         width: 320px;
+        padding: 25px 0 20px 0;
         h3 {
             display: inline;
         }
@@ -52,10 +56,29 @@
             width: 150px;
         }
     }
+    .form-elem {
+        &__small {
+            position: relative;
+            width: 266px;
+            form {
+                width: 100%;
+                padding: 20px 0;
+            }
+            .form-elem__dropdown {
+                width: 100%;
+            }
+        }
+    }
+
+    .form-elem__input-simple {
+        form {
+            padding-bottom: 20px;
+        }
+    }
 
     .input__field .active {
         @include input-active();
-    }
+    }    
 
     .input__field {
         border: 1px solid $DarkShade25;
@@ -79,8 +102,18 @@
 // dropdown
 
 .form-elem {
+    &__dropdown-container{
+        .form-elem__small:first-child {
+            form {
+                padding-top: 0;
+
+            }
+        }
+    }
     &__dropdown-wrapper{
+        position: relative;
         width: 320px;
+        height: 221.5px;
         transition: $transition;
         form > input {
             border-radius:4px 4px 0 0 ;
@@ -89,6 +122,7 @@
         &:focus,
         &:active {
             box-shadow: 0px 10px 20px $DarkShade5;
+            @include expand;
         }
     }
     &__dropdown-unit{
@@ -103,7 +137,12 @@
     &__dropdown{
         padding: 0 7px 13px 15px;
         border: 1px solid $DarkShade50;
+        border-top: none;
         border-radius: 0 0 4px 4px;
+        position: absolute;
+        top: 62px;
+        width: 100%;
+        box-sizing: border-box;
     }
     &__change-box {
         @include flex;
@@ -134,20 +173,22 @@
 .dropdown-section {
     @include flex($align: flex-start);
     width: 100%;
+    padding: 45px 0 0 0;
 }
 
 // checkbox
 
 .form-elem{
     &__checkbox-wrapper {
+        padding-left: 53px;
         h3 {
             padding-bottom: 16.56px;
         }
         .checkbox {
             &__box {
-                @include flex($justify: start, $wrap: nowrap);
-                padding-bottom: 10px;
-                max-width: 220px;
+                @include flex($justify: start, $wrap: nowrap, $align: flex-start);
+                padding-bottom: 11px;
+                max-width: 222px;
                 span {
                     line-height: 1.8rem;
                 }
@@ -174,6 +215,7 @@
             }
         }
         &:checked+label::before {
+            border: 1px solid $primary-color;
             background-image: url("../../../../assets/icons/check.svg");
           }
     }
@@ -380,7 +422,7 @@
 
 .range__wrapper {
     max-width: 266px;
-    padding: 20.44px 0 40.56px 0;
+    padding: 12.44px 0 40.56px 0;
     * {
         box-sizing: border-box;
         outline: none;
@@ -392,7 +434,7 @@
     }
     .ui-slider {
         position: relative;
-        height: 6px;
+        height: 8px;
         border-radius:3px;
         transition: $transition;
         .ui-slider-handle {
@@ -543,22 +585,29 @@
     width: 100%;
 }
 
+.list-section {
+    padding-top: 40px;
+}
+
+// expandable
+
 .expandable{
     &__wrapper {
         h3 {
             display: inline;
-            line-height: 0;
+            line-height: 1rem;
+        }
+        &:hover,
+        &:focus {
+            @include expand;
         }
     }
     &__title {
-        @include flex;
+        @include flex($align: start);
         width: 266px;
         height: 44px;
-        &:hover,
-        &focus {
-            i {
-                transform: rotate(180deg);
-            }
+        i {
+            line-height: 8px;
         }
     }
     &__title .active {

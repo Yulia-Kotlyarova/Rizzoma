@@ -1,14 +1,14 @@
 @font-face {
   font-family: "Montserrat";
-  src: url("../../../assets/fonts/Montserrat/Montserrat-Regular.eot");
-  src: url("../../../assets/fonts/Montserrat/Montserrat-Regular.eot?iefix") format("eot"), url("../../../assets/fonts/Montserrat/Montserrat-Regular.woff") format("woff"), url("../../../assets/fonts/Montserrat/Montserrat-Regular.ttf") format("truetype");
+  src: url("../../assets/fonts/Montserrat/Montserrat-Regular.eot");
+  src: url("../../assets/fonts/Montserrat/Montserrat-Regular.eot?iefix") format("eot"), url("../../assets/fonts/Montserrat/Montserrat-Regular.woff") format("woff"), url("../../assets/fonts/Montserrat/Montserrat-Regular.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "Montserrat";
-  src: url("../../../assets/fonts/Montserrat/Montserrat-Bold.eot");
-  src: url("../../../assets/fonts/Montserrat/Montserrat-Bold.eot?iefix") format("eot"), url("../../../assets/fonts/Montserrat/Montserrat-Bold.woff") format("woff"), url("../../../assets/fonts/Montserrat/Montserrat-Bold.ttf") format("truetype");
+  src: url("../../assets/fonts/Montserrat/Montserrat-Bold.eot");
+  src: url("../../assets/fonts/Montserrat/Montserrat-Bold.eot?iefix") format("eot"), url("../../assets/fonts/Montserrat/Montserrat-Bold.woff") format("woff"), url("../../assets/fonts/Montserrat/Montserrat-Bold.ttf") format("truetype");
   font-weight: 700;
   font-style: normal;
 }
@@ -115,10 +115,11 @@ input, button {
   justify-content: space-between;
   align-items: flex-start;
   flex-wrap: wrap;
-  padding: 163px 141px 131px;
+  padding: 144px 141px 131px;
 }
 .form-elem__wrapper form .active {
   border: 1px solid rgba(31, 32, 65, 0.5);
+  border-radius: 4px 4px 0 0;
 }
 .form-elem__wrapper form .active::placeholder {
   color: rgba(31, 32, 65, 0.5);
@@ -128,6 +129,7 @@ input, button {
   position: relative;
   width: 320px;
   padding-bottom: 19.56px;
+  margin: 0;
 }
 .form-elem__wrapper form .input__text-box {
   display: flex;
@@ -143,6 +145,7 @@ input, button {
 .form-elem__wrapper form .input__text-box span {
   text-transform: uppercase;
   color: rgba(31, 32, 65, 0.25);
+  line-height: 0;
 }
 .form-elem__wrapper form .material-icons {
   position: absolute;
@@ -161,12 +164,27 @@ input, button {
   align-items: center;
   flex-wrap: wrap;
   width: 320px;
+  padding: 25px 0 20px 0;
 }
 .form-elem__wrapper .form-elem__date-dropdown h3 {
   display: inline;
 }
 .form-elem__wrapper .form-elem__date-dropdown form {
   width: 150px;
+}
+.form-elem__wrapper .form-elem__small {
+  position: relative;
+  width: 266px;
+}
+.form-elem__wrapper .form-elem__small form {
+  width: 100%;
+  padding: 20px 0;
+}
+.form-elem__wrapper .form-elem__small .form-elem__dropdown {
+  width: 100%;
+}
+.form-elem__wrapper .form-elem__input-simple form {
+  padding-bottom: 20px;
 }
 .form-elem__wrapper .input__field .active {
   border: 1px solid rgba(31, 32, 65, 0.5);
@@ -195,8 +213,13 @@ input, button {
   outline: none;
 }
 
+.form-elem__dropdown-container .form-elem__small:first-child form {
+  padding-top: 0;
+}
 .form-elem__dropdown-wrapper {
+  position: relative;
   width: 320px;
+  height: 221.5px;
   transition: 0.4s;
 }
 .form-elem__dropdown-wrapper form > input {
@@ -204,6 +227,9 @@ input, button {
 }
 .form-elem__dropdown-wrapper:hover, .form-elem__dropdown-wrapper:focus, .form-elem__dropdown-wrapper:active {
   box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+}
+.form-elem__dropdown-wrapper:hover .expand_more, .form-elem__dropdown-wrapper:focus .expand_more, .form-elem__dropdown-wrapper:active .expand_more {
+  transform: rotate(180deg);
 }
 .form-elem__dropdown-unit {
   display: flex;
@@ -220,7 +246,12 @@ input, button {
 .form-elem__dropdown {
   padding: 0 7px 13px 15px;
   border: 1px solid rgba(31, 32, 65, 0.5);
+  border-top: none;
   border-radius: 0 0 4px 4px;
+  position: absolute;
+  top: 62px;
+  width: 100%;
+  box-sizing: border-box;
 }
 .form-elem__change-box {
   display: flex;
@@ -261,18 +292,22 @@ input, button {
   align-items: flex-start;
   flex-wrap: wrap;
   width: 100%;
+  padding: 45px 0 0 0;
 }
 
+.form-elem__checkbox-wrapper {
+  padding-left: 53px;
+}
 .form-elem__checkbox-wrapper h3 {
   padding-bottom: 16.56px;
 }
 .form-elem__checkbox-wrapper .checkbox__box {
   display: flex;
   justify-content: start;
-  align-items: center;
+  align-items: flex-start;
   flex-wrap: nowrap;
-  padding-bottom: 10px;
-  max-width: 220px;
+  padding-bottom: 11px;
+  max-width: 222px;
 }
 .form-elem__checkbox-wrapper .checkbox__box span {
   line-height: 1.8rem;
@@ -298,6 +333,7 @@ input, button {
   background-position: center center;
 }
 .form-elem__custom-checkbox:checked + label::before {
+  border: 1px solid #BC9CFF;
   background-image: url("../../../../assets/icons/check.svg");
 }
 
@@ -519,7 +555,7 @@ input, button {
 
 .range__wrapper {
   max-width: 266px;
-  padding: 20.44px 0 40.56px 0;
+  padding: 12.44px 0 40.56px 0;
 }
 .range__wrapper * {
   box-sizing: border-box;
@@ -532,7 +568,7 @@ input, button {
 }
 .range__wrapper .ui-slider {
   position: relative;
-  height: 6px;
+  height: 8px;
   border-radius: 3px;
   transition: 0.4s;
 }
@@ -717,20 +753,27 @@ input, button {
   width: 100%;
 }
 
+.list-section {
+  padding-top: 40px;
+}
+
 .expandable__wrapper h3 {
   display: inline;
-  line-height: 0;
+  line-height: 1rem;
+}
+.expandable__wrapper:hover .expand_more, .expandable__wrapper:focus .expand_more {
+  transform: rotate(180deg);
 }
 .expandable__title {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: start;
   flex-wrap: wrap;
   width: 266px;
   height: 44px;
 }
-.expandable__title:hover i, .expandable__titlefocus i {
-  transform: rotate(180deg);
+.expandable__title i {
+  line-height: 8px;
 }
 .expandable__title .active i {
   transform: rotate(180deg);
