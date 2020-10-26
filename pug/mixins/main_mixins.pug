@@ -1,11 +1,12 @@
 mixin logo(path)
     img.logo-icon(src= ""+path +"" alt="logo")
 
-mixin links(link1, link2, link3, link4)
+mixin links(link1, link2, link3, link4, link4)
     link( rel="stylesheet" href="" + link1 +"")
     link(rel="stylesheet" href="" + link2 +"")
     link(rel="stylesheet" href="" + link3 +"")
     link(rel="stylesheet" href="" + link4+"")
+    link(rel="stylesheet" href="" + link5+"")
 
 mixin input-action(clear= "очистить", save= "применить")
     .form-elem__action
@@ -18,7 +19,7 @@ mixin input(title, subtitle, innerText, icon, className = "default")
             h3= title 
             span= subtitle
         input(class = ""+className+" " +"input__field" type = "text" placeholder = "" + innerText + "")
-        i(class="material-icons md-24")= icon
+        i(class="material-icons md-24" + " "+ icon+ "")= icon
 
 mixin dropdown_extend_unit(extendTitle, quantity)
     .form-elem__dropdown-unit
@@ -70,3 +71,52 @@ mixin range-slider(title)
     .range__wrapper
         .range__range
         input(type= "hidden" id= "range__result")
+
+mixin button-round(text, fill = false, bordered = false, active = "", icon)
+        if fill
+            button(class = "button__fill" + " "+"button__fill-" +active+"")= text
+        else
+            button(class = "button__bordered" + " "+"button__bordered-"+ active+"")= text
+
+mixin button-text(text, active= "")
+    button(class = "button__text"+ " "+"button__text-"+ active+"")= text
+
+mixin list(title, className = "default", icon, active = "")
+    div(class = "expandable__title"+ " "+ active+"")
+        h3= title
+        i(class="material-icons md-24")= icon
+    
+mixin list-item(text, id, checkedInput = false)
+    .expandable__list-item
+        input(class ="form-elem__custom-checkbox" type= "checkbox" id=""+id+"" checked= checkedInput )
+        label(for=""+id+"")
+        span= text
+
+mixin rich-list(title, text, id, checkedInput = false)
+    .rich-list__item
+        input(class ="form-elem__custom-checkbox" type= "checkbox" id=""+id+"" checked= checkedInput )
+        label(for=""+id+"")
+        .rich-list__text-box
+            p.rich-list__title= title
+            span= text
+
+mixin bullet-item(text)
+    li.bullet-list__item= text
+
+mixin benefit(title, subtitle, icon)
+    .benefits__box
+        i(class="material-icons md-24")= icon
+        .benefits__textbox
+            p= title
+            span= subtitle
+
+mixin response(path, name, time, text)
+    .response__user-box
+        .ava__container
+            img(src= ""+path +"" alt="ava")
+        .response__user-info
+            p= name
+            span= time
+    .response__user-textbox
+        +like("favorite", "12", "like__with")
+        p= text

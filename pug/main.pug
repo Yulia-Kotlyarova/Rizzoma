@@ -19,15 +19,15 @@ html(lang='ru')
         head
                 meta(charset="utf-8")
                 meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1')
-                +links("../ui_kit/color_type/dist/color_type.css", "../../style/dist/style.css", "../../jquery/ui_style.css", "https://fonts.googleapis.com/css?family=Cute+Font|Inconsolata")
-                //- <link rel="stylesheet" href="./ui_kit/color_type/dist/color_type.css">
-                //- <link rel="stylesheet" href="../style/dist/style.css">
+                +links("../ui_kit/color_type/dist/color_type.css", "../../style/dist/style.css", "../../jquery/ui_style.css", "https://fonts.googleapis.com/css?family=Cute+Font|Inconsolata", "../../jquery/simplePagination.css")
         body
                 +logo('../../assets/icons/logo.svg')
                 block content
                 script(src='../../jquery/ui_min.js')
                 script(src='../../jquery/ui_touch.js')
-                script(src='./range.js') 
+                script(src='../../jquery/jquery.simplePagination.js')
+                script(src='./range.js')
+                script(src='./pagination.js') 
 
 
 //- Footer

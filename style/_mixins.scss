@@ -32,11 +32,36 @@
     }
 }
 
-@mixin circle () {
+@mixin circle ($width: 12px, $height: 12px) {
     content: '';
     position: absolute;
-    width: 12px;
-    height: 12px;
+    width: $width;
+    height: $height;
     border-radius: 50%;
     transition: $transition;
+}
+
+@mixin btn-rounded($padding: 2px 15px) {
+    @include cursor-style;
+    padding: $padding;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 3;
+    border-radius: 22px;
+    color: #fff;
+    transition: $transition;
+}
+
+@mixin gradient-border($margin: -1px) {
+    content: '';
+    @include cursor-style;
+    position: absolute;
+    top: 0; 
+    right: 0; 
+    bottom: 0; 
+    left: 0;
+    z-index: -1;
+    margin: $margin;
+    border-radius: inherit;
 }

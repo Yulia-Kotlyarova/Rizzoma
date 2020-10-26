@@ -9,7 +9,8 @@
     <link rel="stylesheet" href="../ui_kit/color_type/dist/color_type.css"/>
     <link rel="stylesheet" href="../../style/dist/style.css"/>
     <link rel="stylesheet" href="../../jquery/ui_style.css"/>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cute+Font|Inconsolata"/>
+    <link rel="stylesheet" href="../../jquery/simplePagination.css"/>
+    <link rel="stylesheet" href="undefined"/>
   </head>
   <body><img class="logo-icon" src="../../assets/icons/logo.svg" alt="logo"/>
     <link rel="stylesheet" href="../ui_kit/form_elem/dist/form_elem.css">
@@ -20,51 +21,51 @@
           <div class="input__text-box">
             <h3>Text Field</h3><span>default</span>
           </div>
-          <input class="default input__field" type="text" placeholder="Email"/><i class="material-icons md-24"></i>
+          <input class="default input__field" type="text" placeholder="Email"/><i class="material-icons md-24 undefined"></i>
         </form>
         <form action="">
           <div class="input__text-box">
             <h3>Text Field</h3><span>hover/focus</span>
           </div>
-          <input class="active input__field" type="text" placeholder="This is pretty awesome"/><i class="material-icons md-24"></i>
+          <input class="active input__field" type="text" placeholder="This is pretty awesome"/><i class="material-icons md-24 "></i>
         </form>
         <form action="">
           <div class="input__text-box">
             <h3>Dropdown</h3><span></span>
           </div>
-          <input class="default input__field" type="text" placeholder="Сколько гостей"/><i class="material-icons md-24">expand_more</i>
+          <input class="default input__field" type="text" placeholder="Сколько гостей"/><i class="material-icons md-24 expand_more">expand_more</i>
         </form>
         <form action="">
           <div class="input__text-box">
             <h3>masked text field</h3><span></span>
           </div>
-          <input class="default input__field" type="text" placeholder="ДД.ММ.ГГГГ"/><i class="material-icons md-24"></i>
+          <input class="default input__field" type="text" placeholder="ДД.ММ.ГГГГ"/><i class="material-icons md-24 undefined"></i>
         </form>
         <div class="form-elem__date-dropdown">
           <form action="">
             <div class="input__text-box">
               <h3>date Dropdown</h3><span></span>
             </div>
-            <input class="default input__field" type="text" placeholder="ДД.ММ.ГГГГ"/><i class="material-icons md-24">expand_more</i>
+            <input class="default input__field" type="text" placeholder="ДД.ММ.ГГГГ"/><i class="material-icons md-24 expand_more">expand_more</i>
           </form>
           <form action="">
             <div class="input__text-box">
               <h3>date Dropdown</h3><span></span>
             </div>
-            <input class="default input__field" type="text" placeholder="19.08.2019"/><i class="material-icons md-24">expand_more</i>
+            <input class="default input__field" type="text" placeholder="19.08.2019"/><i class="material-icons md-24 expand_more">expand_more</i>
           </form>
         </div>
         <form action="">
           <div class="input__text-box">
             <h3>filter date dropdown</h3><span></span>
           </div>
-          <input class="default input__field" type="text" placeholder="19 авг - 23 авг"/><i class="material-icons md-24">expand_more</i>
+          <input class="default input__field" type="text" placeholder="19 авг - 23 авг"/><i class="material-icons md-24 expand_more">expand_more</i>
         </form>
         <form action="">
           <div class="input__text-box">
             <h3>subscription text field</h3><span></span>
           </div>
-          <input class="default input__field" type="text" placeholder="Email"/><i class="material-icons md-24">arrow_forward</i>
+          <input class="default input__field" type="text" placeholder="Email"/><i class="material-icons md-24 arrow_forward">arrow_forward</i>
         </form>
       </div>
       <div class="form-elem__checkbox-wrapper">
@@ -142,6 +143,18 @@
           <div class="range__range"></div>
           <input type="hidden" id="range__result"/>
         </div>
+        <h3>buttons</h3>
+        <div class="button__wrapper">
+          <button class="button__fill button__fill-">CLICK ME</button>
+          <button class="button__fill button__fill-active">CLICK ME</button>
+          <button class="button__bordered button__bordered-">CLICK ME</button>
+          <button class="button__bordered button__bordered-active">CLICK ME</button>
+          <button class="button__text button__text-">CLICK ME</button>
+          <button class="button__text button__text-active">CLICK ME</button>
+        </div>
+        <button class="button__fill button__pay">перейти к оплате<i class="material-icons md-24 ">arrow_forward</i></button>
+        <h3>pagination</h3>
+        <div id="light-pagination"></div>
       </div>
       <section class="dropdown-section">
         <div class="form-elem__dropdown-wrapper">
@@ -149,13 +162,13 @@
             <div class="input__text-box">
               <h3>dropdown</h3><span>default</span>
             </div>
-            <input class="default input__field" type="text" placeholder="2 спальни, 2 кровати..."/><i class="material-icons md-24">expand_more</i>
+            <input class="default input__field" type="text" placeholder="2 спальни, 2 кровати..."/><i class="material-icons md-24 expand_more">expand_more</i>
           </form>
           <form action="">
             <div class="input__text-box">
               <h3>dropdown</h3><span>expanded</span>
             </div>
-            <input class="active input__field" type="text" placeholder="2 спальни, 2 кровати..."/><i class="material-icons md-24">expand_more</i>
+            <input class="active input__field" type="text" placeholder="2 спальни, 2 кровати..."/><i class="material-icons md-24 expand_more">expand_more</i>
           </form>
           <div class="form-elem__dropdown">
             <div class="form-elem__dropdown-unit">
@@ -189,7 +202,7 @@
             <div class="input__text-box">
               <h3>dropdown</h3><span></span>
             </div>
-            <input class="active input__field" type="text" placeholder="Сколько гостей"/><i class="material-icons md-24">expand_more</i>
+            <input class="active input__field" type="text" placeholder="Сколько гостей"/><i class="material-icons md-24 expand_more">expand_more</i>
           </form>
           <div class="form-elem__dropdown">
             <div class="form-elem__dropdown-unit">
@@ -227,7 +240,7 @@
             <div class="input__text-box">
               <h3>dropdown</h3><span></span>
             </div>
-            <input class="active input__field" type="text" placeholder="3 гостя"/><i class="material-icons md-24">expand_more</i>
+            <input class="active input__field" type="text" placeholder="3 гостя"/><i class="material-icons md-24 expand_more">expand_more</i>
           </form>
           <div class="form-elem__dropdown">
             <div class="form-elem__dropdown-unit">
@@ -261,9 +274,96 @@
           </div>
         </div>
       </section>
+      <section class="list-section">
+        <div class="expandable__wrapper">
+          <div class="expandable__title ">
+            <h3>expandable checkbox list</h3><i class="material-icons md-24">expand_more</i>
+          </div>
+          <div class="expandable__title active">
+            <h3>expandable checkbox list</h3><i class="material-icons md-24">expand_more</i>
+          </div>
+          <div class="expandable__list-item">
+            <input class="form-elem__custom-checkbox" type="checkbox" id="breakfast"/>
+            <label for="breakfast"></label><span>Завтрак</span>
+          </div>
+          <div class="expandable__list-item">
+            <input class="form-elem__custom-checkbox" type="checkbox" id="writing-table" checked="checked"/>
+            <label for="writing-table"></label><span>Письменный стол</span>
+          </div>
+          <div class="expandable__list-item">
+            <input class="form-elem__custom-checkbox" type="checkbox" id="feeding-chair" checked="checked"/>
+            <label for="feeding-chair"></label><span>Стул для кормления</span>
+          </div>
+          <div class="expandable__list-item">
+            <input class="form-elem__custom-checkbox" type="checkbox" id="baby-bed" checked="checked"/>
+            <label for="baby-bed"></label><span>Кроватка</span>
+          </div>
+          <div class="expandable__list-item">
+            <input class="form-elem__custom-checkbox" type="checkbox" id="tv"/>
+            <label for="tv"></label><span>Телевизор</span>
+          </div>
+          <div class="expandable__list-item">
+            <input class="form-elem__custom-checkbox" type="checkbox" id="shampoo"/>
+            <label for="shampoo"></label><span>Шампунь</span>
+          </div>
+        </div>
+        <div class="rich-list__wrapper">
+          <h3>rich Checkbox Buttons</h3>
+          <div class="rich-list__item">
+            <input class="form-elem__custom-checkbox" type="checkbox" id="wide_corridor"/>
+            <label for="wide_corridor"></label>
+            <div class="rich-list__text-box">
+              <p class="rich-list__title">Широкий коридор</p><span>Ширина коридоров в номере не менее 91 см.</span>
+            </div>
+          </div>
+          <div class="rich-list__item">
+            <input class="form-elem__custom-checkbox" type="checkbox" id="helper_for_disabled"/>
+            <label for="helper_for_disabled"></label>
+            <div class="rich-list__text-box">
+              <p class="rich-list__title">Помощник для инвалидов</p><span>На 1 этаже вас встретит специалист  и проводит до номера.</span>
+            </div>
+          </div>
+        </div>
+        <div class="bullet-list___wrapper">
+          <h3>bullet list</h3>
+          <ul>
+            <li class="bullet-list__item">Нельзя с питомцами</li>
+            <li class="bullet-list__item">Без вечеринок и мероприятий</li>
+            <li class="bullet-list__item">Время прибытия — после 13:00, а выезд до 12:00</li>
+          </ul>
+        </div>
+      </section>
+      <section class="benefits-section">
+        <div class="benefits__wrapper">
+          <div class="benefits__box"><i class="material-icons md-24">insert_emoticon</i>
+            <div class="benefits__textbox">
+              <p>Комфорт</p><span>Шумопоглощающие стены</span>
+            </div>
+          </div>
+          <div class="benefits__box"><i class="material-icons md-24">location_city</i>
+            <div class="benefits__textbox">
+              <p>Удобство</p><span>Окно в каждой из спален</span>
+            </div>
+          </div>
+        </div>
+        <div class="response__wrapper">
+          <div class="response__user-box">
+            <div class="ava__container"><img src="../../assets/img/photo.png" alt="ava"/></div>
+            <div class="response__user-info">
+              <p>Мурад Сарафанов</p><span>5 дней назад</span>
+            </div>
+          </div>
+          <div class="response__user-textbox">
+            <div class="like__box like__with"><i class="material-icons md-24 ">favorite</i><span>12</span></div>
+            <p>Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.</p>
+          </div>
+        </div>
+      </section>
     </main>
     <script src="../../jquery/ui_min.js"></script>
     <script src="../../jquery/ui_touch.js"></script>
-    <script src="./range.js"> </script>
+    <script src="../../jquery/jquery.simplePagination.js"></script>
+    <script src="./range.js"></script>
+    <script src="./pagination.js"> </script>
   </body>
 </html>
