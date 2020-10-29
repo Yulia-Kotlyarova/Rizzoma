@@ -7,12 +7,12 @@ $(".range__range").slider({
   range: true,
   animate: "fast",
   slide: function slide(event, ui) {
-    $(".range__result-text").text("".concat(ui.values[0], "\u20BD - ").concat(ui.values[1], "\u20BD"));
+    $(".range__result-text").text("".concat(ui.values[0].toLocaleString('ru'), "\u20BD - ").concat(ui.values[1].toLocaleString('ru'), "\u20BD"));
   }
 });
 var result1 = $(".range__range").slider("values", 0);
 var result2 = $(".range__range").slider("values", 1);
 $(".range__thumb-left").val(result1);
 $(".range__thumb-right").val(result2);
-$(".range__result-text").text("".concat(result1, "\u20BD - ").concat(result2, "\u20BD"));
+$(".range__result-text").text("".concat(result1.toLocaleString('ru'), "\u20BD - ").concat(result2.toLocaleString('ru'), "\u20BD"));
 $("#range__result").val($(".range__range").slider("value"));

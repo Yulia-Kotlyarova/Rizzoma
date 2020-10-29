@@ -19,17 +19,17 @@ $('#light-pagination').pagination({
   // pages: 0, 
 
   // How many page numbers should be visible while navigating. Minimum allowed: 3 (previous, current & next)
-  // displayedPages: 5, 
+  displayedPages: 3, 
 
   // How many page numbers are visible at the beginning/ending of the pagination.
-  edges: 2,
+  edges: 1,
 
   // Enables start/end edge
   useStartEdge : true,
   useEndEdge : true,
 
   // Which page will be selected immediately after init.
-  currentPage: 0, 
+  currentPage: 1, 
 
   // Uses anchor links or spans
   useAnchors: true,
@@ -44,7 +44,7 @@ $('#light-pagination').pagination({
   // prevText: "Prev", 
 
   // Text to be display on the next button.
-  nextText: "Next", 
+  nextText: `<i class="material-icons md-24 ">arrow_forward</i>`, 
 
   // Ellipse Character
   ellipseText: '&hellip;',
@@ -67,3 +67,5 @@ $('#light-pagination').pagination({
   invertPageOrder: false
 
 });
+
+// $(".next").html('<i class="material-icons md-24 ">arrow_forward</i>') ;

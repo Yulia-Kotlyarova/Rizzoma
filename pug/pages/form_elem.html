@@ -22,13 +22,13 @@
             <div class="input__text-box">
               <h3>Text Field</h3><span>default</span>
             </div>
-            <input class="default input__field" type="text" placeholder="Email"/><i class="material-icons md-24 undefined"></i>
+            <input class="default input__field" type="text" placeholder="Email"/>
           </form>
           <form action="">
             <div class="input__text-box">
               <h3>Text Field</h3><span>hover/focus</span>
             </div>
-            <input class="active input__field" type="text" placeholder="This is pretty awesome"/><i class="material-icons md-24 "></i>
+            <input class="active input__field" type="text" placeholder="This is pretty awesome"/>
           </form>
           <form action="">
             <div class="input__text-box">
@@ -40,7 +40,7 @@
             <div class="input__text-box">
               <h3>masked text field</h3><span></span>
             </div>
-            <input class="default input__field" type="text" placeholder="ДД.ММ.ГГГГ"/><i class="material-icons md-24 undefined"></i>
+            <input class="default input__field" type="text" placeholder="ДД.ММ.ГГГГ"/>
           </form>
         </div>
         <div class="form-elem__date-dropdown">
@@ -75,92 +75,111 @@
         </div>
       </div>
       <div class="form-elem__checkbox-wrapper">
-        <h3>Checkbox Buttons</h3>
-        <div class="checkbox__box">
-          <input class="form-elem__custom-checkbox" type="checkbox" id="smoking"/>
-          <label for="smoking"></label><span>Можно курить</span>
+        <div class="form-elem__checkbox-container">
+          <h3>Checkbox Buttons</h3>
+          <div class="checkbox__box">
+            <input class="form-elem__custom-checkbox" type="checkbox" id="smoking"/>
+            <label for="smoking"></label><span>Можно курить</span>
+          </div>
+          <div class="checkbox__box">
+            <input class="form-elem__custom-checkbox" type="checkbox" id="pets" checked="checked"/>
+            <label for="pets"></label><span>Можно с питомцами</span>
+          </div>
+          <div class="checkbox__box">
+            <input class="form-elem__custom-checkbox" type="checkbox" id="guest" checked="checked"/>
+            <label for="guest"></label><span>Можно пригласить гостей (до 10 человек)</span>
+          </div>
         </div>
-        <div class="checkbox__box">
-          <input class="form-elem__custom-checkbox" type="checkbox" id="pets" checked="checked"/>
-          <label for="pets"></label><span>Можно с питомцами</span>
+        <div class="form-elem__radio-container">
+          <h3>radio buttons</h3>
+          <form class="radio__wrapper">
+            <div class="radio__box">
+              <input class="form-elem__custom-radio" name="sex" type="radio" id="man" checked="checked"/>
+              <label for="man"></label><span>Мужчина</span>
+            </div>
+            <div class="radio__box">
+              <input class="form-elem__custom-radio" name="sex" type="radio" id="women"/>
+              <label for="women"></label><span>Женщина</span>
+            </div>
+          </form>
         </div>
-        <div class="checkbox__box">
-          <input class="form-elem__custom-checkbox" type="checkbox" id="guest" checked="checked"/>
-          <label for="guest"></label><span>Можно пригласить гостей (до 10 человек)</span>
+        <div class="form-elem__toggle-container">
+          <h3>toggle</h3>
+          <form class="toggle__wrapper" action="">
+            <div class="toggle__box">
+              <input class="form-elem__custom-toggle" type="checkbox" checked="checked"/><span>Получать спецпредложения</span>
+            </div>
+            <div class="toggle__box">
+              <input class="form-elem__custom-toggle" type="checkbox"/><span>Получать спецпредложения</span>
+            </div>
+          </form>
         </div>
-        <h3>radio button</h3>
-        <form class="radio__wrapper">
-          <div class="radio__box">
-            <input class="form-elem__custom-radio" name="sex" type="radio" id="man" checked="checked"/>
-            <label for="man"></label><span>Мужчина</span>
+        <div class="form-elem__like-container">
+          <h3>like button </h3>
+          <div class="like__wrapper">
+            <div class="like__box like__without"><i class="material-icons md-24 ">favorite_border</i><span>2</span></div>
+            <div class="like__box like__with"><i class="material-icons md-24 ">favorite</i><span>12</span></div>
           </div>
-          <div class="radio__box">
-            <input class="form-elem__custom-radio" name="sex" type="radio" id="women"/>
-            <label for="women"></label><span>Женщина</span>
-          </div>
-        </form>
-        <h3>toggle</h3>
-        <form class="toggle__wrapper" action="">
-          <div class="toggle__box">
-            <input class="form-elem__custom-toggle" type="checkbox" checked="checked"/><span>Получать спецпредложения</span>
-          </div>
-          <div class="toggle__box">
-            <input class="form-elem__custom-toggle" type="checkbox"/><span>Получать спецпредложения</span>
-          </div>
-        </form>
-        <h3>like button </h3>
-        <div class="like__wrapper">
-          <div class="like__box like__without"><i class="material-icons md-24 ">favorite_border</i><span>2</span></div>
-          <div class="like__box like__with"><i class="material-icons md-24 ">favorite</i><span>12</span></div>
         </div>
-        <h3>rate button</h3>
-        <div class="rate__wrapper">
-          <div class="rate__box">
-            <input name="rate1" type="radio" id="rate11"/>
-            <label for="rate11"></label>
-            <input name="rate1" type="radio" id="rate12" checked="checked"/>
-            <label for="rate12"></label>
-            <input name="rate1" type="radio" id="rate13"/>
-            <label for="rate13"></label>
-            <input name="rate1" type="radio" id="rate14"/>
-            <label for="rate14"></label>
-            <input name="rate1" type="radio" id="rate15"/>
-            <label for="rate15"></label>
-          </div>
-          <div class="rate__box">
-            <input name="rate2" type="radio" id="rate21" checked="checked"/>
-            <label for="rate21"></label>
-            <input name="rate2" type="radio" id="rate22"/>
-            <label for="rate22"></label>
-            <input name="rate2" type="radio" id="rate23"/>
-            <label for="rate23"></label>
-            <input name="rate2" type="radio" id="rate24"/>
-            <label for="rate24"></label>
-            <input name="rate2" type="radio" id="rate25"/>
-            <label for="rate25"></label>
+        <div class="form-elem__rate-container">
+          <h3>rate button</h3>
+          <div class="rate__wrapper">
+            <div class="rate__box">
+              <input name="rate1" type="radio" id="rate11"/>
+              <label for="rate11"></label>
+              <input name="rate1" type="radio" id="rate12" checked="checked"/>
+              <label for="rate12"></label>
+              <input name="rate1" type="radio" id="rate13"/>
+              <label for="rate13"></label>
+              <input name="rate1" type="radio" id="rate14"/>
+              <label for="rate14"></label>
+              <input name="rate1" type="radio" id="rate15"/>
+              <label for="rate15"></label>
+            </div>
+            <div class="rate__box">
+              <input name="rate2" type="radio" id="rate21" checked="checked"/>
+              <label for="rate21"></label>
+              <input name="rate2" type="radio" id="rate22"/>
+              <label for="rate22"></label>
+              <input name="rate2" type="radio" id="rate23"/>
+              <label for="rate23"></label>
+              <input name="rate2" type="radio" id="rate24"/>
+              <label for="rate24"></label>
+              <input name="rate2" type="radio" id="rate25"/>
+              <label for="rate25"></label>
+            </div>
           </div>
         </div>
       </div>
-      <div class="form-elem__button-wrapper">  
-        <div class="range__textbox">
-          <h3>Range Slider</h3><span class="range__result-text"></span>
+      <div class="form-elem__buttons-wrapper">
+        <div class="form-elem__range-wrapper">  
+          <div class="range__textbox">
+            <h3>Range Slider</h3><span class="range__result-text"></span>
+          </div>
+          <div class="range__wrapper">
+            <div class="range__range"></div>
+            <input type="hidden" id="range__result"/>
+          </div>
         </div>
-        <div class="range__wrapper">
-          <div class="range__range"></div>
-          <input type="hidden" id="range__result"/>
+        <div class="form-elem__buttons-container">
+          <h3>buttons</h3>
+          <div class="button__wrapper">
+            <button class="button__fill button__fill-">CLICK ME</button>
+            <button class="button__fill button__fill-active">CLICK ME</button>
+            <button class="button__bordered button__bordered-">CLICK ME</button>
+            <button class="button__bordered button__bordered-active">CLICK ME</button>
+          </div>
+          <div class="button__text-box">
+            <button class="button__text button__text-">CLICK ME</button>
+            <button class="button__text button__text-active">CLICK ME</button>
+          </div>
+          <button class="button__fill button__pay">перейти к оплате<i class="material-icons md-24 ">arrow_forward</i></button>
         </div>
-        <h3>buttons</h3>
-        <div class="button__wrapper">
-          <button class="button__fill button__fill-">CLICK ME</button>
-          <button class="button__fill button__fill-active">CLICK ME</button>
-          <button class="button__bordered button__bordered-">CLICK ME</button>
-          <button class="button__bordered button__bordered-active">CLICK ME</button>
-          <button class="button__text button__text-">CLICK ME</button>
-          <button class="button__text button__text-active">CLICK ME</button>
+        <div class="form-elem__pagination-container">
+          <h3>pagination</h3>
+          <div id="light-pagination"></div>
+          <p>1 – 12 из 100+ вариантов аренды</p>
         </div>
-        <button class="button__fill button__pay">перейти к оплате<i class="material-icons md-24 ">arrow_forward</i></button>
-        <h3>pagination</h3>
-        <div id="light-pagination"></div>
       </div>
       <section class="dropdown-section">
         <div class="form-elem__dropdown-container">

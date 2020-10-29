@@ -1,14 +1,14 @@
 @font-face {
   font-family: "Montserrat";
-  src: url("../../assets/fonts/Montserrat/Montserrat-Regular.eot");
-  src: url("../../assets/fonts/Montserrat/Montserrat-Regular.eot?iefix") format("eot"), url("../../assets/fonts/Montserrat/Montserrat-Regular.woff") format("woff"), url("../../assets/fonts/Montserrat/Montserrat-Regular.ttf") format("truetype");
+  src: url("../../../../../assets/fonts/Montserrat/Montserrat-Regular.eot");
+  src: url("../../../../../assets/fonts/Montserrat/Montserrat-Regular.eot?iefix") format("eot"), url("../../../../../assets/fonts/Montserrat/Montserrat-Regular.woff") format("woff"), url("../../../../../assets/fonts/Montserrat/Montserrat-Regular.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "Montserrat";
-  src: url("../../assets/fonts/Montserrat/Montserrat-Bold.eot");
-  src: url("../../assets/fonts/Montserrat/Montserrat-Bold.eot?iefix") format("eot"), url("../../assets/fonts/Montserrat/Montserrat-Bold.woff") format("woff"), url("../../assets/fonts/Montserrat/Montserrat-Bold.ttf") format("truetype");
+  src: url("../../../../../assets/fonts/Montserrat/Montserrat-Bold.eot");
+  src: url("../../../../../assets/fonts/Montserrat/Montserrat-Bold.eot?iefix") format("eot"), url("../../../../../assets/fonts/Montserrat/Montserrat-Bold.woff") format("woff"), url("../../../../../assets/fonts/Montserrat/Montserrat-Bold.ttf") format("truetype");
   font-weight: 700;
   font-style: normal;
 }
@@ -146,6 +146,7 @@ input, button {
   text-transform: uppercase;
   color: rgba(31, 32, 65, 0.25);
   line-height: 0;
+  font-size: 1.2rem;
 }
 .form-elem__wrapper form .material-icons {
   position: absolute;
@@ -202,6 +203,8 @@ input, button {
   outline: none;
 }
 .form-elem__wrapper .input__field::placeholder {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.4rem;
   color: rgba(31, 32, 65, 0.25);
   transition: 0.4s;
 }
@@ -224,9 +227,6 @@ input, button {
 }
 .form-elem__dropdown-wrapper form > input {
   border-radius: 4px 4px 0 0;
-}
-.form-elem__dropdown-wrapper:hover, .form-elem__dropdown-wrapper:focus, .form-elem__dropdown-wrapper:active {
-  box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
 }
 .form-elem__dropdown-wrapper:hover .expand_more, .form-elem__dropdown-wrapper:focus .expand_more, .form-elem__dropdown-wrapper:active .expand_more {
   transform: rotate(180deg);
@@ -252,6 +252,7 @@ input, button {
   top: 62px;
   width: 100%;
   box-sizing: border-box;
+  box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
 }
 .form-elem__change-box {
   display: flex;
@@ -298,6 +299,9 @@ input, button {
 .form-elem__checkbox-wrapper {
   padding-left: 53px;
 }
+.form-elem__checkbox-wrapper > div {
+  padding-bottom: 30px;
+}
 .form-elem__checkbox-wrapper h3 {
   padding-bottom: 16.56px;
 }
@@ -308,6 +312,9 @@ input, button {
   flex-wrap: nowrap;
   padding-bottom: 11px;
   max-width: 222px;
+}
+.form-elem__checkbox-wrapper .checkbox__box:last-child {
+  padding-bottom: 0;
 }
 .form-elem__checkbox-wrapper .checkbox__box span {
   line-height: 1.8rem;
@@ -337,6 +344,9 @@ input, button {
   background-image: url("../../../../assets/icons/check.svg");
 }
 
+.form-elem__radio-container {
+  margin-top: 10px;
+}
 .form-elem__custom-radio {
   display: none;
 }
@@ -371,6 +381,7 @@ input, button {
   align-items: center;
   flex-wrap: wrap;
   width: 220px !important;
+  padding-bottom: 0 !important;
 }
 
 .radio__box {
@@ -434,6 +445,13 @@ input, button {
   background: rgba(31, 32, 65, 0.25);
 }
 
+.form-elem__toggle-container {
+  padding-top: 7px;
+}
+.form-elem__toggle-container .toggle__wrapper {
+  padding-bottom: 0;
+}
+
 .toggle__box {
   display: flex;
   justify-content: start;
@@ -472,6 +490,10 @@ input, button {
 .toggle__box input:checked[type=checkbox]::before {
   background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
   left: 22px;
+}
+
+.form-elem__rate-container {
+  padding-top: 10px;
 }
 
 .rate__wrapper {
@@ -551,11 +573,13 @@ input, button {
 }
 .range__textbox .range__result-text {
   color: rgba(31, 32, 65, 0.5);
+  line-height: 0;
+  font-size: 1.2rem;
 }
 
 .range__wrapper {
   max-width: 266px;
-  padding: 12.44px 0 40.56px 0;
+  padding: 22.44px 0 40.56px 0;
 }
 .range__wrapper * {
   box-sizing: border-box;
@@ -568,7 +592,7 @@ input, button {
 }
 .range__wrapper .ui-slider {
   position: relative;
-  height: 8px;
+  height: 6px;
   border-radius: 3px;
   transition: 0.4s;
 }
@@ -580,7 +604,7 @@ input, button {
   height: 14px;
   border-radius: 50%;
   border: 2px solid #fff;
-  margin: 0px 0px 0 -3px;
+  margin: 0px 0px 0 -15px;
   z-index: 2;
 }
 .range__wrapper .ui-slider .ui-slider-handle:hover {
@@ -594,9 +618,14 @@ input, button {
   background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
   position: absolute;
   top: -1;
+  margin: 0 0 0 -15px;
   z-index: 1;
   height: 6px;
   border-radius: 3px;
+}
+
+.form-elem__buttons-container {
+  padding-top: 5px;
 }
 
 .button__wrapper {
@@ -605,12 +634,13 @@ input, button {
   align-items: center;
   flex-wrap: wrap;
   max-width: 218px;
-  height: 195px;
+  height: 149px;
 }
 .button__fill {
   background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-  padding: 2px 15px;
+  padding: 3px 20px;
   font-family: "Montserrat", sans-serif;
+  font-size: 1.2rem;
   font-weight: 700;
   text-transform: uppercase;
   line-height: 3;
@@ -626,8 +656,9 @@ input, button {
   opacity: 50%;
 }
 .button__bordered {
-  padding: 0px 15px;
+  padding: 2px 17px;
   font-family: "Montserrat", sans-serif;
+  font-size: 1.2rem;
   font-weight: 700;
   text-transform: uppercase;
   line-height: 3;
@@ -665,12 +696,21 @@ input, button {
 .button__bordered:hover::before {
   background: linear-gradient(180deg, rgba(188, 156, 255, 0.5) 0%, rgba(139, 164, 249, 0.5) 100%);
 }
+.button__text-box {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 15px 0;
+}
 .button__text {
   border: none;
   background-color: transparent;
   color: #BC9CFF;
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
+  font-size: 1.2rem;
+  padding: 0 18px 0 0;
   transition: 0.4s;
 }
 .button__text:hover {
@@ -682,6 +722,7 @@ input, button {
 .button__pay {
   width: 320px;
   height: 44px;
+  margin: 17px 0 0 0;
   position: relative;
 }
 .button__pay i {
@@ -705,10 +746,64 @@ input, button {
   color: rgba(31, 32, 65, 0.5);
 }
 
+.form-elem__pagination-container {
+  padding-top: 40px;
+}
+.form-elem__pagination-container .simple-pagination {
+  padding: 15px 5px 5px 0;
+}
+.form-elem__pagination-container p {
+  color: rgba(31, 32, 65, 0.75);
+}
+
+.light-theme li {
+  font-size: 1.2rem;
+  width: 40px;
+  height: 40px;
+  position: relative;
+  text-align: center;
+}
+.light-theme .active span {
+  color: #fff;
+  font-weight: 700;
+}
+.light-theme .active::after {
+  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  transition: 0.4s;
+  top: 0;
+  right: 0;
+  z-index: -1;
+}
+.light-theme li:first-child {
+  display: none;
+}
+.light-theme li:last-child::after {
+  background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  transition: 0.4s;
+  top: 0;
+  right: 0;
+  z-index: -1;
+}
+.light-theme li:last-child a {
+  background-color: transparent;
+}
+.light-theme li:last-child a i {
+  color: #fff;
+  line-height: 40px;
+}
+
 .light-theme a,
 .light-theme span {
-  background-color: #fff;
-  background: #fff;
   border: none;
   box-shadow: none;
   text-decoration: none;
@@ -716,33 +811,25 @@ input, button {
 }
 .light-theme a:hover,
 .light-theme span:hover {
-  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-  width: 40px;
-  height: 40px;
-  border-radius: 22px;
   padding: 0;
   box-shadow: none;
 }
 
 .light-theme .current {
-  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-  width: 40px;
-  height: 40px;
-  border-radius: 22px;
+  display: block;
+  text-align: center;
   padding: 0;
   box-shadow: none;
   border: none;
+}
+
+.next i {
   color: #fff;
+  line-height: 40px;
 }
 
 .light-theme .current .prev {
   display: none;
-}
-
-.light-theme a .next {
-  background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
-  padding: 0;
-  box-shadow: none;
 }
 
 .list-section {

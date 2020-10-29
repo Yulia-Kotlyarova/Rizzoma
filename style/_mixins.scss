@@ -22,6 +22,11 @@
     }
 }
 
+@mixin placeholder-input($font-size: 1.4rem) {
+    font-family: 'Montserrat', sans-serif;
+    font-size: $font-size;
+}
+
 @mixin expand {
     .expand_more {
         transform: rotate(180deg);
@@ -47,10 +52,11 @@
     transition: $transition;
 }
 
-@mixin btn-rounded($padding: 2px 15px) {
+@mixin btn-rounded($padding: 3px 20px) {
     @include cursor-style;
     padding: $padding;
     font-family: 'Montserrat', sans-serif;
+    font-size: 1.2rem;
     font-weight: 700;
     text-transform: uppercase;
     line-height: 3;
@@ -70,4 +76,10 @@
     z-index: -1;
     margin: $margin;
     border-radius: inherit;
+}
+
+@mixin gradient-icon {
+    @include gradient;
+    -webkit-background-clip: text;
+    color: transparent;
 }

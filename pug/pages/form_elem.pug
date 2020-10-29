@@ -31,46 +31,50 @@ block content
                 .form-elem__small
                     +input("subscription text field", "", "Email", "arrow_forward")
         .form-elem__checkbox-wrapper
-            h3 Checkbox Buttons
-            +checkbox("Можно курить", "smoking")
-            +checkbox("Можно с питомцами", "pets", true)
-            +checkbox("Можно пригласить гостей (до 10 человек)", "guest", true)
-
-            h3 radio button
-            form.radio__wrapper
-                +radio-btn("Мужчина", "man", true)
-                +radio-btn("Женщина", "women")
-
-            h3 toggle
-            form.toggle__wrapper(action="")
-                +toggle("Получать спецпредложения", true)
-                +toggle("Получать спецпредложения")
-
-            h3 like button 
-            .like__wrapper
-                +like("favorite_border", "2", "like__without")
-                +like("favorite", "12", "like__with")
-
-            h3 rate button
-            .rate__wrapper
-                +rate("rate1",2)
-                +rate("rate2",1)
-
-        .form-elem__button-wrapper   
-            +range-slider("Range Slider")
-
-            h3 buttons
-            .button__wrapper
-                +button-round("CLICK ME", fill= true)
-                +button-round("CLICK ME", fill= true,  bordered = false, "active")
-                +button-round("CLICK ME", fill= false,  bordered = true)
-                +button-round("CLICK ME", fill= false,  bordered = true, "active")
-                +button-text("CLICK ME")
-                +button-text("CLICK ME", "active")
-            button(class = "button__fill button__pay") перейти к оплате
-                i(class="material-icons md-24 ") arrow_forward
-            h3 pagination
-            #light-pagination
+            .form-elem__checkbox-container
+                h3 Checkbox Buttons
+                +checkbox("Можно курить", "smoking")
+                +checkbox("Можно с питомцами", "pets", true)
+                +checkbox("Можно пригласить гостей (до 10 человек)", "guest", true)
+            .form-elem__radio-container
+                h3 radio buttons
+                form.radio__wrapper
+                    +radio-btn("Мужчина", "man", true)
+                    +radio-btn("Женщина", "women")
+            .form-elem__toggle-container
+                h3 toggle
+                form.toggle__wrapper(action="")
+                    +toggle("Получать спецпредложения", true)
+                    +toggle("Получать спецпредложения")
+            .form-elem__like-container
+                h3 like button 
+                .like__wrapper
+                    +like("favorite_border", "2", "like__without")
+                    +like("favorite", "12", "like__with")
+            .form-elem__rate-container
+                h3 rate button
+                .rate__wrapper
+                    +rate("rate1",2)
+                    +rate("rate2",1)
+        .form-elem__buttons-wrapper
+            .form-elem__range-wrapper   
+                +range-slider("Range Slider")
+            .form-elem__buttons-container
+                h3 buttons
+                .button__wrapper
+                    +button-round("CLICK ME", fill= true)
+                    +button-round("CLICK ME", fill= true,  bordered = false, "active")
+                    +button-round("CLICK ME", fill= false,  bordered = true)
+                    +button-round("CLICK ME", fill= false,  bordered = true, "active")
+                .button__text-box
+                    +button-text("CLICK ME")
+                    +button-text("CLICK ME", "active")
+                button(class = "button__fill button__pay") перейти к оплате
+                    i(class="material-icons md-24 ") arrow_forward
+            .form-elem__pagination-container
+                h3 pagination
+                #light-pagination
+                p 1 – 12 из 100+ вариантов аренды
 
         section.dropdown-section
             .form-elem__dropdown-container

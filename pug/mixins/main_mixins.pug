@@ -19,7 +19,8 @@ mixin input(title, subtitle, innerText, icon, className = "default")
             h3= title 
             span= subtitle
         input(class = ""+className+" " +"input__field" type = "text" placeholder = "" + innerText + "")
-        i(class="material-icons md-24" + " "+ icon+ "")= icon
+        if icon
+            i(class="material-icons md-24" + " "+ icon+ "")= icon
 
 mixin dropdown_extend_unit(extendTitle, quantity)
     .form-elem__dropdown-unit

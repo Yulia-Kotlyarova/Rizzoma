@@ -31,6 +31,7 @@
                 text-transform: uppercase;
                 color: $DarkShade25;
                 line-height: 0;
+                font-size: 1.2rem;
             }
         }
         .material-icons {
@@ -40,9 +41,7 @@
             color: $DarkShade50;
         }
         .arrow_forward {
-            @include gradient;
-            -webkit-background-clip: text;
-            color: transparent;
+            @include gradient-icon;
         }
     }
     .form-elem__date-dropdown {
@@ -88,9 +87,9 @@
         transition: $transition;
         outline: none;
         &::placeholder {
+            @include placeholder-input;
             color: $DarkShade25;
             transition: $transition;
-            
         }
         &:focus, 
         &:hover {
@@ -121,7 +120,6 @@
         &:hover, 
         &:focus,
         &:active {
-            box-shadow: 0px 10px 20px $DarkShade5;
             @include expand;
         }
     }
@@ -143,6 +141,7 @@
         top: 62px;
         width: 100%;
         box-sizing: border-box;
+        box-shadow: $box-shadow;
     }
     &__change-box {
         @include flex;
@@ -181,6 +180,9 @@
 .form-elem{
     &__checkbox-wrapper {
         padding-left: 53px;
+        & > div {
+            padding-bottom: 30px;
+        }
         h3 {
             padding-bottom: 16.56px;
         }
@@ -189,6 +191,9 @@
                 @include flex($justify: start, $wrap: nowrap, $align: flex-start);
                 padding-bottom: 11px;
                 max-width: 222px;
+                &:last-child {
+                    padding-bottom: 0;
+                }
                 span {
                     line-height: 1.8rem;
                 }
@@ -226,6 +231,9 @@
 // radio
 
 .form-elem {
+    &__radio-container {
+        margin-top: 10px;
+    }
     &__custom-radio {
         display: none;
         &+label {
@@ -253,11 +261,13 @@
 .radio__wrapper {
     @include flex;
     width: 220px!important;
+    padding-bottom: 0!important;
 }
 
 .radio__box {
     @include flex($justify: start, $wrap: nowrap);
     position: relative;
+    // margin-top: -5px;
     span {
         padding-left: 10px;
     }
@@ -315,6 +325,13 @@
     }
 }
 
+.form-elem__toggle-container {
+    padding-top: 7px;
+    .toggle__wrapper {
+        padding-bottom: 0;
+    }
+}
+
 .toggle__box {
     @include flex($justify: start);
     width: 260px;
@@ -348,6 +365,9 @@
 }
 
 // rate 
+.form-elem__rate-container {
+    padding-top: 10px;
+}
 .rate__wrapper {
     @include flex;
     max-width: 260px;
@@ -416,13 +436,15 @@
         }
         .range__result-text {
             color: $DarkShade50;
+            line-height: 0;
+            font-size: 1.2rem;
         }
     }
 }
 
 .range__wrapper {
     max-width: 266px;
-    padding: 12.44px 0 40.56px 0;
+    padding: 22.44px 0 40.56px 0;
     * {
         box-sizing: border-box;
         outline: none;
@@ -434,7 +456,7 @@
     }
     .ui-slider {
         position: relative;
-        height: 8px;
+        height: 6px;
         border-radius:3px;
         transition: $transition;
         .ui-slider-handle {
@@ -446,7 +468,7 @@
             height: 14px;
             border-radius: 50%;
             border: 2px solid #fff;
-            margin: 0px 0px 0 -3px;
+            margin: 0px 0px 0 -15px;
             z-index: 2;
         }
         .ui-slider-handle:hover,
@@ -458,6 +480,7 @@
             @include gradient($secondary-color, $primary-lightblue);
             position: absolute;
             top: -1;
+            margin: 0 0 0 -15px;
             z-index: 1;
             height: 6px;
             border-radius:3px;
@@ -467,11 +490,15 @@
 
 // button
 
+.form-elem__buttons-container {
+    padding-top: 5px;
+}
+
 .button{
     &__wrapper {
         @include flex;
         max-width: 218px;
-        height: 195px;
+        height: 149px;
     }
     &__fill {
         @include gradient;
@@ -482,7 +509,7 @@
         }
     }
     &__bordered {
-        @include btn-rounded($padding: 0px 15px);
+        @include btn-rounded($padding: 2px 17px);
         position: relative;
         color: $primary-color;
         background-color: #fff;
@@ -500,6 +527,10 @@
             }
         }
     }
+    &__text-box {
+        @include flex($justify: start);
+        padding: 15px 0;
+    }
     &__text {
         @include cursor-style;
         border: none;
@@ -507,6 +538,8 @@
         color: $primary-color;
         font-family: 'Montserrat', sans-serif;
         font-weight: 700;
+        font-size: 1.2rem;
+        padding: 0 18px 0 0;
         transition: $transition;
         &:hover{
             color: $DarkShade50;
@@ -515,6 +548,7 @@
     &__pay {
         width: 320px;
         height: 44px;
+        margin: 17px 0 0 0;
         position: relative;
             i {
                 position: absolute;
@@ -542,42 +576,86 @@
 
 // pagination
 
+.form-elem__pagination-container {
+    padding-top: 40px;
+    .simple-pagination {
+        padding: 15px 5px 5px 0;
+    }
+    p {
+        color: $DarkShade75;
+    }
+}
+
+.light-theme {
+    li {
+        font-size: 1.2rem;
+        width: 40px;
+        height: 40px;
+        position: relative;
+        text-align: center;
+    }
+    .active {
+        span {
+            color: #fff;
+            font-weight: 700;
+        }
+        &::after {
+            @include gradient;
+            @include circle ($width: 40px, $height: 40px);
+            top: 0;
+            right: 0;
+            z-index: -1;
+        }
+    }
+    li:first-child {
+        display: none;
+    }
+    li:last-child{ 
+        &::after {
+            @include gradient($secondary-color, $primary-lightblue);
+            @include circle ($width: 40px, $height: 40px);
+            top: 0;
+            right: 0;
+            z-index: -1;
+        }
+        a {
+            background-color: transparent;
+            i {
+                color: #fff;
+                line-height: 40px;
+            }
+        }
+    }
+}
+
 .light-theme a,
 .light-theme span {
-    background-color: #fff;
-    background: #fff;
     border: none;
     box-shadow: none;
     text-decoration: none;
     line-height: 40px;
     &:hover {
-        @include gradient;
-        width: 40px;
-        height: 40px;
-        border-radius: 22px;
         padding: 0;
         box-shadow: none;
     }
 }
 .light-theme .current {
-    @include gradient;
-    width: 40px;
-    height: 40px;
-    border-radius: 22px;
+    display: block;
+    text-align: center;
     padding: 0;
     box-shadow: none;
     border: none;
-    color: #fff;
 }
+
+.next {
+    i {
+        color: #fff;
+        line-height: 40px;
+    }
+} 
 
 .light-theme .current .prev{
     display: none;
-}
-
-.light-theme a .next {
-    @include gradient($secondary-color, $primary-lightblue);
-    padding: 0;
-    box-shadow: none;
 }
 
 .list-section {
