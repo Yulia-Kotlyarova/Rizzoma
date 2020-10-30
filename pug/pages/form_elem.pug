@@ -88,7 +88,7 @@ block content
                             +dropdown_extend_unit("кровати", "2")
                             +dropdown_extend_unit("ванные комнаты", "0")
 
-            .form-elem__dropdown-wrapper
+            .form-elem__dropdown-wrapper.form-elem__dropdown-middle
                 +input("dropdown", "", "Сколько гостей", "expand_more", "active")
                 .form-elem__dropdown
                     +dropdown_extend_unit("взрослые", "0")
@@ -107,18 +107,20 @@ block content
             .expandable__container
                 .expandable__wrapper
                     +list("expandable checkbox list", "","expand_more")
-                .expandable__wrapper
+                .expandable__wrapper.expandable__wrapper-needs
                     +list("expandable checkbox list", "","expand_more", "active")
-                    +list-item("Завтрак", "breakfast")
-                    +list-item("Письменный стол", "writing-table", true)
-                    +list-item("Стул для кормления", "feeding-chair", true)
-                    +list-item("Кроватка", "baby-bed", true)
-                    +list-item("Телевизор", "tv")
-                    +list-item("Шампунь", "shampoo")
+                    .expandable__list-box
+                        +list-item("Завтрак", "breakfast")
+                        +list-item("Письменный стол", "writing-table", true)
+                        +list-item("Стул для кормления", "feeding-chair", true)
+                        +list-item("Кроватка", "baby-bed", true)
+                        +list-item("Телевизор", "tv")
+                        +list-item("Шампунь", "shampoo")
             .rich-list__wrapper
                 h3 rich Checkbox Buttons
-                +rich-list("Широкий коридор", "Ширина коридоров в номере не менее 91 см.", "wide_corridor")
-                +rich-list("Помощник для инвалидов", "На 1 этаже вас встретит специалист  и проводит до номера.", "helper_for_disabled")
+                .rich-list__item-box
+                    +rich-list("Широкий коридор", "Ширина коридоров в номере не менее 91 см.", "wide_corridor")
+                    +rich-list("Помощник для инвалидов", "На 1 этаже вас встретит специалист  и проводит до номера.", "helper_for_disabled")
             .bullet-list___wrapper
                 h3 bullet list
                 ul

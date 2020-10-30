@@ -111,7 +111,7 @@
     }
     &__dropdown-wrapper{
         position: relative;
-        width: 320px;
+        // width: 320px;
         height: 221.5px;
         transition: $transition;
         form > input {
@@ -123,17 +123,20 @@
             @include expand;
         }
     }
+    &__dropdown-middle {
+        margin: 0 0 0 110px;
+    }
     &__dropdown-unit{
         @include flex;
         width: 100%;
         box-sizing: border-box;
-        padding: 7px 0;
+        padding: 6px 0 0;
         h3 {
             display: inline;
         }
     }
     &__dropdown{
-        padding: 0 7px 13px 15px;
+        padding: 0 7px 4px 15px;
         border: 1px solid $DarkShade50;
         border-top: none;
         border-radius: 0 0 4px 4px;
@@ -162,7 +165,7 @@
     }
     &__action {
         @include flex;
-        padding-top: 12px;
+        padding: 17px 0 9px;
         h3 {
             color: $primary-color;
         }
@@ -172,7 +175,7 @@
 .dropdown-section {
     @include flex($align: flex-start);
     width: 100%;
-    padding: 45px 0 0 0;
+    padding: 64px 0 0 0;
 }
 
 // checkbox
@@ -303,25 +306,30 @@
             margin: -1px;
             border-radius: inherit;
           }
-        i {
-            color: $primary-color;
-            font-size: 1rem;
-        }
         span {
             font-size: 1rem;
             line-height: 0;
         }
     }
+
     &__with {
         &:before {
             @include gradient;
           }
+        i {
+        color: $primary-color;
+        font-size: 1rem;
+        }
     }
     
     &__without {
         &:before {
             background: $DarkShade25;
             }
+        i {
+            color: $DarkShade25;
+            font-size: 1rem;
+        }
     }
 }
 
@@ -583,6 +591,7 @@
     }
     p {
         color: $DarkShade75;
+        padding: 3px 0 0 6px;
     }
 }
 
@@ -661,10 +670,8 @@
 .list-section {
     @include flex($align: flex-start);
     width: 100%;
-}
-
-.list-section {
-    padding-top: 40px;
+    padding-top: 15px;
+    max-width: 1095px;
 }
 
 // expandable
@@ -673,19 +680,21 @@
     &__wrapper {
         h3 {
             display: inline;
-            line-height: 1rem;
+            line-height: 1.5rem;
         }
         &:hover,
         &:focus {
             @include expand;
         }
     }
+    &__wrapper-needs {
+        padding-top: 48px;
+    }
     &__title {
         @include flex($align: start);
-        width: 266px;
-        height: 44px;
+        width: 256px;
         i {
-            line-height: 8px;
+            line-height: 17px;
         }
     }
     &__title .active {
@@ -693,9 +702,13 @@
             transform: rotate(180deg);
         }
     }
+    &__list-box {
+        padding-top: 9px;
+    }
     &__list-item {
         @include flex($justify: start);
         padding: 5px 0;
+        line-height: 1.5rem;
     }
 }
 
@@ -703,11 +716,21 @@
 
 .rich-list {
     &__wrapper {
-        width: 233px;
+        width: 255px;
+        padding-left: 52px;
+    }
+    &__box {
+        padding-top: 15px;
     }
     &__item {
-        @include flex($wrap: nowrap);
+        @include flex($align: flex-start, $wrap: nowrap);
         padding: 0 0 10px 0;
+    }
+    &__text-box {
+        span {
+            font-size: 1.2rem;
+            line-height: 1.4rem;
+        }
     }
     &__title {
         font-weight: 700;
@@ -719,9 +742,10 @@
 
 .bullet-list{
     &___wrapper {
-        max-width: 292px;
+        max-width: 255px;
         ul {
             padding: 0 0 0 20px;
+            margin: 10px 0 0 0;
         }
     }
     &__item{
@@ -740,7 +764,7 @@
 .benefits-section {
     @include flex($align: flex-start);
     width: 100%;
-    padding: 100px 0 0 0;
+    padding: 97px 0 0 0;
 }
 
 .benefits {
@@ -749,7 +773,8 @@
     }
     &__box {
         @include flex($justify: start);
-        padding:0 0 17px;
+        width: 291px;
+        padding:0 0 21px;
         border-bottom: 1px solid rgba(31, 32, 65, 0.1);
         &:nth-child(n+2) {
             padding:20px 0 17px;
@@ -777,17 +802,17 @@
     &__wrapper {
         max-width: 711px;
     }
-    &__user-box,
     &__user-textbox {
-        @include flex($justify: start, $wrap: nowrap)
-    }
-    &__user-textbox {
+        @include flex($justify: start, $align: flex-start, $wrap: nowrap);
+        padding: 8px 0 0 3px;
         p {
             padding-left: 14.3px;
         }
     }
     &__user-box {
+        @include flex($justify: start, $wrap: nowrap);
         height: 51px;
+        padding: 10px 0 0 0;
     }
     &__user-info {
         padding-left: 10px;

@@ -221,7 +221,6 @@ input, button {
 }
 .form-elem__dropdown-wrapper {
   position: relative;
-  width: 320px;
   height: 221.5px;
   transition: 0.4s;
 }
@@ -231,6 +230,9 @@ input, button {
 .form-elem__dropdown-wrapper:hover .expand_more, .form-elem__dropdown-wrapper:focus .expand_more, .form-elem__dropdown-wrapper:active .expand_more {
   transform: rotate(180deg);
 }
+.form-elem__dropdown-middle {
+  margin: 0 0 0 110px;
+}
 .form-elem__dropdown-unit {
   display: flex;
   justify-content: space-between;
@@ -238,13 +240,13 @@ input, button {
   flex-wrap: wrap;
   width: 100%;
   box-sizing: border-box;
-  padding: 7px 0;
+  padding: 6px 0 0;
 }
 .form-elem__dropdown-unit h3 {
   display: inline;
 }
 .form-elem__dropdown {
-  padding: 0 7px 13px 15px;
+  padding: 0 7px 4px 15px;
   border: 1px solid rgba(31, 32, 65, 0.5);
   border-top: none;
   border-radius: 0 0 4px 4px;
@@ -281,7 +283,7 @@ input, button {
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  padding-top: 12px;
+  padding: 17px 0 9px;
 }
 .form-elem__action h3 {
   color: #BC9CFF;
@@ -293,7 +295,7 @@ input, button {
   align-items: flex-start;
   flex-wrap: wrap;
   width: 100%;
-  padding: 45px 0 0 0;
+  padding: 64px 0 0 0;
 }
 
 .form-elem__checkbox-wrapper {
@@ -430,10 +432,6 @@ input, button {
   margin: -1px;
   border-radius: inherit;
 }
-.like__box i {
-  color: #BC9CFF;
-  font-size: 1rem;
-}
 .like__box span {
   font-size: 1rem;
   line-height: 0;
@@ -441,8 +439,16 @@ input, button {
 .like__with:before {
   background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
 }
+.like__with i {
+  color: #BC9CFF;
+  font-size: 1rem;
+}
 .like__without:before {
   background: rgba(31, 32, 65, 0.25);
+}
+.like__without i {
+  color: rgba(31, 32, 65, 0.25);
+  font-size: 1rem;
 }
 
 .form-elem__toggle-container {
@@ -754,6 +760,7 @@ input, button {
 }
 .form-elem__pagination-container p {
   color: rgba(31, 32, 65, 0.75);
+  padding: 3px 0 0 6px;
 }
 
 .light-theme li {
@@ -838,32 +845,35 @@ input, button {
   align-items: flex-start;
   flex-wrap: wrap;
   width: 100%;
-}
-
-.list-section {
-  padding-top: 40px;
+  padding-top: 15px;
+  max-width: 1095px;
 }
 
 .expandable__wrapper h3 {
   display: inline;
-  line-height: 1rem;
+  line-height: 1.5rem;
 }
 .expandable__wrapper:hover .expand_more, .expandable__wrapper:focus .expand_more {
   transform: rotate(180deg);
+}
+.expandable__wrapper-needs {
+  padding-top: 48px;
 }
 .expandable__title {
   display: flex;
   justify-content: space-between;
   align-items: start;
   flex-wrap: wrap;
-  width: 266px;
-  height: 44px;
+  width: 256px;
 }
 .expandable__title i {
-  line-height: 8px;
+  line-height: 17px;
 }
 .expandable__title .active i {
   transform: rotate(180deg);
+}
+.expandable__list-box {
+  padding-top: 9px;
 }
 .expandable__list-item {
   display: flex;
@@ -871,17 +881,26 @@ input, button {
   align-items: center;
   flex-wrap: wrap;
   padding: 5px 0;
+  line-height: 1.5rem;
 }
 
 .rich-list__wrapper {
-  width: 233px;
+  width: 255px;
+  padding-left: 52px;
+}
+.rich-list__box {
+  padding-top: 15px;
 }
 .rich-list__item {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   flex-wrap: nowrap;
   padding: 0 0 10px 0;
+}
+.rich-list__text-box span {
+  font-size: 1.2rem;
+  line-height: 1.4rem;
 }
 .rich-list__title {
   font-weight: 700;
@@ -889,10 +908,11 @@ input, button {
 }
 
 .bullet-list___wrapper {
-  max-width: 292px;
+  max-width: 255px;
 }
 .bullet-list___wrapper ul {
   padding: 0 0 0 20px;
+  margin: 10px 0 0 0;
 }
 .bullet-list__item {
   position: relative;
@@ -917,7 +937,7 @@ input, button {
   align-items: flex-start;
   flex-wrap: wrap;
   width: 100%;
-  padding: 100px 0 0 0;
+  padding: 97px 0 0 0;
 }
 
 .benefits__wrapper {
@@ -928,7 +948,8 @@ input, button {
   justify-content: start;
   align-items: center;
   flex-wrap: wrap;
-  padding: 0 0 17px;
+  width: 291px;
+  padding: 0 0 21px;
   border-bottom: 1px solid rgba(31, 32, 65, 0.1);
 }
 .benefits__box:nth-child(n+2) {
@@ -952,17 +973,23 @@ input, button {
 .response__wrapper {
   max-width: 711px;
 }
-.response__user-box, .response__user-textbox {
+.response__user-textbox {
   display: flex;
   justify-content: start;
-  align-items: center;
+  align-items: flex-start;
   flex-wrap: nowrap;
+  padding: 8px 0 0 3px;
 }
 .response__user-textbox p {
   padding-left: 14.3px;
 }
 .response__user-box {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-wrap: nowrap;
   height: 51px;
+  padding: 10px 0 0 0;
 }
 .response__user-info {
   padding-left: 10px;
