@@ -2,7 +2,10 @@ node_modules
 pug/ui_kit/color_type/dist
 pug/ui_kit/form_elem/dist
 pug/pages/dist
+pug/pages/headers_and_footers/dist
+pug/components/dist
 style/dist
 jquery/dist
 text.txt
 FormElements.jpg
+HeadersFooters.jpg

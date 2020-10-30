@@ -1,0 +1,11 @@
+@import '../../style/mixins';
+@import '../../style/const.scss';
+@import '../../style/style.scss';
+
+.colored-logo{
+    &__wrapper {
+        @include flex;
+        width: 106px;
+        height: 40px;
+    }
+}

@@ -1,12 +1,8 @@
 mixin logo(path)
     img.logo-icon(src= ""+path +"" alt="logo")
 
-mixin links(link1, link2, link3, link4, link4)
-    link( rel="stylesheet" href="" + link1 +"")
-    link(rel="stylesheet" href="" + link2 +"")
-    link(rel="stylesheet" href="" + link3 +"")
-    link(rel="stylesheet" href="" + link4+"")
-    link(rel="stylesheet" href="" + link5+"")
+mixin links(linkItem)
+    link( rel="stylesheet" href="" + linkItem +"")
 
 mixin input-action(clear= "очистить", save= "применить")
     .form-elem__action

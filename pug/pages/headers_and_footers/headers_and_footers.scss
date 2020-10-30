@@ -1,0 +1,11 @@
+@import '../../../style/style.scss';
+@import '../../components/dist/header.css';
+
+.header-and-footer-wrapper {
+    @include flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    height: 1350px;
+    padding: 140px 0;
+    background-color: $colored-back;
+}

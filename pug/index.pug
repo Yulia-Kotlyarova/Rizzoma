@@ -5,19 +5,5 @@ block variables
 include mixins/color_type_mixins.pug
 
 block content
-    section.color-type__wrapper
-        .color-box
-            ul.color-box__list
-                +color_mode("#1F2041", "Dark Shade 100%", "100%")
-                +color_mode("#1F2041", "Dark Shade 75%", "75%")
-                +color_mode("#1F2041", "Dark Shade 50%", "50%")
-                +color_mode("#1F2041", "Dark Shade 25%", "25%")
-                +color_mode("#1F2041", "Dark Shade 5%", "5%")
-                +color_mode("#BC9CFF", "Purple")
-                +color_mode("#6FCF97", "Green")
-        .font-box
-            ul.font-box__list
-                +font_mode("H1", "This one is the sub-section or widget title")
-                +font_mode("H2", "Next one is the item title inside widgets")
-                +font_mode("H3", "This is a label or CTA text")
-                +font_mode("body", "This is the body text which is used for most of the design, like paragraphs, lists, etc.")
+    section
+        a(href="./pages/headers_and_footers/headers_and_footers.html") Headers and Footers
