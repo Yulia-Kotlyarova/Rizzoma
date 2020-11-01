@@ -126,40 +126,6 @@ input, button {
   color: rgba(31, 32, 65, 0.5);
   outline: none;
 }
-.form-elem__wrapper form {
-  position: relative;
-  width: 320px;
-  padding-bottom: 19.56px;
-  margin: 0;
-}
-.form-elem__wrapper form .input__text-box {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  padding-bottom: 5px;
-  color: rgba(31, 32, 65, 0.25);
-}
-.form-elem__wrapper form .input__text-box h3 {
-  display: inline;
-}
-.form-elem__wrapper form .input__text-box span {
-  text-transform: uppercase;
-  color: rgba(31, 32, 65, 0.25);
-  line-height: 0;
-  font-size: 1.2rem;
-}
-.form-elem__wrapper form .material-icons {
-  position: absolute;
-  right: 10px;
-  bottom: 30px;
-  color: rgba(31, 32, 65, 0.5);
-}
-.form-elem__wrapper form .arrow_forward {
-  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-  -webkit-background-clip: text;
-  color: transparent;
-}
 .form-elem__wrapper .form-elem__date-dropdown {
   display: flex;
   justify-content: space-between;
@@ -188,14 +154,16 @@ input, button {
 .form-elem__wrapper .form-elem__input-simple form {
   padding-bottom: 20px;
 }
-.form-elem__wrapper .input__field .active {
+
+.input__field .active {
   border: 1px solid rgba(31, 32, 65, 0.5);
 }
-.form-elem__wrapper .input__field .active::placeholder {
+.input__field .active::placeholder {
   color: rgba(31, 32, 65, 0.5);
   outline: none;
 }
-.form-elem__wrapper .input__field {
+
+.input__field {
   border: 1px solid rgba(31, 32, 65, 0.25);
   border-radius: 4px;
   padding: 13px 15px;
@@ -203,18 +171,53 @@ input, button {
   transition: 0.4s;
   outline: none;
 }
-.form-elem__wrapper .input__field::placeholder {
+.input__field::placeholder {
   font-family: "Montserrat", sans-serif;
   font-size: 1.4rem;
   color: rgba(31, 32, 65, 0.25);
   transition: 0.4s;
 }
-.form-elem__wrapper .input__field:focus, .form-elem__wrapper .input__field:hover {
+.input__field:focus, .input__field:hover {
   border: 1px solid rgba(31, 32, 65, 0.5);
 }
-.form-elem__wrapper .input__field:focus::placeholder, .form-elem__wrapper .input__field:hover::placeholder {
+.input__field:focus::placeholder, .input__field:hover::placeholder {
   color: rgba(31, 32, 65, 0.5);
   outline: none;
+}
+
+form {
+  position: relative;
+  width: 320px;
+  padding-bottom: 19.56px;
+  margin: 0;
+}
+form .input__text-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding-bottom: 5px;
+  color: rgba(31, 32, 65, 0.25);
+}
+form .input__text-box h3 {
+  display: inline;
+}
+form .input__text-box span {
+  text-transform: uppercase;
+  color: rgba(31, 32, 65, 0.25);
+  line-height: 0;
+  font-size: 1.2rem;
+}
+form .material-icons {
+  position: absolute;
+  right: 10px;
+  bottom: 30px;
+  color: rgba(31, 32, 65, 0.5);
+}
+form .arrow_forward {
+  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+  -webkit-background-clip: text;
+  color: transparent;
 }
 
 .form-elem__dropdown-container .form-elem__small:first-child form {

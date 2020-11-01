@@ -12,8 +12,10 @@ mixin input-action(clear= "очистить", save= "применить")
 mixin input(title, subtitle, innerText, icon, className = "default")
     form(action="")
         .input__text-box
-            h3= title 
-            span= subtitle
+            if title
+                h3= title 
+            if subtitle
+                span= subtitle
         input(class = ""+className+" " +"input__field" type = "text" placeholder = "" + innerText + "")
         if icon
             i(class="material-icons md-24" + " "+ icon+ "")= icon
