@@ -1,14 +1,14 @@
 @font-face {
   font-family: "Montserrat";
-  src: url("../../../assets/fonts/Montserrat/Montserrat-Regular.eot");
-  src: url("../../../assets/fonts/Montserrat/Montserrat-Regular.eot?iefix") format("eot"), url("../../../assets/fonts/Montserrat/Montserrat-Regular.woff") format("woff"), url("../../../assets/fonts/Montserrat/Montserrat-Regular.ttf") format("truetype");
+  src: url("../../../../../assets/fonts/Montserrat/Montserrat-Regular.eot");
+  src: url("../../../../../assets/fonts/Montserrat/Montserrat-Regular.eot?iefix") format("eot"), url("../../../../../assets/fonts/Montserrat/Montserrat-Regular.woff") format("woff"), url("../../../../../assets/fonts/Montserrat/Montserrat-Regular.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "Montserrat";
-  src: url("../../../assets/fonts/Montserrat/Montserrat-Bold.eot");
-  src: url("../../../assets/fonts/Montserrat/Montserrat-Bold.eot?iefix") format("eot"), url("../../../assets/fonts/Montserrat/Montserrat-Bold.woff") format("woff"), url("../../../assets/fonts/Montserrat/Montserrat-Bold.ttf") format("truetype");
+  src: url("../../../../../assets/fonts/Montserrat/Montserrat-Bold.eot");
+  src: url("../../../../../assets/fonts/Montserrat/Montserrat-Bold.eot?iefix") format("eot"), url("../../../../../assets/fonts/Montserrat/Montserrat-Bold.woff") format("woff"), url("../../../../../assets/fonts/Montserrat/Montserrat-Bold.ttf") format("truetype");
   font-weight: 700;
   font-style: normal;
 }
@@ -88,6 +88,7 @@ h3, .h3 {
 
 a {
   color: inherit;
+  text-decoration: none;
 }
 a:hover {
   text-decoration: none;
@@ -97,4 +98,136 @@ a:hover {
 
 p {
   margin: 0;
+}
+
+input, button {
+  outline: none;
+}
+
+.logo-icon {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+}
+
+.form-elem__buttons-container {
+  padding-top: 5px;
+}
+
+.button__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 218px;
+  height: 149px;
+}
+.button__fill {
+  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+  padding: 3px 20px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 3;
+  border-radius: 22px;
+  color: #fff;
+  transition: 0.4s;
+  border: none;
+}
+.button__fill:hover {
+  cursor: pointer;
+}
+.button__fill:hover {
+  opacity: 50%;
+}
+.button__bordered {
+  padding: 2px 17px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 3;
+  border-radius: 22px;
+  color: #fff;
+  transition: 0.4s;
+  position: relative;
+  color: #BC9CFF;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 2px solid transparent;
+}
+.button__bordered:hover {
+  cursor: pointer;
+}
+.button__bordered::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  margin: -2px;
+  border-radius: inherit;
+  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+  transition: 0.4s;
+}
+.button__bordered::before:hover {
+  cursor: pointer;
+}
+.button__bordered:hover {
+  color: rgba(188, 156, 255, 0.5);
+}
+.button__bordered:hover::before {
+  background: linear-gradient(180deg, rgba(188, 156, 255, 0.5) 0%, rgba(139, 164, 249, 0.5) 100%);
+}
+.button__text-box {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 15px 0;
+}
+.button__text {
+  border: none;
+  background-color: transparent;
+  color: #BC9CFF;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 1.2rem;
+  padding: 0 18px 0 0;
+  transition: 0.4s;
+}
+.button__text:hover {
+  cursor: pointer;
+}
+.button__text:hover {
+  color: rgba(31, 32, 65, 0.5);
+}
+.button__pay {
+  width: 320px;
+  height: 44px;
+  margin: 17px 0 0 0;
+  position: relative;
+}
+.button__pay i {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+
+.button__fill-active {
+  opacity: 50%;
+}
+
+.button__bordered-active {
+  color: rgba(188, 156, 255, 0.5);
+}
+.button__bordered-active::before {
+  background: linear-gradient(180deg, rgba(188, 156, 255, 0.5) 0%, rgba(139, 164, 249, 0.5) 100%);
+}
+
+.button__text-active {
+  color: rgba(31, 32, 65, 0.5);
 }

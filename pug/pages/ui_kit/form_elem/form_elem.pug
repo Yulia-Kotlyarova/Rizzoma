@@ -1,20 +1,12 @@
-extend ../main.pug
+extend ../../../main.pug
 
 block variables
 
-include ../mixins/color_type_mixins.pug
-include ../mixins/main_mixins.pug
-
-block prepend scripts
-  script(src= '../../../node_modules/jquery/dist/jquery.js')
-  script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js")
-
-block append scripts
-  script(src='./range.js')
-
+include ../../../mixins/color_type_mixins.pug
+include ../../../mixins/main_mixins.pug
 
 block content
-    link(rel="stylesheet" href="../ui_kit/form_elem/dist/form_elem.css")
+    link(rel="stylesheet" href="./dist/form_elem.css")
     link(rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons")
     main.form-elem__wrapper
         .form-elem__inputs-wrapper
@@ -132,4 +124,4 @@ block content
                 +benefit("Комфорт", "Шумопоглощающие стены", "insert_emoticon")
                 +benefit("Удобство", "Окно в каждой из спален", "location_city")
             .response__wrapper
-                +response("../../assets/img/photo.png", "Мурад Сарафанов", "5 дней назад", "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.")  
+                +response("../../../../assets/img/photo.png", "Мурад Сарафанов", "5 дней назад", "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.")  

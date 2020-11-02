@@ -8,7 +8,7 @@ block title
 include mixins/main_mixins.pug
 
 block prepend scripts
-  script(src= '../../../node_modules/jquery/dist/jquery.js')
+  script(src= '../../../../node_modules/jquery/dist/jquery.js')
   script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js")
 
 block append scripts
@@ -19,15 +19,15 @@ html(lang='ru')
         head
                 meta(charset="utf-8")
                 meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1')
-                +links("../ui_kit/color_type/dist/color_type.css", "../../style/dist/style.css", "../../jquery/ui_style.css", "https://fonts.googleapis.com/css?family=Cute+Font|Inconsolata", "../../jquery/simplePagination.css")
+                +links("./dist/color_type.css")
+                +links("../../../style/dist/style.css")
+                +links("../../../../../jquery/ui_style.css")
+                +links("https://fonts.googleapis.com/css?family=Cute+Font|Inconsolata")
+                +links("../../../../../jquery/simplePagination.css")
         body
-                +logo('../../assets/icons/logo.svg')
+                +logo('../../../../assets/icons/logo.svg')
                 block content
-                script(src='../../jquery/ui_min.js')
-                script(src='../../jquery/ui_touch.js')
-                script(src='../../jquery/jquery.simplePagination.js')
-                script(src='./range.js')
-                script(src='./pagination.js') 
+
 
 
 //- Footer
@@ -35,4 +35,9 @@ html(lang='ru')
 
 
 //- block scripts
-//- block scripts
+block scripts
+        script(src='../../../../../jquery/ui_min.js')
+        script(src='../../../../../jquery/ui_touch.js')
+        script(src='../../../../../jquery/jquery.simplePagination.js')
+        script(src='./range.js')
+        script(src='./pagination.js') 

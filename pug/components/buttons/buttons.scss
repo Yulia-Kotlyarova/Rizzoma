@@ -1,3 +1,87 @@
 @import '../../../style/const.scss';
 @import '../../../style/style.scss';
 @import '../../../style/mixins.scss';
+
+.form-elem__buttons-container {
+    padding-top: 5px;
+}
+
+.button{
+    &__wrapper {
+        @include flex;
+        max-width: 218px;
+        height: 149px;
+    }
+    &__fill {
+        @include gradient;
+        @include btn-rounded;
+        border: none;
+        &:hover {
+            opacity: 50%;
+        }
+    }
+    &__bordered {
+        @include btn-rounded($padding: 2px 17px);
+        position: relative;
+        color: $primary-color;
+        background-color: #fff;
+        background-clip: padding-box;
+        border: 2px solid transparent;
+        &::before {
+            @include gradient-border($margin: -2px);
+            @include gradient;
+            transition: $transition;
+        }
+        &:hover {
+            color:  $primary-color-opacity;
+            &::before {
+                @include gradient($color1: $primary-color-opacity, $color2: $primary-blue-opacity);
+            }
+        }
+    }
+    &__text-box {
+        @include flex($justify: start);
+        padding: 15px 0;
+    }
+    &__text {
+        @include cursor-style;
+        border: none;
+        background-color: transparent;
+        color: $primary-color;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 700;
+        font-size: 1.2rem;
+        padding: 0 18px 0 0;
+        transition: $transition;
+        &:hover{
+            color: $DarkShade50;
+        }
+    }
+    &__pay {
+        width: 320px;
+        height: 44px;
+        margin: 17px 0 0 0;
+        position: relative;
+            i {
+                position: absolute;
+                right: 10px;
+                top: 10px;
+            }
+    }
+
+}
+
+.button__fill-active {
+    opacity: 50%;
+}
+
+.button__bordered-active {
+    color:  $primary-color-opacity;
+    &::before {
+        @include gradient($color1: $primary-color-opacity, $color2: $primary-blue-opacity);
+    }
+}
+
+.button__text-active {
+    color: $DarkShade50;
+}

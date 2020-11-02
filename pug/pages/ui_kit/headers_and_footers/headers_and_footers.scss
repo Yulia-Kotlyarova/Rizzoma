@@ -1,5 +1,6 @@
-@import '../../../style/style.scss';
-@import '../../components/dist/header.css';
+@import '../../../../style/style.scss';
+@import '../../../components/header.scss';
+@import '../form_elem/form_elem.scss';
 
 .header-and-footer-wrapper {
     @include flex;
