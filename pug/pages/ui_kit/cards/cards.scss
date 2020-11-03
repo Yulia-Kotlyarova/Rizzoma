@@ -1,3 +1,100 @@
 @import '../../../../style/const.scss';
 @import '../../../../style/style.scss';
 @import '../../../../style/mixins';
+@import '../../../components/rate/rate.scss';
+
+body {
+    background-color: $colored-back;
+}
+
+.card {
+    &__wrapper {
+        position: relative;
+        width: 270px;
+        border-radius: 3px;
+        background-color: #fff;
+        overflow: hidden;
+    }
+
+    &__img-box {
+        position: relative;
+        width: 270px;
+        height: 151px;
+        &::before {
+            position: absolute;
+            content:'';
+            height:100%;
+            width:270px;
+            top:0;
+            left:0;
+            background: linear-gradient(to right, rgba(0,0,0,0.5) 0.5%, 5%,transparent 15%,transparent 85%, rgba(0,0,0,0.5) 99.5%, 5%, rgba(0,0,0,0.5) 100%);
+        }
+    }
+    &__info-box {
+        @include flex;
+        flex-direction: column;
+        padding: 20px 17px 19px 20px;
+    }
+    &__up-info {
+        @include flex;
+        width: 100%;
+        padding-bottom: 10px;
+    }
+    &__number,
+    &__price,
+    &__response_quantity {
+        font-weight: 700;
+    }
+    &__lux {
+        font-size: 1.2rem;
+        text-transform: uppercase;
+        color: $primary-color;
+    }
+    &__down-info {
+        @include flex;
+        width: 100%;
+        border-top: 1px solid $DarkShade10;
+        padding-top: 8px;
+    }
+    &__left-arr,
+    &__right-arr {
+        position: absolute;
+        top: 63.5px;
+        color: #fff;
+        cursor: pointer;
+    }
+    &__left-arr {
+        transform: rotate(90deg);
+        left: 10px;
+    }
+    &__right-arr {
+        transform: rotate(-90deg);
+        left: 236px;
+    }
+}
+
+.slick-dots {
+    @include flex;
+    position: absolute;
+    width: 41px;
+    top: 110px;
+    left: 161px;
+    list-style: none;
+    li {
+        &:before {
+            @include circle($width: 5.6px, $height: 5.6px);
+            background-color: transparent;
+            border: 1px solid #fff;
+            cursor: pointer;
+        }
+        button {
+            display: none;
+        }
+    }
+
+    .slick-active {
+        &:before {
+            background-color: #fff;
+        }
+    }
+}

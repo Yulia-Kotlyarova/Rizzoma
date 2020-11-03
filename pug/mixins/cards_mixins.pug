@@ -1,0 +1,29 @@
+include ./main_mixins.pug
+
+mixin card(card_number,price, path, response_quantity, arrows = false, lux = false, rate_points = 0)
+    .card__wrapper
+        .card__img-slider
+            .card__img-box
+                img(src=""+ path+ "", alt="photo")
+            .card__img-box
+                img(src=""+ path+ "", alt="photo")
+            .card__img-box
+                img(src=""+ path+ "", alt="photo")
+            .card__img-box
+                img(src=""+ path+ "", alt="photo")
+        if arrows
+            i(class="material-icons md-24 card__left-arr ") expand_more
+            i(class="material-icons md-24 card__right-arr ") expand_more
+        .card__info-box
+            .card__up-info
+                span.card__number= "№" + card_number
+                    if lux
+                        span.card__lux &nbsp;люкс
+                p
+                    span.card__price= price + " ₽"
+                    span &nbsp;в сутки
+            .card__down-info
+                +rate(card_number,rate_points)
+                p
+                    span.card__response_quantity= response_quantity
+                    span &nbsp;отзывов

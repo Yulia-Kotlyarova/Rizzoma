@@ -1,6 +1,12 @@
 @import '../../../../style/style.scss';
+@import '../../../../style/const.scss';
 @import '../../../components/header.scss';
 @import '../form_elem/form_elem.scss';
+
+body {
+    max-width: 100%;
+    background-color: $colored-back;
+}
 
 .header-and-footer-wrapper {
     @include flex;
@@ -8,5 +14,4 @@
     box-sizing: border-box;
     height: 1350px;
     padding: 140px 0;
-    background-color: $colored-back;
 }

@@ -4,6 +4,9 @@ mixin logo(path)
 mixin links(linkItem)
     link( rel="stylesheet" href="" + linkItem +"")
 
+mixin script(linkItem)
+    script( type="text/javascript" src="" + linkItem +"")
+
 mixin input-action(clear= "очистить", save= "применить")
     .form-elem__action
         h3= clear

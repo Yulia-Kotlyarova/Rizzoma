@@ -63,7 +63,7 @@ html {
 }
 
 body, .body {
-    @include container(1440, 0);
+    @include container(100%, 0);
     margin: 0 auto;
     color: $DarkShade50;
     font-family: 'Montserrat', sans-serif;

@@ -5,6 +5,9 @@
 footer {
     width: 100%;
     // height: 442px;
+    .colored-logo__wrapper {
+        padding-bottom: 20px;
+    }
 }
 
 .footer{
@@ -60,9 +63,6 @@ footer {
         height: 367px;
         background-color: #fff;
         margin: 0 auto;
-        .colored-logo__wrapper {
-            padding-bottom: 20px;
-        }
         p {
             padding-bottom: 25px;
         }

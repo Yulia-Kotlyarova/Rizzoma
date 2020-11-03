@@ -36,8 +36,12 @@ html(lang='ru')
 
 //- block scripts
 block scripts
-        script(src='../../../../../jquery/ui_min.js')
-        script(src='../../../../../jquery/ui_touch.js')
-        script(src='../../../../../jquery/jquery.simplePagination.js')
-        script(src='./range.js')
-        script(src='./pagination.js') 
+        +script('../../../../../jquery/ui_min.js')
+        +script('../../../../../jquery/ui_touch.js')
+        +script('../../../../../jquery/jquery.simplePagination.js')
+        +script('./range.js')
+        +script('./pagination.js') 
+        +script("//code.jquery.com/jquery-1.11.0.min.js")
+        +script("//code.jquery.com/jquery-migrate-1.2.1.min.js")
+        +script("../../../../../slick-1.8.1/slick/slick.min.js")
+        +script("./card.js")

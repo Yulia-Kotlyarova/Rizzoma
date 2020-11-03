@@ -3,8 +3,12 @@ extend ../../../main.pug
 block variables
 
 include ../../../mixins/color_type_mixins.pug
+include ../../../mixins/cards_mixins.pug
 include ../../../mixins/main_mixins.pug
 
 block content
-    link(rel="stylesheet" href="./dist/form_elem.css")
-    link(rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons")
+    +links("../../../../slick-1.8.1/slick/slick.css")
+    +links("./dist/cards.css")
+    +links("https://fonts.googleapis.com/icon?family=Material+Icons")
+    +card("888", 9990, "../../../../assets/img/number_880.png", 65, true, true, 1)
+
