@@ -54,10 +54,10 @@ block content
             .form-elem__buttons-container
                 h3 buttons
                 .button__wrapper
-                    +button-round("CLICK ME", fill= true)
-                    +button-round("CLICK ME", fill= true,  bordered = false, "active")
-                    +button-round("CLICK ME", fill= false,  bordered = true)
-                    +button-round("CLICK ME", fill= false,  bordered = true, "active")
+                    +button-round("CLICK ME", true)
+                    +button-round("CLICK ME", true, false, "active")
+                    +button-round("CLICK ME", false, true)
+                    +button-round("CLICK ME", false, true, "active")
                 .button__text-box
                     +button-text("CLICK ME")
                     +button-text("CLICK ME", "active")

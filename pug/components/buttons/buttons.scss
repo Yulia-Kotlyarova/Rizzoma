@@ -21,17 +21,14 @@
         }
     }
 
-    &__border-box {
+    &__bordered-box {
         @include btn-rounded($padding: 2px);
         @include gradient;
         box-sizing: border-box;
         max-width: 250px;
         position: relative;
         &:hover {
-            @include gradient($color1: $primary-color-opacity, $color2: $primary-blue-opacity);
-            .button__bordered {
-                color:  $primary-color-opacity;
-            }
+            opacity: 50%;
         }
     }
     &__bordered {
@@ -76,11 +73,8 @@
     opacity: 50%;
 }
 
-.button__bordered-active {
-    color:  $primary-color-opacity;
-    &::before {
-        @include gradient($color1: $primary-color-opacity, $color2: $primary-blue-opacity);
-    }
+.button__bordered-box-active {
+    opacity: 50%;
 }
 
 .button__text-active {

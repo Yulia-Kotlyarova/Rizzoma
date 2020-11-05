@@ -78,8 +78,8 @@ mixin button-round(text, fill = false, bordered = false, active = "", icon)
         if fill
             button(class = "button__fill" + " "+"button__fill-" +active+"")= text
         else
-        .button__border-box
-            button(class = "button__bordered" + " "+"button__bordered-"+ active+"")= text
+            div(class = "button__bordered-box" + " "+"button__bordered-box-"+ active+"")
+                button(class = "button__bordered")= text
 
 mixin button-text(text, active= "")
     button(class = "button__text"+ " "+"button__text-"+ active+"")= text

@@ -65,6 +65,7 @@ h1, .h1 {
   font-size: 2.4rem;
   line-height: 3rem;
   color: #1F2041;
+  margin: 0;
 }
 
 h2, .h2 {
@@ -143,7 +144,7 @@ input, button {
 .button__fill:hover {
   opacity: 50%;
 }
-.button__border-box {
+.button__bordered-box {
   padding: 2px;
   font-family: "Montserrat", sans-serif;
   font-size: 1.2rem;
@@ -159,14 +160,11 @@ input, button {
   max-width: 250px;
   position: relative;
 }
-.button__border-box:hover {
+.button__bordered-box:hover {
   cursor: pointer;
 }
-.button__border-box:hover {
-  background: linear-gradient(180deg, #e7e7fe 0%, rgba(139, 164, 249, 0.4) 100%);
-}
-.button__border-box:hover .button__bordered {
-  color: #e7e7fe;
+.button__bordered-box:hover {
+  opacity: 50%;
 }
 .button__bordered {
   padding: 0px 15px 1px 17px;
@@ -224,11 +222,8 @@ input, button {
   opacity: 50%;
 }
 
-.button__bordered-active {
-  color: #e7e7fe;
-}
-.button__bordered-active::before {
-  background: linear-gradient(180deg, #e7e7fe 0%, rgba(139, 164, 249, 0.4) 100%);
+.button__bordered-box-active {
+  opacity: 50%;
 }
 
 .button__text-active {

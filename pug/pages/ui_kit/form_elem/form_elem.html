@@ -6,11 +6,11 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <link rel="stylesheet" href="./dist/color_type.css"/>
-    <link rel="stylesheet" href="../../../style/dist/style.css"/>
-    <link rel="stylesheet" href="../../../../../jquery/ui_style.css"/>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cute+Font|Inconsolata"/>
-    <link rel="stylesheet" href="../../../../../jquery/simplePagination.css"/>
+    <link rel="stylesheet" href="./dist/color_type.css" type="text/css"/>
+    <link rel="stylesheet" href="../../../style/dist/style.css" type="text/css"/>
+    <link rel="stylesheet" href="../../../../../jquery/ui_style.css" type="text/css"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cute+Font|Inconsolata" type="text/css"/>
+    <link rel="stylesheet" href="../../../../../jquery/simplePagination.css" type="text/css"/>
   </head>
   <body><img class="logo-icon" src="../../../../assets/icons/logo.svg" alt="logo"/>
     <link rel="stylesheet" href="./dist/form_elem.css">
@@ -166,8 +166,12 @@
           <div class="button__wrapper">
             <button class="button__fill button__fill-">CLICK ME</button>
             <button class="button__fill button__fill-active">CLICK ME</button>
-            <button class="button__bordered button__bordered-">CLICK ME</button>
-            <button class="button__bordered button__bordered-active">CLICK ME</button>
+            <div class="button__bordered-box button__bordered-box-">
+              <button class="button__bordered">CLICK ME</button>
+            </div>
+            <div class="button__bordered-box button__bordered-box-active">
+              <button class="button__bordered">CLICK ME</button>
+            </div>
           </div>
           <div class="button__text-box">
             <button class="button__text button__text-">CLICK ME</button>
@@ -261,7 +265,7 @@
               </div>
             </div>
             <div class="form-elem__action">
-              <h3>очистить</h3>
+              <h3 class="clear" data-action="clear">очистить</h3>
               <h3>применить</h3>
             </div>
           </div>
@@ -299,7 +303,7 @@
               </div>
             </div>
             <div class="form-elem__action">
-              <h3>очистить</h3>
+              <h3 class="clear" data-action="clear">очистить</h3>
               <h3>применить</h3>
             </div>
           </div>
@@ -410,3 +414,5 @@
 <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 <script type="text/javascript" src="../../../../../slick-1.8.1/slick/slick.min.js"></script>
 <script type="text/javascript" src="./card.js"></script>
+<script type="text/javascript" src="../../../../node_modules/air-datepicker/dist/js/datepicker.min.js"></script>
+<script type="text/javascript" src="../../../components/datepicker/datepicker.js"></script>
