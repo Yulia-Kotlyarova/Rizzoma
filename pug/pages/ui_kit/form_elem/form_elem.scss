@@ -3,6 +3,8 @@
 @import '../../../../style/mixins';
 @import '../../../components/buttons/buttons.scss';
 @import '../../../components/rate/rate.scss';
+@import '../../../components/form_elem/actions.scss';
+@import '../../../components/inputs/input.scss';
 
 .kit-main {
     @include flex;
@@ -51,57 +53,61 @@
         }
     }
 }
-.input__field .active {
-    @include input-active();
-}    
-
-.input__field {
-    border: 1px solid $DarkShade25;
-    border-radius: 4px;
-    padding: 13px 15px;
-    width: 100%;
-    transition: $transition;
-    outline: none;
-    &::placeholder {
-        @include placeholder-input;
-        color: $DarkShade25;
-        transition: $transition;
-    }
-    &:focus, 
-    &:hover {
-        @include input-active();
-    }
-}
 
 form {
-    position: relative;
-    width: 320px;
-    padding-bottom: 19.56px;
-    margin: 0;
-    .input__text-box {
-        @include flex;
-        padding-bottom: 5px;
-        color: $DarkShade25;
-        h3 {
-            display: inline;
-        }
-        span {
-            text-transform: uppercase;
-            color: $DarkShade25;
-            line-height: 0;
-            font-size: 1.2rem;
-        }
-    }
-    .material-icons {
-        position: absolute;
-        right: 10px;
-        bottom: 30px;
-        color: $DarkShade50;
-    }
-    .arrow_forward {
-        @include gradient-icon;
-    }
+    padding-bottom: 19.56px; // TODO inspect a page about form padding
 }
+// .input__field .active {
+//     @include input-active();
+// }    
+
+// .input__field {
+//     border: 1px solid $DarkShade25;
+//     border-radius: 4px;
+//     padding: 13px 15px;
+//     width: 100%;
+//     transition: $transition;
+//     outline: none;
+//     &::placeholder {
+//         @include placeholder-input;
+//         color: $DarkShade25;
+//         transition: $transition;
+//     }
+//     &:focus, 
+//     &:hover {
+//         @include input-active();
+//     }
+// }
+
+// form {
+//     position: relative;
+//     width: 320px;
+//     padding-bottom: 19.56px;
+//     margin: 0;
+//     .input__text-box {
+//         @include flex;
+//         padding-bottom: 5px;
+//         color: $DarkShade25;
+//         h3 {
+//             display: inline;
+//         }
+//         span {
+//             text-transform: uppercase;
+//             color: $DarkShade25;
+//             line-height: 0;
+//             font-size: 1.2rem;
+//         }
+//     }
+//     .material-icons {
+//         position: absolute;
+//         right: 10px;
+//         bottom: 30px;
+//         color: $DarkShade50;
+//     }
+//     .arrow_forward {
+//         @include gradient-icon;
+//     }
+// }
 
 // dropdown
 
@@ -168,13 +174,7 @@ form {
             color: $DarkShade25;
         }
     }
-    &__action {
-        @include flex;
-        padding: 17px 0 9px;
-        h3 {
-            color: $primary-color;
-        }
-    }
+
 }
 
 .dropdown-section {

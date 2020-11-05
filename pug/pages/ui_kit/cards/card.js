@@ -6,5 +6,5 @@ window.onload = () => {
         prevArrow: $('.card__left-arr '),
         nextArrow: $('.card__right-arr '),
     });
-    console.log('ready');
+    console.log(slick);
   };

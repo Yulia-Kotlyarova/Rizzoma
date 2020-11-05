@@ -1,0 +1,14 @@
+include ../../mixins/main_mixins.pug
+
+//- mixin text-and-button (text, button)
+
+.log-in__wrapper
+    h2 Войти
+    .input__wrapper
+        +input(false, false, "Email")
+        +input(false, false, "password")
+    button(class = "button__fill button__pay") войти
+        i(class="material-icons md-24 ") arrow_forward
+    .log-in__create
+        p Нет аккаунта на Toxin?
+        +button-round("создать", fill= false,  bordered = true)

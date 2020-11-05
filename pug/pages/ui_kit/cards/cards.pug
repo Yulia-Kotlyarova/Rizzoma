@@ -9,6 +9,15 @@ include ../../../mixins/main_mixins.pug
 block content
     +links("../../../../slick-1.8.1/slick/slick.css")
     +links("./dist/cards.css")
+    +links("../../../components/inputs/dist/input.css")
+    +links("../../../components/form_elem/dist/log_in.css")
+    +links("../../../components/buttons/dist/buttons.css")
+    +links("../../../components/datepicker/dist/datepicker.css")
     +links("https://fonts.googleapis.com/icon?family=Material+Icons")
-    +card("888", 9990, "../../../../assets/img/number_880.png", 65, true, true, 1)
-
+    +links("../../../../../../node_modules/air-datepicker/dist/css/datepicker.min.css")
+    main
+        include ../../../components/form_elem/log_in.pug
+        +calendar("card-calendar")
+        +card("888", 9990, "../../../../assets/img/number_880.png", 145, true, true, 1)
+        +card("840", 9990, "../../../../assets/img/number_840.jpg", 65, false, false, 2)
+    

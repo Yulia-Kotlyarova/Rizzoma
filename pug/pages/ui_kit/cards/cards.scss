@@ -7,6 +7,11 @@ body {
     background-color: $colored-back;
 }
 
+main {
+    @include container($padding: 150px 140px 140px);
+    @include flex($align: start);
+}
+
 .card {
     &__wrapper {
         position: relative;

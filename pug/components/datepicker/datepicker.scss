@@ -1,0 +1,112 @@
+@import '../../../style/const.scss';
+@import '../../../style/mixins.scss';
+@import '../form_elem/actions.scss';
+
+@mixin range-background($width: 16px) {
+    content: '';
+    position: absolute;
+    right: 0px;
+    width: $width;
+    height: 40px;
+    background-color: $primary-color-opacity;
+    z-index: -1;
+}
+
+.calendar__wrapper {
+    max-width: 320px;
+    background-color: #fff;
+    border: 1px solid $DarkShade25;
+    border-radius: 4px;
+    .datepicker {
+        margin: auto;
+        border: none;
+    }
+    .datepicker--nav {
+        padding: 20px 0 30px;
+        border: none;
+    }
+    .datepicker--nav-title {
+        font-family: 'Quicksand', sans-serif;
+        font-weight: 700;
+        font-size: 1.9rem;
+        &::hover {
+            
+        }
+    }
+    .datepicker--nav-action {
+        &::hover {
+        
+        }
+    }
+    .datepicker--content {
+        .datepicker--cells {
+            .datepicker--cell-day {
+                font-size: 1.2rem;
+                width: 40px;
+                height: 40px;
+            }
+        }
+        .-selected- {
+            @include gradient;
+            border-radius: 50%;
+            font-weight: 700;
+            z-index: 2;
+        }
+        .-current- {
+            @include gradient($secondary-color, $primary-lightblue);
+            border-radius: 50%;
+            color: #fff;
+            font-weight: 700;
+            z-index: 2;
+        }
+        .-in-range- {
+            position: relative;
+            &::before {
+                content: '';
+                position: absolute;
+                width: 42px;
+                height: 40px;
+                background-color: $primary-color-opacity;
+                z-index: -1;
+            }
+        }
+        .-range-from- {
+            &::before {
+                @include range-background;
+            }
+            &::after {
+                content: '';
+                position: absolute;
+                width: 66px;
+                @include circle($width: 40px,$height: 40px);
+                @include gradient;
+                z-index: -1;
+            } 
+        }
+        .-range-to- {
+            &::before {
+                @include range-background;
+                left: 0;
+            }
+            &::after {
+                content: '';
+                position: absolute;
+                width: 66px;
+                @include circle($width: 40px,$height: 40px);
+                @include gradient;
+                z-index: -1;
+            } 
+        }  
+    }
+    .datepicker--day-name {
+        color: $primary-color;
+        font-weight: 700;
+        font-family: 'Montserrat', sans-serif;
+    }
+    .material-icons {
+        @include gradient-icon;
+    }
+    .form-elem__action {
+        padding: 17px 20px 9px;
+    }
+}

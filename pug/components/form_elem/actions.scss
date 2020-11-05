@@ -1,0 +1,12 @@
+@import '../../../style/const.scss';
+@import '../../../style/mixins.scss';
+
+.form-elem {    
+    &__action {
+        @include flex;
+        padding: 17px 0 9px;
+        h3 {
+            color: $primary-color;
+        }
+    }
+}
