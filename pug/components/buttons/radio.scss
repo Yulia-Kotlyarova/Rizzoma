@@ -1,0 +1,46 @@
+@import '../../../style/const.scss';
+@import '../../../style/style.scss';
+@import '../../../style/mixins.scss';
+
+.form-elem {
+    &__radio-container {
+        margin-top: 10px;
+    }
+    &__custom-radio {
+        display: none;
+        &+label {
+            display: inline-flex;
+            align-items: center;
+            user-select: none;
+            &::before {
+                content: '';
+                display: inline-block;
+                width: 20px;
+                height: 20px;
+                box-sizing: border-box;
+                border: 1px solid $DarkShade25;
+                border-radius: 50%;
+            }
+        }
+        &:checked+label::after {
+            @include circle;
+            @include gradient;
+            left: 4px;
+          }
+    }
+}
+
+.radio__wrapper {
+    @include flex;
+    width: 220px!important;
+    padding-bottom: 0!important;
+}
+
+.radio__box {
+    @include flex($justify: start, $wrap: nowrap);
+    position: relative;
+    // margin-top: -5px;
+    span {
+        padding-left: 10px;
+    }
+}

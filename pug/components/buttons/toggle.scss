@@ -1,0 +1,42 @@
+@import '../../../style/const.scss';
+@import '../../../style/style.scss';
+@import '../../../style/mixins.scss';
+
+.form-elem__toggle-container {
+    padding-top: 7px;
+    .toggle__wrapper {
+        padding-bottom: 0;
+    }
+}
+
+.toggle__box {
+    @include flex($justify: start);
+    width: 260px;
+    padding-bottom: 10px;
+    input[type="checkbox"] {
+        position: relative;
+        width: 40px;
+        height: 20px;
+        margin: 0;
+        margin-right: 10px;
+        -webkit-appearance: none;
+        box-sizing: border-box;
+        border: 1px solid $DarkShade25;
+        border-radius: 10px;
+        transition: $transition;
+        outline: none;
+        &::before {
+            @include circle;
+            background: $DarkShade25;
+            top: 3px;
+            left: 3px;
+        }
+    }
+    input:checked[type="checkbox"] {
+        border: 1px solid $primary-color;
+        &::before {
+            @include gradient;
+            left: 22px;
+        }
+    }
+}

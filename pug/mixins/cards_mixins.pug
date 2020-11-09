@@ -1,5 +1,14 @@
 include ./main_mixins.pug
 
+mixin card-up-info (card_number, price, lux = false)
+    .card__up-info
+        span.card__number= "№" + card_number
+            if lux
+                span.card__lux &nbsp;люкс
+        p
+            span.card__price= price + " ₽"
+            span &nbsp;в сутки
+
 mixin card(card_number,price, path, response_quantity, arrows = false, lux = false, rate_points = 0)
     .card__wrapper
         .card__img-slider
@@ -27,8 +36,3 @@ mixin card(card_number,price, path, response_quantity, arrows = false, lux = fal
                 p
                     span.card__response_quantity= response_quantity
                     span &nbsp;отзывов
-
-mixin calendar(name)
-    .calendar__wrapper
-        div(class="datepicker-here" + " "+ name+ "")
-        +input-action

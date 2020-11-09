@@ -1,0 +1,10 @@
+include ../../mixins/cards_mixins.pug
+
+.book-room__wrapper
+    +card-up-info(888, 9990, true)
+    .form-elem__date-dropdown
+        +input("прибытие", false, "input__drop-text", "19.08.2019", "expand_more")
+        +input("выезд", false, "input__drop-numb", "23.08.2019", "expand_more")
+    +input("dropdown", "",  false,"3 гостя", "expand_more", "active")
+    button(class = "button__fill button__pay") забронировать
+        i(class="material-icons md-24 ") arrow_forward

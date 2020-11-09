@@ -1,0 +1,23 @@
+include ../../mixins/cards_mixins.pug
+
+.create-account__wrapper
+    h2 Регистрация аккаунта
+    .input__wrapper
+        +input(false, false, false, "Имя")
+        +input(false, false, false, "Фамилия")
+    form.radio__wrapper
+        +radio-btn("Мужчина", "man", true)
+        +radio-btn("Женщина", "women")
+    +input("дата рождения", false, false, "ДД.ММ.ГГГГ")
+
+    .input__wrapper
+        +input("данные для входа в сервис", false, false, "Email")
+        +input(false, false, false, "password")
+
+    button(class = "button__fill button__pay") перейти к оплате
+        i(class="material-icons md-24 ") arrow_forward
+    form.toggle__wrapper(action="")
+        +toggle("Получать спецпредложения")
+    .log-in__create
+        p Уже есть аккаунт на Toxin
+        +button-round("создать", fill= false,  bordered = true)

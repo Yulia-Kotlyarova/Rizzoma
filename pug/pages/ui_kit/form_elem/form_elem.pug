@@ -5,23 +5,29 @@ block variables
 include ../../../mixins/color_type_mixins.pug
 include ../../../mixins/main_mixins.pug
 
+block append scripts
+    +script("../../../components/inputs/date_drop_numb.js") // TODO below links like there
+
 block content
-    link(rel="stylesheet" href="./dist/form_elem.css")
-    link(rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons")
+    +links("./dist/form_elem.css")
+    +links("https://fonts.googleapis.com/icon?family=Material+Icons")
+    +links("../../../../../../node_modules/air-datepicker/dist/css/datepicker.min.css")
+    +links("../../../components/datepicker/dist/datepicker.css")
+    +links("../../../components/inputs/dist/input.css")
     main.form-elem__wrapper
         .form-elem__inputs-wrapper
             .form-elem__input-simple
-                +input("Text Field", "default", "Email")
-                +input("Text Field", "hover/focus", "This is pretty awesome", "", "active")
-                +input("Dropdown", "", "Сколько гостей", "expand_more")
-                +input("masked text field", "", "ДД.ММ.ГГГГ")
+                +input("Text Field", "default",false, "Email")
+                +input("Text Field", "hover/focus",false, "This is pretty awesome", "", "active")
+                +input("Dropdown", "",false ,"Сколько гостей", "expand_more")
+                +input("masked text field", "",false, "ДД.ММ.ГГГГ")
             .form-elem__date-dropdown
-                +input("date Dropdown", "", "ДД.ММ.ГГГГ", "expand_more")
-                +input("date Dropdown", "", "19.08.2019", "expand_more")
+                +input("date Dropdown", false, "input__drop-text", "ДД.ММ.ГГГГ", "expand_more")
+                +input("date Dropdown", false, "input__drop-numb", "19.08.2019", "expand_more")
                 .form-elem__small
-                    +input("filter date dropdown", "", "19 авг - 23 авг", "expand_more")
+                    +input("filter date dropdown", false, "input__drop-filter", "19 авг - 23 авг", "expand_more")
                 .form-elem__small
-                    +input("subscription text field", "", "Email", "arrow_forward")
+                    +input("subscription text field", false, false, "Email", "arrow_forward")
         .form-elem__checkbox-wrapper
             .form-elem__checkbox-container
                 h3 Checkbox Buttons
@@ -71,17 +77,17 @@ block content
         section.dropdown-section
             .form-elem__dropdown-container
                 .form-elem__small
-                    +input("dropdown", "default", "2 спальни, 2 кровати...", "expand_more")
+                    +input("dropdown", "default", false, "2 спальни, 2 кровати...", "expand_more")
                 .form-elem__dropdown-wrapper
                     .form-elem__small
-                        +input("dropdown", "expanded", "2 спальни, 2 кровати...", "expand_more", "active")
+                        +input("dropdown", "expanded", false, "2 спальни, 2 кровати...", "expand_more", "active")
                         .form-elem__dropdown
                             +dropdown_extend_unit("спальни", "2")
                             +dropdown_extend_unit("кровати", "2")
                             +dropdown_extend_unit("ванные комнаты", "0")
 
             .form-elem__dropdown-wrapper.form-elem__dropdown-middle
-                +input("dropdown", "", "Сколько гостей", "expand_more", "active")
+                +input("dropdown", "", false, "Сколько гостей", "expand_more", "active")
                 .form-elem__dropdown
                     +dropdown_extend_unit("взрослые", "0")
                     +dropdown_extend_unit("дети", "0")
@@ -89,7 +95,7 @@ block content
                     +input-action
 
             .form-elem__dropdown-wrapper
-                +input("dropdown", "", "3 гостя", "expand_more", "active")
+                +input("dropdown", "",  false,"3 гостя", "expand_more", "active")
                 .form-elem__dropdown
                     +dropdown_extend_unit("взрослые", "2")
                     +dropdown_extend_unit("дети", "1")

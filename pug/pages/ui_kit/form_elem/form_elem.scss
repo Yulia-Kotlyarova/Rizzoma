@@ -2,9 +2,12 @@
 @import '../../../../style/style.scss';
 @import '../../../../style/mixins';
 @import '../../../components/buttons/buttons.scss';
+@import '../../../components/buttons/toggle.scss';
+@import '../../../components/buttons/radio.scss';
 @import '../../../components/rate/rate.scss';
 @import '../../../components/form_elem/actions.scss';
 @import '../../../components/inputs/input.scss';
+@import '../../../components/inputs/date_drop.scss';
 
 .kit-main {
     @include flex;
@@ -20,17 +23,7 @@
         border-radius: 4px 4px 0 0 ;
     }
     
-    .form-elem__date-dropdown {
-        @include flex;
-        width: 320px;
-        padding: 25px 0 20px 0;
-        h3 {
-            display: inline;
-        }
-        form {
-            width: 150px;
-        }
-    }
+
     .form-elem {
         &__small {
             position: relative;
@@ -57,57 +50,6 @@
 form {
     padding-bottom: 19.56px; // TODO inspect a page about form padding
 }
-// .input__field .active {
-//     @include input-active();
-// }    
-
-// .input__field {
-//     border: 1px solid $DarkShade25;
-//     border-radius: 4px;
-//     padding: 13px 15px;
-//     width: 100%;
-//     transition: $transition;
-//     outline: none;
-//     &::placeholder {
-//         @include placeholder-input;
-//         color: $DarkShade25;
-//         transition: $transition;
-//     }
-//     &:focus, 
-//     &:hover {
-//         @include input-active();
-//     }
-// }
-
-// form {
-//     position: relative;
-//     width: 320px;
-//     padding-bottom: 19.56px;
-//     margin: 0;
-//     .input__text-box {
-//         @include flex;
-//         padding-bottom: 5px;
-//         color: $DarkShade25;
-//         h3 {
-//             display: inline;
-//         }
-//         span {
-//             text-transform: uppercase;
-//             color: $DarkShade25;
-//             line-height: 0;
-//             font-size: 1.2rem;
-//         }
-//     }
-//     .material-icons {
-//         position: absolute;
-//         right: 10px;
-//         bottom: 30px;
-//         color: $DarkShade50;
-//     }
-//     .arrow_forward {
-//         @include gradient-icon;
-//     }
-// }
 
 // dropdown
 
@@ -238,48 +180,7 @@ form {
 
 // radio
 
-.form-elem {
-    &__radio-container {
-        margin-top: 10px;
-    }
-    &__custom-radio {
-        display: none;
-        &+label {
-            display: inline-flex;
-            align-items: center;
-            user-select: none;
-            &::before {
-                content: '';
-                display: inline-block;
-                width: 20px;
-                height: 20px;
-                box-sizing: border-box;
-                border: 1px solid $DarkShade25;
-                border-radius: 50%;
-            }
-        }
-        &:checked+label::after {
-            @include circle;
-            @include gradient;
-            left: 4px;
-          }
-    }
-}
 
-.radio__wrapper {
-    @include flex;
-    width: 220px!important;
-    padding-bottom: 0!important;
-}
-
-.radio__box {
-    @include flex($justify: start, $wrap: nowrap);
-    position: relative;
-    // margin-top: -5px;
-    span {
-        padding-left: 10px;
-    }
-}
 
 // like 
 
@@ -338,47 +239,7 @@ form {
     }
 }
 
-.form-elem__toggle-container {
-    padding-top: 7px;
-    .toggle__wrapper {
-        padding-bottom: 0;
-    }
-}
-
-.toggle__box {
-    @include flex($justify: start);
-    width: 260px;
-    padding-bottom: 10px;
-    input[type="checkbox"] {
-        position: relative;
-        width: 40px;
-        height: 20px;
-        margin: 0;
-        margin-right: 10px;
-        -webkit-appearance: none;
-        box-sizing: border-box;
-        border: 1px solid $DarkShade25;
-        border-radius: 10px;
-        transition: $transition;
-        outline: none;
-        &::before {
-            @include circle;
-            background: $DarkShade25;
-            top: 3px;
-            left: 3px;
-        }
-    }
-    input:checked[type="checkbox"] {
-        border: 1px solid $primary-color;
-        &::before {
-            @include gradient;
-            left: 22px;
-        }
-    }
-}
-
 // rate 
-
 
 .form-elem__button-wrapper {
     min-width: 320px;

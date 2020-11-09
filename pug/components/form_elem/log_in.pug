@@ -5,8 +5,8 @@ include ../../mixins/main_mixins.pug
 .log-in__wrapper
     h2 Войти
     .input__wrapper
-        +input(false, false, "Email")
-        +input(false, false, "password")
+        +input(false, false, false, "Email")
+        +input(false, false, false, "password")
     button(class = "button__fill button__pay") войти
         i(class="material-icons md-24 ") arrow_forward
     .log-in__create

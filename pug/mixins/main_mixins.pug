@@ -12,14 +12,17 @@ mixin input-action(clear= "очистить", save= "применить")
         h3(class = "clear" data-action = 'clear')= clear
         h3= save
 
-mixin input(title, subtitle, innerText, icon, className = "default")
+mixin input(title, subtitle, style = false, innerText, icon, className = "default")
     form(action="")
         .input__text-box
             if title
                 h3= title 
             if subtitle
                 span= subtitle
-        input(class = ""+className+" " +"input__field" type = "text" placeholder = "" + innerText + "")
+            if style
+                input(class = ""+className+" " +"input__field" + " "+ style+"" placeholder = "" + innerText + "")
+            else 
+                input(class = ""+className+" " +"input__field"  placeholder = "" + innerText + "")
         if icon
             i(class="material-icons md-24" + " "+ icon+ "")= icon
 
@@ -123,3 +126,8 @@ mixin response(path, name, time, text)
     .response__user-textbox
         +like("favorite", "12", "like__with")
         p= text
+
+mixin calendar(name)
+    .calendar__wrapper
+        div(class="datepicker-here" + " "+ name+ "")
+        +input-action

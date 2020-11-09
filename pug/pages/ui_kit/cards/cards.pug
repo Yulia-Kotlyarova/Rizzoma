@@ -6,17 +6,27 @@ include ../../../mixins/color_type_mixins.pug
 include ../../../mixins/cards_mixins.pug
 include ../../../mixins/main_mixins.pug
 
+block append scripts
+    +script("../../../components/inputs/date_drop_numb.js") // TODO below links like there
+
 block content
     +links("../../../../slick-1.8.1/slick/slick.css")
     +links("./dist/cards.css")
     +links("../../../components/inputs/dist/input.css")
     +links("../../../components/form_elem/dist/log_in.css")
+    +links("../../../components/form_elem/dist/search_room.css")
+    +links("../../../components/form_elem/dist/book_room.css")
+    +links("../../../components/form_elem/dist/create_account.css")
     +links("../../../components/buttons/dist/buttons.css")
+    +links("../../../components/buttons/dist/toggle.css")
     +links("../../../components/datepicker/dist/datepicker.css")
     +links("https://fonts.googleapis.com/icon?family=Material+Icons")
     +links("../../../../../../node_modules/air-datepicker/dist/css/datepicker.min.css")
     main
+        include ../../../components/form_elem/search_room.pug
+        include ../../../components/form_elem/book_room.pug
         include ../../../components/form_elem/log_in.pug
+        include ../../../components/form_elem/create_account.pug
         +calendar("card-calendar")
         +card("888", 9990, "../../../../assets/img/number_880.png", 145, true, true, 1)
         +card("840", 9990, "../../../../assets/img/number_840.jpg", 65, false, false, 2)

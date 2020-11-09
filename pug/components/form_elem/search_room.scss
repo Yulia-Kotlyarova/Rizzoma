@@ -1,0 +1,9 @@
+@import '../../../style/const.scss';
+@import '../../../style/mixins.scss';
+@import '../../../style/style.scss';
+@import '../../components/inputs/date_drop.scss';
+
+.search-room__wrapper {
+    @include card-wrapper;
+    padding: 40px 30px 30px;
+}
