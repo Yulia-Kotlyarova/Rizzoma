@@ -10,7 +10,7 @@ mixin script(linkItem)
 mixin input-action(clear= "очистить", save= "применить")
     .form-elem__action
         h3(class = "clear" data-action = 'clear')= clear
-        h3= save
+        h3(data-action = 'set-result')= save
 
 mixin input(title, subtitle, style = false, innerText, icon, className = "default")
     form(action="")
@@ -20,21 +20,19 @@ mixin input(title, subtitle, style = false, innerText, icon, className = "defaul
             if subtitle
                 span= subtitle
             if style
-                input(class = ""+className+" " +"input__field" + " "+ style+"" placeholder = "" + innerText + "")
+                input(class = ""+className+" " +"input__field" + " "+ style+"" placeholder = "" + innerText + "" readonly)
             else 
-                input(class = ""+className+" " +"input__field"  placeholder = "" + innerText + "")
+                input(class = ""+className+" " +"input__field"  placeholder = "" + innerText + "" readonly)
         if icon
             i(class="material-icons md-24" + " "+ icon+ "")= icon
 
-mixin dropdown_extend_unit(extendTitle, quantity)
+mixin dropdown_extend_unit(extendTitle, className, quantity)
     .form-elem__dropdown-unit
         h3= extendTitle
         .form-elem__change-box
-            .circle
-                span.change-number -
+            div(class = "circle" + " " + className + "-minus") -
             h3.quantity= quantity
-            .circle
-                span.change-number +
+            div(class = "circle" + " " + className + "-plus") +
 
 mixin checkbox(text, id, checkedInput = false)
     .checkbox__box

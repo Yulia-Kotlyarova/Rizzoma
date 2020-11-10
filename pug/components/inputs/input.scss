@@ -13,6 +13,7 @@
     width: 100%;
     transition: $transition;
     outline: none;
+    cursor: auto;
     &::placeholder {
         @include placeholder-input;
         color: $DarkShade25;
@@ -50,5 +51,18 @@ form {
     }
     .arrow_forward {
         @include gradient-icon;
+    }
+
+
+}
+.form-elem__dropdown-wrapper:hover {
+    .form-elem__dropdown {
+        opacity: 1;
+    }
+}
+.form-elem__dropdown {
+    opacity: 0;
+    &:hover {
+        opacity: 1;
     }
 }

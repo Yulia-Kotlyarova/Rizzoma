@@ -94,7 +94,7 @@ form {
         border-top: none;
         border-radius: 0 0 4px 4px;
         position: absolute;
-        top: 62px;
+        top: 58px;
         width: 100%;
         box-sizing: border-box;
         box-shadow: $box-shadow;
@@ -111,6 +111,11 @@ form {
             border:1px solid $DarkShade25;
             text-align: center;
           }
+        .disabled {
+            border:1px solid $DarkShade10;
+            color: $DarkShade10;
+            cursor: auto;
+        }
         .change-number {
             font-size: 1.8rem;
             color: $DarkShade25;

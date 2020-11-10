@@ -7,6 +7,10 @@
         padding: 17px 0 9px;
         h3 {
             color: $primary-color;
+            cursor: pointer;
         }
     }
+}
+.hidden {
+    opacity: 0;
 }
