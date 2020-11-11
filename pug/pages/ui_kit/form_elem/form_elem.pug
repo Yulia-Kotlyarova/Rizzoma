@@ -6,8 +6,10 @@ include ../../../mixins/color_type_mixins.pug
 include ../../../mixins/main_mixins.pug
 
 block append scripts
-    +script("../../../components/inputs/date_drop_numb.js") // TODO below links like there
-    +script("../../../components/inputs/drop_down_guests.js")
+    +script("../../../components/inputs/drop_helpers.js", "module")
+    +script("../../../components/inputs/date_drop_numb.js", "module") // TODO below links like there
+    +script("../../../components/inputs/drop_down_guests.js", "module")
+    +script("../../../components/inputs/drop_down_room.js", "module")
 
 block content
     +links("./dist/form_elem.css")
@@ -79,7 +81,7 @@ block content
             .form-elem__dropdown-container
                 .form-elem__small
                     +input("dropdown", "default", false, "2 спальни, 2 кровати...", "expand_more")
-                .form-elem__dropdown-wrapper
+                .form-elem__dropdown-wrapper.form-elem__dropdown-wrapper-room
                     .form-elem__small
                         +input("dropdown", "expanded", false, "2 спальни, 2 кровати...", "expand_more", "active")
                         .form-elem__dropdown

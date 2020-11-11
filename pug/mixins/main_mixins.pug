@@ -4,8 +4,8 @@ mixin logo(path)
 mixin links(linkItem)
     link( rel="stylesheet" href="" + linkItem +"" type="text/css")
 
-mixin script(linkItem)
-    script( type="text/javascript" src="" + linkItem +"")
+mixin script(linkItem, typeDoc = "text/javascript")
+    script( type = typeDoc src="" + linkItem +"" )
 
 mixin input-action(clear= "очистить", save= "применить")
     .form-elem__action

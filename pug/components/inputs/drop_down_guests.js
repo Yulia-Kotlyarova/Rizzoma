@@ -1,40 +1,16 @@
+import { disabledButton, onMinus, onPlus } from './drop_helpers.js';
+
 window.onload = () => {
     const clearBtn = $(`[data-action = 'clear']`);
     const setResultBtn = $(`[data-action = 'set-result']`);
+    const guestsForm = $('.form-elem__dropdown-wrapper-guest');
     
-    const disabledButton = () => {
-        document.querySelectorAll('.quantity').forEach((el) => {
-            if (el.innerText == '0'){
-                el.previousElementSibling.classList.add('disabled');
-            } else {
-                el.previousElementSibling.classList.remove('disabled');
-            }
-        });
-    }
-
-    const onMinus = (e) => {
-        let number = e.target.nextElementSibling.innerText;
-        number != 0 ? --e.target.nextElementSibling.innerText: false;
-        disabledButton();
-    }
-    const onPlus = (e) => {
-        ++e.target.previousElementSibling.innerText;
-        disabledButton();
-    }
-
     $('.adult-minus').on('click', onMinus);
     $('.adult-plus').on('click', onPlus);
     $('.children-minus').on('click', onMinus);
     $('.children-plus').on('click', onPlus);
     $('.baby-minus').on('click', onMinus);
     $('.baby-plus').on('click', onPlus);
-
-    $('.bedroom-minus').on('click', onMinus);
-    $('.bedroom-plus').on('click', onPlus);
-    $('.bed-minus').on('click', onMinus);
-    $('.bed-plus').on('click', onPlus);
-    $('.bathroom-minus').on('click', onMinus);
-    $('.bathroom-plus').on('click', onPlus);
 
     disabledButton();
 
@@ -78,6 +54,7 @@ window.onload = () => {
         clearBtn[i].addEventListener('click', () => onClear(dropdownMenu));
         setResultBtn[i].addEventListener('click', () => onSetResult(dropdownMenu));
     }
-    const guestsForm = $('.form-elem__dropdown-wrapper-guest');
     onSetResult();
 }
+
+

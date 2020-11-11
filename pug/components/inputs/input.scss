@@ -60,6 +60,11 @@ form {
         opacity: 1;
     }
 }
+.form-elem__dropdown-wrapper-room {
+    input {
+        text-transform: lowercase;
+    }
+}
 .form-elem__dropdown {
     opacity: 0;
     &:hover {
