@@ -1,4 +1,5 @@
-window.onload = () => {
+window.addEventListener("DOMContentLoaded", () => {
+    // $drop_numb = jQuery.noConflict();
     $('.input__drop-text').datepicker({
         toggleSelected: false, // возможость выбрать одну дату
         prevHtml: `<i class = 'material-icons md-24 '> arrow_back </i>`,
@@ -26,4 +27,4 @@ window.onload = () => {
         dateFormat: 'dd M',
         multipleDatesSeparator: " - ",
     })
-}
+})

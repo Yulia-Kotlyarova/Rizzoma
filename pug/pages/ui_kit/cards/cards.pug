@@ -8,6 +8,9 @@ include ../../../mixins/main_mixins.pug
 
 block append scripts
     +script("../../../components/inputs/date_drop_numb.js") // TODO below links like there
+    +script("./card.js")
+    +script("../../../../node_modules/air-datepicker/dist/js/datepicker.min.js")
+    +script("../../../components/datepicker/datepicker.js")
 
 block content
     +links("../../../../slick-1.8.1/slick/slick.css")

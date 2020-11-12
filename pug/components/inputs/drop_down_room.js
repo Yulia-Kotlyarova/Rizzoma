@@ -1,28 +1,30 @@
 import { disabledButton } from './drop_helpers.js';
 
-window.onload = () => {
-    const roomForm = $('.form-elem__dropdown-wrapper-room');
+window.addEventListener("DOMContentLoaded", () => {
+    let $room = jQuery.noConflict();
+    console.log('room');
+    const roomForm = $room('.form-elem__dropdown-wrapper-room');
 
-    const onMinus = (e) => {
+    const onMinusRoom = (e) => {
         let number = e.target.nextElementSibling.innerText;
         number != 0 ? --e.target.nextElementSibling.innerText: false;
-        onSetResult();
+        onSetRoomResult();
         disabledButton();
     }
-    const onPlus = (e) => {
+    const onPlusRoom = (e) => {
         ++e.target.previousElementSibling.innerText;
-        onSetResult();
+        onSetRoomResult();
         disabledButton();
     }
     
-    $('.bedroom-minus').on('click', onMinus);
-    $('.bedroom-plus').on('click', onPlus);
-    $('.bed-minus').on('click', onMinus);
-    $('.bed-plus').on('click', onPlus);
-    $('.bathroom-minus').on('click', onMinus);
-    $('.bathroom-plus').on('click', onPlus);
+    $room('.bedroom-minus').on('click', onMinusRoom);
+    $room('.bedroom-plus').on('click', onPlusRoom);
+    $room('.bed-minus').on('click', onMinusRoom);
+    $room('.bed-plus').on('click', onPlusRoom);
+    $room('.bathroom-minus').on('click', onMinusRoom);
+    $room('.bathroom-plus').on('click', onPlusRoom);
 
-    const onSetResult = () => {
+    const onSetRoomResult = () => {
 
         for (let i = 0; i < roomForm.length; i++) {
             const changeBoxItems = roomForm[i].querySelectorAll('.form-elem__change-box');
@@ -38,4 +40,4 @@ window.onload = () => {
             inputRoom.setAttribute('placeholder', finalResult);
         }
     }
-}
+})

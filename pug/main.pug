@@ -23,27 +23,11 @@ html(lang='ru')
                 +links("../../../style/dist/style.css")
                 +links("../../../../../jquery/ui_style.css")
                 +links("https://fonts.googleapis.com/css?family=Cute+Font|Inconsolata")
-                +links("../../../../../jquery/simplePagination.css")
         body
                 +logo('../../../../assets/icons/logo.svg')
                 block content
 
-
-
-//- Footer
-//- include pug/components/footer.pug
-
-
-//- block scripts
 block scripts
-        +script('../../../../../jquery/ui_min.js')
-        +script('../../../../../jquery/ui_touch.js')
-        +script('../../../../../jquery/jquery.simplePagination.js')
-        +script('./range.js')
-        +script('./pagination.js') 
         +script("//code.jquery.com/jquery-1.11.0.min.js")
         +script("//code.jquery.com/jquery-migrate-1.2.1.min.js")
         +script("../../../../../slick-1.8.1/slick/slick.min.js")
-        +script("./card.js")
-        +script("../../../../node_modules/air-datepicker/dist/js/datepicker.min.js")
-        +script("../../../components/datepicker/datepicker.js")

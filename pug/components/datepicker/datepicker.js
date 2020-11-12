@@ -1,5 +1,6 @@
-window.onload = () => {
-    $('.card-calendar').datepicker({
+window.addEventListener("DOMContentLoaded",() => {
+    // $date = jQuery.noConflict();
+    ($('.card-calendar').datepicker({
         // Можно выбрать тольо даты, идущие за сегодняшним днем, включая сегодня
         // minDate: new Date(),
         multipleDates: true,
@@ -12,7 +13,5 @@ window.onload = () => {
             days: 'MM yyyy',
           },
         //   clearButton: true,
-    })
-    $(`.clear`).clear();
-    // console.log($(`[data-action = 'clear']`));
-}
+    }))(jQuery)
+});

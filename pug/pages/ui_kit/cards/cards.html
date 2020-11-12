@@ -10,7 +10,6 @@
     <link rel="stylesheet" href="../../../style/dist/style.css" type="text/css"/>
     <link rel="stylesheet" href="../../../../../jquery/ui_style.css" type="text/css"/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cute+Font|Inconsolata" type="text/css"/>
-    <link rel="stylesheet" href="../../../../../jquery/simplePagination.css" type="text/css"/>
   </head>
   <body><img class="logo-icon" src="../../../../assets/icons/logo.svg" alt="logo"/>
     <link rel="stylesheet" href="../../../../slick-1.8.1/slick/slick.css" type="text/css"/>
@@ -32,13 +31,13 @@
                 <form action="">
                   <div class="input__text-box">
                     <h3>прибытие</h3>
-                    <input class="default input__field input__drop-text" placeholder="ДД.ММ.ГГГГ">
+                    <input class="default input__field input__drop-text" placeholder="ДД.ММ.ГГГГ" readonly>
                   </div><i class="material-icons md-24 expand_more">expand_more</i>
                 </form>
                 <form action="">
                   <div class="input__text-box">
                     <h3>выезд</h3>
-                    <input class="default input__field input__drop-numb" placeholder="ДД.ММ.ГГГГ">
+                    <input class="default input__field input__drop-numb" placeholder="ДД.ММ.ГГГГ" readonly>
                   </div><i class="material-icons md-24 expand_more">expand_more</i>
                 </form>
         </div>
@@ -158,7 +157,7 @@
               <div class="datepicker-here card-calendar"></div>
                     <div class="form-elem__action">
                       <h3 class="clear" data-action="clear">очистить</h3>
-                      <h3>применить</h3>
+                      <h3 data-action="set-result">применить</h3>
                     </div>
             </div>
             <div class="card__wrapper">
@@ -220,15 +219,10 @@
     </main>
   </body>
 </html>
-      <script type="text/javascript" src="../../../../../jquery/ui_min.js"></script>
-      <script type="text/javascript" src="../../../../../jquery/ui_touch.js"></script>
-      <script type="text/javascript" src="../../../../../jquery/jquery.simplePagination.js"></script>
-      <script type="text/javascript" src="./range.js"></script>
-      <script type="text/javascript" src="./pagination.js"></script>
       <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
       <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
       <script type="text/javascript" src="../../../../../slick-1.8.1/slick/slick.min.js"></script>
+      <script type="text/javascript" src="../../../components/inputs/date_drop_numb.js"></script>
       <script type="text/javascript" src="./card.js"></script>
       <script type="text/javascript" src="../../../../node_modules/air-datepicker/dist/js/datepicker.min.js"></script>
       <script type="text/javascript" src="../../../components/datepicker/datepicker.js"></script>
-      <script type="text/javascript" src="../../../components/inputs/date_drop_numb.js"></script>

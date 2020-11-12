@@ -12,7 +12,7 @@ mixin input-action(clear= "очистить", save= "применить")
         h3(class = "clear" data-action = 'clear')= clear
         h3(data-action = 'set-result')= save
 
-mixin input(title, subtitle, style = false, innerText, icon, className = "default")
+mixin input(title, subtitle, style = false, innerText, icon, className = "default", read = false)
     form(action="")
         .input__text-box
             if title
@@ -20,9 +20,9 @@ mixin input(title, subtitle, style = false, innerText, icon, className = "defaul
             if subtitle
                 span= subtitle
             if style
-                input(class = ""+className+" " +"input__field" + " "+ style+"" placeholder = "" + innerText + "" readonly)
+                input(class = ""+className+" " +"input__field" + " "+ style+"" placeholder = "" + innerText + "" readonly = read)
             else 
-                input(class = ""+className+" " +"input__field"  placeholder = "" + innerText + "" readonly)
+                input(class = ""+className+" " +"input__field"  placeholder = "" + innerText + "" readonly = read)
         if icon
             i(class="material-icons md-24" + " "+ icon+ "")= icon
 

@@ -3,8 +3,8 @@ include ../../mixins/main_mixins.pug
 .search-room__wrapper
     h2 Найдём номера под ваши пожелания
     .form-elem__date-dropdown
-        +input("прибытие", false, "input__drop-text", "ДД.ММ.ГГГГ", "expand_more")
-        +input("выезд", false, "input__drop-numb", "ДД.ММ.ГГГГ", "expand_more")
+        +input("прибытие", false, "input__drop-text", "ДД.ММ.ГГГГ", "expand_more", "default", true)
+        +input("выезд", false, "input__drop-numb", "ДД.ММ.ГГГГ", "expand_more", "default", true)
     +input("гости", "",false ,"Сколько гостей", "expand_more")
     button(class = "button__fill button__pay") подобрать номер
         i(class="material-icons md-24 ") arrow_forward

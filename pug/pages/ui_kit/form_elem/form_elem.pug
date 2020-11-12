@@ -8,12 +8,20 @@ include ../../../mixins/main_mixins.pug
 block append scripts
     +script("../../../components/inputs/drop_helpers.js", "module")
     +script("../../../components/inputs/date_drop_numb.js", "module") // TODO below links like there
-    +script("../../../components/inputs/drop_down_guests.js", "module")
     +script("../../../components/inputs/drop_down_room.js", "module")
+    +script("../../../components/inputs/drop_down_guests.js", "module")
+    +script('../../../../../jquery/ui_min.js')
+    +script('../../../../../jquery/ui_touch.js')
+    +script('../../../../../jquery/jquery.simplePagination.js')
+    +script('./range.js')
+    +script('./pagination.js') 
+    +script("../../../../node_modules/air-datepicker/dist/js/datepicker.min.js")
+    +script("../../../components/datepicker/datepicker.js")
 
 block content
     +links("./dist/form_elem.css")
     +links("https://fonts.googleapis.com/icon?family=Material+Icons")
+    +links("../../../../../jquery/simplePagination.css")
     +links("../../../../../../node_modules/air-datepicker/dist/css/datepicker.min.css")
     +links("../../../components/datepicker/dist/datepicker.css")
     +links("../../../components/inputs/dist/input.css")
@@ -80,7 +88,7 @@ block content
         section.dropdown-section
             .form-elem__dropdown-container
                 .form-elem__small
-                    +input("dropdown", "default", false, "2 спальни, 2 кровати...", "expand_more")
+                    +input("dropdown", "default", false, "2 спальни, 2 кровати...", "expand_more", true)
                 .form-elem__dropdown-wrapper.form-elem__dropdown-wrapper-room
                     .form-elem__small
                         +input("dropdown", "expanded", false, "2 спальни, 2 кровати...", "expand_more", "active")
@@ -90,7 +98,7 @@ block content
                             +dropdown_extend_unit("ванные комнаты", "bathroom", "0")
 
             .form-elem__dropdown-wrapper.form-elem__dropdown-wrapper-guest.form-elem__dropdown-middle
-                +input("dropdown", "", false, "Сколько гостей", "expand_more", "active")
+                +input("dropdown", "", false, "Сколько гостей", "expand_more", "active", true)
                 .form-elem__dropdown.form-elem__dropdown-guests
                     +dropdown_extend_unit("взрослые", "adult", "0")
                     +dropdown_extend_unit("дети", "children", "0")
@@ -98,7 +106,7 @@ block content
                     +input-action
 
             .form-elem__dropdown-wrapper.form-elem__dropdown-wrapper-guest
-                +input("dropdown", "",  false,"3 гостя", "expand_more", "active")
+                +input("dropdown", "",  false,"3 гостя", "expand_more", "active", true)
                 .form-elem__dropdown.form-elem__dropdown-guests
                     +dropdown_extend_unit("взрослые", "adult", "2")
                     +dropdown_extend_unit("дети", "children", "1")

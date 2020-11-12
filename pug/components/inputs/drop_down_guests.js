@@ -1,16 +1,18 @@
 import { disabledButton, onMinus, onPlus } from './drop_helpers.js';
 
-window.onload = () => {
-    const clearBtn = $(`[data-action = 'clear']`);
-    const setResultBtn = $(`[data-action = 'set-result']`);
-    const guestsForm = $('.form-elem__dropdown-wrapper-guest');
+window.addEventListener("DOMContentLoaded", () => {
+    let $guest = jQuery.noConflict();
+    console.log('guest');
+    const clearBtn = $guest(`[data-action = 'clear']`);
+    const setResultBtn = $guest(`[data-action = 'set-result']`);
+    const guestsForm = $guest('.form-elem__dropdown-wrapper-guest');
     
-    $('.adult-minus').on('click', onMinus);
-    $('.adult-plus').on('click', onPlus);
-    $('.children-minus').on('click', onMinus);
-    $('.children-plus').on('click', onPlus);
-    $('.baby-minus').on('click', onMinus);
-    $('.baby-plus').on('click', onPlus);
+    $guest('.adult-minus').on('click', onMinus);
+    $guest('.adult-plus').on('click', onPlus);
+    $guest('.children-minus').on('click', onMinus);
+    $guest('.children-plus').on('click', onPlus);
+    $guest('.baby-minus').on('click', onMinus);
+    $guest('.baby-plus').on('click', onPlus);
 
     disabledButton();
 
@@ -50,11 +52,9 @@ window.onload = () => {
     }
 
     for (let i = 0; i < clearBtn.length; i++) {
-        let dropdownMenu = $('.form-elem__dropdown-guests')[i];
+        let dropdownMenu = $guest('.form-elem__dropdown-guests')[i];
         clearBtn[i].addEventListener('click', () => onClear(dropdownMenu));
         setResultBtn[i].addEventListener('click', () => onSetResult(dropdownMenu));
     }
     onSetResult();
-}
-
-
+})
