@@ -14,25 +14,42 @@
 
 .calendar__wrapper,
 .datepicker-inline {
-    max-width: 320px;
+    // min-width: 320px;
     background-color: #fff;
+    border-radius: 4px;
+}
+.calendar__wrapper {
+    max-width: 320px;
     border: 1px solid $DarkShade25;
     border-radius: 4px;
-
+    box-shadow: $box-shadow;
 }
 
 .datepicker {
+    width: 293px;
+    padding: 20px 6px 23px 19px;
     margin: auto;
     border: none;
 }
 .datepicker--nav {
-    padding: 20px 0 30px;
+    align-items: flex-start;
+    padding: 0 10px 0 0;
     border: none;
 }
+
+.datepicker--cells {
+    padding-top: 7px;
+}
+.datepicker--days-names {
+    text-transform: uppercase;
+    margin: 0;
+    padding: 16px 13px 0 2px;
+}
 .datepicker--nav-title {
-    font-family: 'Quicksand', sans-serif;
     font-weight: 700;
     font-size: 1.9rem;
+    line-height: 2.316rem;
+    text-align: center;
     &::hover {
         
     }
@@ -43,6 +60,7 @@
     }
 }
 .datepicker--content {
+    padding: 0;
     .datepicker--cells {
         .datepicker--cell-day {
             font-size: 1.2rem;
@@ -55,6 +73,9 @@
         border-radius: 50%;
         font-weight: 700;
         z-index: 2;
+        &:hover {
+            @include gradient;
+        }
     }
     .-current- {
         @include gradient($secondary-color, $primary-lightblue);
@@ -102,6 +123,7 @@
         } 
     }  
 }
+
 .datepicker--day-name {
     color: $primary-color;
     font-weight: 700;
@@ -111,5 +133,5 @@
     @include gradient-icon;
 }
 .form-elem__action {
-    padding: 17px 20px 9px;
+    padding: 0 20px 18px;
 }

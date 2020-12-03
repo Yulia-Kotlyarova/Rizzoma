@@ -1,5 +1,4 @@
 @import '../../../style/const.scss';
-@import '../../../style/style.scss';
 @import '../../../style/mixins.scss';
 
 .form-elem {
@@ -33,7 +32,8 @@
 .radio__wrapper {
     @include flex;
     width: 220px!important;
-    padding-bottom: 0!important;
+    // padding-bottom: 0!important;
+    padding: 5px 0 0 0!important;
 }
 
 .radio__box {

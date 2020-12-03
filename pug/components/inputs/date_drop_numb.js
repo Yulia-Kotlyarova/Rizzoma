@@ -1,13 +1,17 @@
 window.addEventListener("DOMContentLoaded", () => {
-    // $drop_numb = jQuery.noConflict();
-    $('.input__drop-text').datepicker({
+    let obj = {};
+    $('.input__drop-text').datepicker(
+        {
         toggleSelected: false, // возможость выбрать одну дату
         prevHtml: `<i class = 'material-icons md-24 '> arrow_back </i>`,
         nextHtml: `<i class = 'material-icons md-24 '> arrow_forward </i>`,
         navTitles: {
             days: 'MM yyyy',
           },
-        //   clearButton: true,
+        onSelect: function(formattedDate, date, inst) {
+            obj.f = date;
+            console.log(inst.el);
+        }
     })
 
     $('.input__drop-numb').datepicker({
@@ -17,6 +21,9 @@ window.addEventListener("DOMContentLoaded", () => {
         navTitles: {
             days: 'MM yyyy',
           },
+          onSelect: function(formattedDate, date, inst) {
+            console.log(date);
+        }
     })
     
     $('.input__drop-filter').datepicker({
@@ -28,3 +35,5 @@ window.addEventListener("DOMContentLoaded", () => {
         multipleDatesSeparator: " - ",
     })
 })
+
+let diff =  Math.floor(( Date.parse(str2) - Date.parse(str1) ) / 86400000); 

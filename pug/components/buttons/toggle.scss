@@ -1,5 +1,4 @@
 @import '../../../style/const.scss';
-@import '../../../style/style.scss';
 @import '../../../style/mixins.scss';
 
 .form-elem__toggle-container {
@@ -12,7 +11,6 @@
 .toggle__box {
     @include flex($justify: start);
     width: 260px;
-    padding-bottom: 10px;
     input[type="checkbox"] {
         position: relative;
         width: 40px;

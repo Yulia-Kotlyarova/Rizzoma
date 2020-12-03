@@ -1,5 +1,7 @@
 import { disabledButton } from './drop_helpers.js';
 
+// book room counter
+
 window.addEventListener("DOMContentLoaded", () => {
     let $room = jQuery.noConflict();
     console.log('room');

@@ -1,11 +1,13 @@
 @import '../../../style/const.scss';
 @import '../../../style/mixins.scss';
-@import '../../../style/style.scss';
 
 .log-in {
     &__wrapper {
         @include card-wrapper;
-        padding: 40px 30px 32px;
+        padding: 43px 30px 32px;
+        h2 {
+            padding-bottom: 20px;
+        }
     }
     &__create {
         @include flex;
@@ -17,8 +19,8 @@
 }
 
 .input__wrapper {
-    padding: 20px 0;
+    // padding: 25px 0;
     form:first-child {
-        padding-bottom: 10px;
+        padding-bottom: 6px;
     }
 }

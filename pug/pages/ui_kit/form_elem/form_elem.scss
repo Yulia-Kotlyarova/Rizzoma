@@ -7,6 +7,7 @@
 @import '../../../components/rate/rate.scss';
 @import '../../../components/form_elem/actions.scss';
 @import '../../../components/inputs/input.scss';
+@import '../../../components/inputs/dropdown.scss';
 @import '../../../components/inputs/date_drop.scss';
 
 .kit-main {
@@ -53,76 +54,7 @@ form {
 
 // dropdown
 
-.form-elem {
-    &__dropdown-container{
-        .form-elem__small:first-child {
-            form {
-                padding-top: 0;
 
-            }
-        }
-    }
-    &__dropdown-wrapper{
-        position: relative;
-        // width: 320px;
-        height: 221.5px;
-        transition: $transition;
-        form > input {
-            border-radius:4px 4px 0 0 ;
-        }
-        &:hover, 
-        &:focus,
-        &:active {
-            @include expand;
-        }
-    }
-    &__dropdown-middle {
-        margin: 0 0 0 110px;
-    }
-    &__dropdown-unit{
-        @include flex;
-        width: 100%;
-        box-sizing: border-box;
-        padding: 6px 0 0;
-        h3 {
-            display: inline;
-        }
-    }
-    &__dropdown{
-        padding: 0 7px 4px 15px;
-        border: 1px solid $DarkShade50;
-        border-top: none;
-        border-radius: 0 0 4px 4px;
-        position: absolute;
-        top: 58px;
-        width: 100%;
-        box-sizing: border-box;
-        box-shadow: $box-shadow;
-    }
-    &__change-box {
-        @include flex;
-        width: 92px;
-        .circle {
-            @include cursor-style;
-            height: 30px;
-            width: 30px;
-            line-height: 30px;
-            border-radius: 50%;
-            border:1px solid $DarkShade25;
-            text-align: center;
-          }
-        .disabled {
-            border:1px solid $DarkShade10;
-            color: $DarkShade10;
-            cursor: auto;
-        }
-        .change-number {
-            font-size: 1.8rem;
-            color: $DarkShade25;
-        }
-    }
-
-}
 
 .dropdown-section {
     @include flex($align: flex-start);

@@ -2,6 +2,7 @@
 @import '../../../../style/style.scss';
 @import '../../../../style/mixins';
 @import '../../../components/rate/rate.scss';
+@import '../../../components/buttons/radio.scss';
 
 body {
     background-color: $colored-back;
@@ -43,8 +44,17 @@ main {
     &__up-info {
         @include flex;
         width: 100%;
-        padding-bottom: 10px;
+        padding-bottom: 8px;
     }
+    &__number-sign {
+        font-size: 1.4rem;
+        color: $DarkShade100;
+    }
+    &__number {
+        font-size: 1.9rem;
+        color: $DarkShade100;
+    }
+    &__number-sign,
     &__number,
     &__price,
     &__response_quantity {
@@ -54,6 +64,9 @@ main {
         font-size: 1.2rem;
         text-transform: uppercase;
         color: $primary-color;
+    }
+    &__price + span {
+        font-size: 1.2rem;
     }
     &__down-info {
         @include flex;
@@ -76,18 +89,23 @@ main {
         transform: rotate(-90deg);
         left: 236px;
     }
+    &__column {
+        > div{
+            margin-bottom: 40px;
+        }
+    }
 }
 
 .slick-dots {
     @include flex;
     position: absolute;
-    width: 41px;
-    top: 110px;
-    left: 161px;
+    width: 35px;
+    top: 114px;
+    left: 173px;
     list-style: none;
     li {
         &:before {
-            @include circle($width: 5.6px, $height: 5.6px);
+            @include circle($width: 5px, $height: 5px);
             background-color: transparent;
             border: 1px solid #fff;
             cursor: pointer;

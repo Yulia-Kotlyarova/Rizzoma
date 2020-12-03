@@ -2,9 +2,11 @@ include ./main_mixins.pug
 
 mixin card-up-info (card_number, price, lux = false)
     .card__up-info
-        span.card__number= "№" + card_number
+        p
+            span.card__number-sign №&nbsp;
+            span.card__number= card_number
             if lux
-                span.card__lux &nbsp;люкс
+                span.card__lux люкс
         p
             span.card__price= price + " ₽"
             span &nbsp;в сутки
@@ -25,11 +27,12 @@ mixin card(card_number,price, path, response_quantity, arrows = false, lux = fal
             i(class="material-icons md-24 card__right-arr ") expand_more
         .card__info-box
             .card__up-info
-                span.card__number= "№" + card_number
-                    if lux
-                        span.card__lux &nbsp;люкс
+                span.card__number-sign №&nbsp;
+                    span.card__number= card_number
+                        if lux
+                            span.card__lux &nbsp;люкс
                 p
-                    span.card__price= price + " ₽"
+                    span.card__price= price + "₽"
                     span &nbsp;в сутки
             .card__down-info
                 +rate(card_number,rate_points)

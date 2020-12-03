@@ -1,9 +1,23 @@
 @import '../../../style/const.scss';
 @import '../../../style/mixins.scss';
-@import '../../../style/style.scss';
 @import '../../components/inputs/date_drop.scss';
+.card__column {
+    .search-room__wrapper {
+        @include card-wrapper;
+        padding: 40px 30px 27px;
+        margin-bottom: 42px;
+        h2 {
+            line-height: 2.93rem;
+        }
+        .button__pay {
+            margin: 27px 0 0 0;
+            i {
+                color: #ffffff;
+            }
+        }
+    }
+    .form-elem__date-dropdown {
+        padding: 23px 0 17px 0;
+    }
 
-.search-room__wrapper {
-    @include card-wrapper;
-    padding: 40px 30px 30px;
 }

@@ -1,9 +1,20 @@
 @import '../../../style/const.scss';
 @import '../../../style/mixins.scss';
-@import '../../../style/style.scss';
 @import '../../components/inputs/date_drop.scss';
 
 .create-account__wrapper {
     @include card-wrapper;
-    padding: 40px 30px 21px;
+    padding: 44px 30px 11px;
+    > div, > form {
+        padding-bottom: 20px;
+    }
+    h2 {
+        padding-bottom: 22px;
+    }
+    .button__pay {
+        margin: 0;
+    }
+    > form {
+        padding-top: 5px;
+    }
 }

@@ -2,7 +2,7 @@ import { disabledButton, onMinus, onPlus } from './drop_helpers.js';
 
 window.addEventListener("DOMContentLoaded", () => {
     let $guest = jQuery.noConflict();
-    console.log('guest');
+    // console.log('guest');
     const clearBtn = $guest(`[data-action = 'clear']`);
     const setResultBtn = $guest(`[data-action = 'set-result']`);
     const guestsForm = $guest('.form-elem__dropdown-wrapper-guest');
@@ -22,6 +22,7 @@ window.addEventListener("DOMContentLoaded", () => {
             el.innerText = 0;
         });
         disabledButton();
+        onSetResult();
     }
 
     const onSetResult = () => {

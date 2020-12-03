@@ -1,0 +1,95 @@
+@import '../../../style/mixins.scss';
+
+.form-elem {
+    &__dropdown-container{
+        .form-elem__small:first-child {
+            form {
+                padding-top: 0;
+            }
+        }
+    }
+    &__dropdown-wrapper{
+        position: relative;
+        // width: 320px;
+        // height: 221.5px;
+        transition: $transition;
+        form > input {
+            border-radius:4px 4px 0 0 ;
+        }
+        &:hover, 
+        &:focus,
+        &:active {
+            @include expand;
+            .input__field {
+                border: 1px solid $DarkShade50;
+                border-radius: 4px 4px 0 0;
+            }
+            .input__field::placeholder {
+                color: $DarkShade75;
+            }
+        }
+    }
+    &__dropdown-middle {
+        margin: 0 0 0 110px;
+    }
+    &__dropdown-unit{
+        @include flex;
+        width: 100%;
+        box-sizing: border-box;
+        padding: 6px 0 0;
+        h3 {
+            display: inline;
+        }
+    }
+    &__dropdown{
+        background-color: #fff;
+        padding: 0 7px 4px 15px;
+        border: 1px solid $DarkShade50;
+        border-top: none;
+        border-radius: 0 0 4px 4px;
+        position: absolute;
+        top: 58px;
+        width: 100%;
+        box-sizing: border-box;
+        box-shadow: $box-shadow;
+    }
+    &__change-box {
+        @include flex;
+        width: 92px;
+        .circle {
+            @include cursor-style;
+            height: 30px;
+            width: 30px;
+            line-height: 30px;
+            border-radius: 50%;
+            border:1px solid $DarkShade25;
+            text-align: center;
+          }
+        .disabled {
+            border:1px solid $DarkShade10;
+            color: $DarkShade10;
+            cursor: auto;
+        }
+        .change-number {
+            font-size: 1.8rem;
+            color: $DarkShade25;
+        }
+    }
+}
+
+.form-elem__dropdown-wrapper:hover {
+    .form-elem__dropdown {
+        display: block;
+    }
+}
+.form-elem__dropdown-wrapper-room {
+    input {
+        text-transform: lowercase;
+    }
+}
+.form-elem__dropdown {
+    display: none;
+    &:hover {
+        display: block;
+    }
+}

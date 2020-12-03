@@ -1,9 +1,76 @@
 @import '../../../style/const.scss';
 @import '../../../style/mixins.scss';
-@import '../../../style/style.scss';
 @import '../../components/inputs/date_drop.scss';
 
 .book-room__wrapper {
     @include card-wrapper;
-    padding: 40px 30px 30px;
+    padding: 43px 30px 30px;
+    color: $DarkShade75;
+    line-height: 2.4rem;
+    .card__number-sign {
+        font-size: 1.4rem;
+        color: $DarkShade100;
+        font-weight: 700;
+    }
+    .card__number {
+        font-size: 2.4rem;
+        color: $DarkShade100;
+    }
+    .card__lux {
+        font-weight: 700;
+    }
+    .card__up-info {
+        p:last-child {
+            padding-top: 4px;
+        }
+    }
+    .card__price + span {
+        font-size: 1.2rem;
+    }
+    .form-elem__date-dropdown {
+        padding: 9px 0 16px 0;
+    }
+    .button__pay {
+        i {
+            color: #ffffff;
+        }
+    }
+}
+.book-room__price-box {
+    padding: 12px 0 0;
+}
+.book-room__services {
+    display: block;
+    max-width: 205px;
+    line-height: 1.8rem;
+}
+.book-room__price-box,
+.book-room__final-result {
+    @include flex($align: flex-start);
+    .book-room__info-label {
+        font-style: normal;
+        color: $DarkShade25;
+        font-size: 2.1rem;
+        padding: 0 30px 0 0;
+    }
+}
+.book-room__final-result {
+    @include flex($align: flex-start, $wrap: nowrap);
+    width: 100%;
+    font-size: 1.9rem;
+    font-weight: 700;
+    color: $DarkShade100;
+    padding: 30px 0px 4px 0;
+    white-space: nowrap;
+    overflow: hidden;
+    span:first-child:after {  
+        content:'............................................................';
+        display: block;
+        white-space: nowrap;
+        overflow: hidden;
+        font-size: 1.4rem;
+        font-weight: normal;
+        color: $DarkShade25;
+        float: right;
+      }
 }

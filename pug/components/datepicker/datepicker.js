@@ -1,6 +1,6 @@
 window.addEventListener("DOMContentLoaded",() => {
-    // $date = jQuery.noConflict();
-    ($('.card-calendar').datepicker({
+    const calendarSetBTN = document.querySelector('.card-calendar').nextElementSibling.querySelector(`[data-action = 'set-result']`);
+    $('.card-calendar').datepicker({
         // Можно выбрать тольо даты, идущие за сегодняшним днем, включая сегодня
         // minDate: new Date(),
         multipleDates: true,
@@ -10,8 +10,12 @@ window.addEventListener("DOMContentLoaded",() => {
         prevHtml: `<i class = 'material-icons md-24 '> arrow_back </i>`,
         nextHtml: `<i class = 'material-icons md-24 '> arrow_forward </i>`,
         navTitles: {
-            days: 'MM yyyy',
+            days: 'MM </br> yyyy',
           },
+        onSelect: function(formattedDate, date, inst) {
+            console.log();
+        }
         //   clearButton: true,
-    }))(jQuery)
+    });
+    
 });
