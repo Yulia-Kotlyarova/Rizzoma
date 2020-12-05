@@ -36,4 +36,4 @@ window.addEventListener("DOMContentLoaded", () => {
     })
 })
 
-let diff =  Math.floor(( Date.parse(str2) - Date.parse(str1) ) / 86400000); 
+// let diff =  Math.floor(( Date.parse(str2) - Date.parse(str1) ) / 86400000); 
