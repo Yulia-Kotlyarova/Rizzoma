@@ -6,25 +6,25 @@ include ../../../mixins/color_type_mixins.pug
 include ../../../mixins/main_mixins.pug
 
 block append scripts
-    +script("../../../components/inputs/drop_helpers.js", "module")
-    +script("../../../components/inputs/date_drop_numb.js", "module") // TODO below links like there
-    +script("../../../components/inputs/drop_down_room.js", "module")
-    +script("../../../components/inputs/drop_down_guests.js", "module")
-    +script('../../../../../jquery/ui_min.js')
-    +script('../../../../../jquery/ui_touch.js')
-    +script('../../../../../jquery/jquery.simplePagination.js')
-    +script('./range.js')
-    +script('./pagination.js') 
-    +script("../../../../node_modules/air-datepicker/dist/js/datepicker.min.js")
-    +script("../../../components/datepicker/datepicker.js")
+    +script("../src/pug/components/inputs/drop_helpers.js", "module")
+    +script("../src/pug/components/inputs/date_drop_numb.js", "module")
+    +script("../src/pug/components/inputs/drop_down_room.js", "module")
+    +script("../src/pug/components/inputs/drop_down_guests.js", "module")
+    +script('../src/jquery/ui_min.js')
+    +script('../src/jquery/ui_touch.js')
+    +script('../src/jquery/jquery.simplePagination.js')
+    +script('../src/pug/pages/ui_kit/form_elem/range.js')
+    +script('../src/pug/pages/ui_kit/form_elem/pagination.js') 
+    +script("../node_modules/air-datepicker/dist/js/datepicker.min.js")
+    +script("../src/pug/components/datepicker/datepicker.js")
 
 block content
-    +links("./dist/form_elem.css")
+    +links("../src/pug/pages/ui_kit/form_elem/dist/form_elem.css")
     +links("https://fonts.googleapis.com/icon?family=Material+Icons")
-    +links("../../../../../jquery/simplePagination.css")
-    +links("../../../../../../node_modules/air-datepicker/dist/css/datepicker.min.css")
-    +links("../../../components/datepicker/dist/datepicker.css")
-    +links("../../../components/inputs/dist/input.css")
+    +links("../src/jquery/simplePagination.css")
+    +links("../node_modules/air-datepicker/dist/css/datepicker.min.css")
+    +links("../src/pug/components/datepicker/dist/datepicker.css")
+    +links("../src/pug/components/inputs/dist/input.css")
     main.form-elem__wrapper
         .form-elem__inputs-wrapper
             .form-elem__input-simple
@@ -141,4 +141,4 @@ block content
                 +benefit("Комфорт", "Шумопоглощающие стены", "insert_emoticon")
                 +benefit("Удобство", "Окно в каждой из спален", "location_city")
             .response__wrapper
-                +response("../../../../assets/img/photo.png", "Мурад Сарафанов", "5 дней назад", "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.")  
+                +response("../src/assets/img/photo.png", "Мурад Сарафанов", "5 дней назад", "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.")  

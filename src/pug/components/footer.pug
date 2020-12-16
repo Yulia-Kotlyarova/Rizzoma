@@ -1,7 +1,7 @@
 include ../mixins/main_mixins.pug
 
 block append scripts
-  script(src='./header.js')
+//-   script(src='./header.js')
 
 mixin footer-list(title, ...rest)
     ul= title
@@ -38,7 +38,7 @@ block content
                 .footer__list-box
                     h3 Подписка
                     p Получайте специальные предложения и новости сервиса
-                    +input(false, false , "Email", "arrow_forward")
+                    +input(false, false , false, "Email", "arrow_forward")
             .footer__down-wrapper
                 p Copyright © 2018 Toxin отель. Все права зачищены.
                 +links-icon 

@@ -1,0 +1,42 @@
+extend ../../../main.pug
+
+block variables
+
+include ../../../mixins/color_type_mixins.pug
+include ../../../mixins/cards_mixins.pug
+include ../../../mixins/main_mixins.pug
+
+block append scripts
+    +script("../src/pug/components/inputs/date_drop_numb.js", "module") // TODO below links like there
+    +script("../src/pug/components/inputs/drop_down_guests.js", "module") 
+    +script("../src/pug/pages/ui_kit/cards/card.js")
+    +script("../node_modules/air-datepicker/dist/js/datepicker.min.js")
+    +script("../src/pug/components/datepicker/datepicker.js")
+    
+
+block content
+    +links("../src/slick-1.8.1/slick/slick.css")
+    +links("../src/pug/pages/ui_kit/cards//dist/cards.css")
+    +links("../src/pug/components/inputs/dist/input.css")
+    +links("../src/pug/components/inputs/dist/dropdown.css")
+    +links("../src/pug/components/form_elem/dist/log_in.css")
+    +links("../src/pug/components/form_elem/dist/search_room.css")
+    +links("../src/pug/components/form_elem/dist/book_room.css")
+    +links("../src/pug/components/form_elem/dist/create_account.css")
+    +links("../src/pug/components/buttons/dist/buttons.css")
+    +links("../src/pug/components/buttons/dist/toggle.css")
+    +links("https://fonts.googleapis.com/icon?family=Material+Icons") // TODO ICONS doesnt work without link
+    +links("../../../../../../node_modules/air-datepicker/dist/css/datepicker.min.css")
+    +links("../src/pug/components/datepicker/dist/datepicker.css")
+    main
+        .card__column
+            include ../../../components/form_elem/search_room.pug
+            include ../../../components/form_elem/create_account.pug
+        .card__column
+            include ../../../components/form_elem/book_room.pug
+            include ../../../components/form_elem/log_in.pug
+        .card__column
+            +calendar("card-calendar")
+            +card("888", 9990, "../src/assets/img/number_880.png", 145, true, true, 1)
+            +card("840", 9990, "../src/assets/img/number_840.jpg", 65, false, false, 2)
+    
