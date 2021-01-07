@@ -89,6 +89,7 @@
 }
 .form-elem__dropdown {
     display: none;
+    z-index: 999;
     &:hover {
         display: block;
     }

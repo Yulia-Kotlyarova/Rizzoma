@@ -26,6 +26,18 @@ mixin input(title, subtitle, style = false, innerText, icon, className = "defaul
         if icon
             i(class="material-icons md-24" + " "+ icon+ "")= icon
 
+mixin doubleInput(title, subtitle, style = false, innerText, icon, className = "default", read = false)
+        .input__text-box
+            if title
+                h3= title 
+            if subtitle
+                span= subtitle
+            if style
+                input(class = ""+className+" " +"input__field" + " "+ style+"" placeholder = "" + innerText + "" readonly = read)
+            else 
+                input(class = ""+className+" " +"input__field"  placeholder = "" + innerText + "" readonly = read)
+            i(class="material-icons md-24" + " "+ icon+ "")= icon
+
 mixin dropdown_extend_unit(extendTitle, className, quantity)
     .form-elem__dropdown-unit
         h3= extendTitle

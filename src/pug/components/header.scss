@@ -38,6 +38,7 @@ header {
 }
 
 .log-container {
+    @include flex;
     button {
         &:first-child {
             margin: 0 20px 0 20px;

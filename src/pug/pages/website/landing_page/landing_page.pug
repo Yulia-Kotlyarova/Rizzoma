@@ -1,0 +1,37 @@
+extend ../../../website_main.pug
+block variables
+
+include ../../../mixins/color_type_mixins.pug
+include ../../../mixins/cards_mixins.pug
+include ../../../mixins/main_mixins.pug
+
+block append scripts
+    +script("../src/pug/components/inputs/date_drop_numb.js", "module")
+    +script("../src/pug/components/inputs/drop_down_guests.js", "module") 
+    +script("../node_modules/air-datepicker/dist/js/datepicker.min.js")
+    +script("../src/pug/components/datepicker/datepicker.js")
+
+block append scripts
+    +script("../src/pug/components/inputs/drop_helpers.js", "module")
+    +script("../src/pug/components/inputs/drop_down_guests.js", "module")
+    +script("../node_modules/air-datepicker/dist/js/datepicker.min.js")
+    +script("../src/pug/components/datepicker/datepicker.js")
+
+block content
+    link(rel="stylesheet" href="../src/pug/components/dist/colored_logo.css")
+    link(rel="stylesheet" href="../src/pug/components/dist/header.css")
+    +links("../src/pug/components/form_elem/dist/search_room.css")
+    link(rel="stylesheet" href="../src/pug/components/dist/footer.css")
+    link(rel="stylesheet" href="../src/pug/pages/website/landing_page/dist/landing_page.css")
+    link(rel="stylesheet" href="../src/pug/pages/ui_kit/form_elem/dist/form_elem.css")
+    +links("https://fonts.googleapis.com/icon?family=Material+Icons")
+    +links("../node_modules/air-datepicker/dist/css/datepicker.min.css")
+    +links("../src/pug/components/datepicker/dist/datepicker.css")
+    +links("../src/pug/components/inputs/dist/input.css")
+
+    include ../../../components/header.pug
+    main.landing-page__main
+        img(src="../src/assets/img/landing_photo.png" class = "landing-page__photo", alt="photo")
+        include ../../../components/form_elem/search_room.pug
+
+    include ../../../components/footer.pug

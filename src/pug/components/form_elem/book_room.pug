@@ -4,8 +4,9 @@ include ../../mixins/main_mixins.pug
 .book-room__wrapper
     +card-up-info(888, 9990, true)
     .form-elem__date-dropdown
-        +input("прибытие", false, "input__drop-text", "19.08.2019", "expand_more")
-        +input("выезд", false, "input__drop-text", "23.08.2019", "expand_more")
+        .form_elem__two-inputs-box
+            +doubleInput("date Dropdown", false, "input__drop-text", "19.08.2019", "expand_more", "input__drop-first")
+            +doubleInput("date Dropdown", false, "input__drop-numb", "23.08.2019", "expand_more", "input__drop-last")
     .form-elem__dropdown-wrapper.form-elem__dropdown-wrapper-guest
         +input("гости", "",  false,"3 гостя", "expand_more", "active")
         .form-elem__dropdown.form-elem__dropdown-guests
@@ -37,7 +38,7 @@ include ../../mixins/main_mixins.pug
             span.book-room__services-result 300₽
         p.book-room__final-result
             span Итого
-            span 38 081₽
+            span.book-room__final-sum 38 081₽
 
 
     button(class = "button__fill button__pay") забронировать

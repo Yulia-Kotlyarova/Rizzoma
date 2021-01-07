@@ -66,6 +66,11 @@ module.exports = {
       template: path.resolve(__dirname, './src/pug/pages/ui_kit/headers_and_footers/headers_and_footers.html'),
       chunks: ['headers_and_footers']
     }),
+    new HtmlWebpackPlugin({
+      filename: 'landing_page.html',
+      template: path.resolve(__dirname, './src/pug/pages/website/landing_page/landing_page.html'),
+      chunks: ['landing_page']
+    }),
 
     // new CopyPlugin([
     //   { from: '../../../../assets', to: 'src/assets' },

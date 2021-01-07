@@ -1,0 +1,30 @@
+block variables
+
+block basicSeo
+
+block title
+        title UI kit
+
+include mixins/main_mixins.pug
+
+block prepend scripts
+  script(src= '../node_modules/jquery/dist/jquery.js')
+  script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js")
+
+block append scripts
+  
+doctype html
+html(lang='ru')
+        head
+                meta(charset="utf-8")
+                meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1')
+                +links("../src/pug/pages/ui_kit/color_type/dist/color_type.css")
+                +links("../style/dist/style.css")
+                +links("../jquery/ui_style.css")
+                +links("https://fonts.googleapis.com/css?family=Cute+Font|Inconsolata")
+        body
+                block content
+
+block scripts
+        +script("//code.jquery.com/jquery-1.11.0.min.js")
+        +script("//code.jquery.com/jquery-migrate-1.2.1.min.js")

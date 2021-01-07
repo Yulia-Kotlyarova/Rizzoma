@@ -135,3 +135,21 @@
 .form-elem__action {
     padding: 0 20px 18px;
 }
+
+.form_elem__two-inputs-box {
+    width: 100%;
+    @include flex($wrap: 'no-wrap');
+
+    .input__field {
+        max-width: 150px;
+    }
+    .input__text-box {
+        position: relative;
+        .material-icons {
+            position: absolute;
+            top: 24px;
+            right: 10px;
+        }
+    }
+
+}
