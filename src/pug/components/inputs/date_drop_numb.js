@@ -3,9 +3,28 @@ window.addEventListener("DOMContentLoaded", () => {
 
     const allDoubleDatepicker = $('.input__drop-first');
 
+    const datepickerAction = document.createElement('div');
+    datepickerAction.classList.add('form-elem__action');
+    datepickerAction.innerHTML = `<h3 class="clear" data-action="clear">очистить</h3>
+                                    <h3 class = "set-result" data-action="set-result">применить</h3>`;
+
+    const getBookSumBox = (inst, nights) => {
+        const howMuchDays = inst.el.closest('.book-room__wrapper').querySelector('.book-room__days');
+        howMuchDays.innerText = `${nights} суток`;
+        const price = 9900;
+        const sum = howMuchDays.closest('p').nextElementSibling.querySelector('.book-room__sum-result');
+        sum.innerText = price * nights;
+        const commission =  parseInt($('.book-room__commission-result')[0].innerText);
+        const extraCommission = parseInt($('.book-room__services-result')[0].innerText);
+        const finalSum = price * nights - commission - extraCommission;
+        $('.book-room__final-sum')[0].innerText =  finalSum;
+    }
+
     allDoubleDatepicker.each(function(){
+
         $(this).datepicker(
             {
+            // inline: true,
             toggleSelected: false, // возможость выбрать одну дату два раза
             range: true,
             prevHtml: `<i class = 'material-icons md-24 '> arrow_back </i>`,
@@ -13,7 +32,15 @@ window.addEventListener("DOMContentLoaded", () => {
             navTitles: {
                 days: 'MM yyyy',
                 },
+                
+            onShow(inst, animationCompleted) {
+                inst.$datepicker.append(datepickerAction);
+                datepickerAction.querySelector('.clear').onclick = () =>  this.clear();
+                datepickerAction.querySelector('.set-result').onclick = () => this.hide();
+            },
+
             onSelect: function (formattedDate, date, inst) { 
+
                 let firstInput = inst.el;
                 let lastInput = inst.el.closest('div').nextSibling.nextSibling.querySelector('.input__drop-last');
                 
@@ -22,22 +49,14 @@ window.addEventListener("DOMContentLoaded", () => {
                 let nights;
                 nights =  date[1] && (date[1].getTime() - date[0].getTime())/(1000*60*60*24);
                 date[1] && console.log('nights quantity:' + nights);
-                console.log(inst);
+
                 if ( inst.el.closest('.book-room__wrapper')) {
-                    const howMuchDays = inst.el.closest('.book-room__wrapper').querySelector('.book-room__days');
-                    howMuchDays.innerText = `${nights} суток`;
-                    const price = 9900;
-                    const sum = howMuchDays.closest('p').nextElementSibling.querySelector('.book-room__sum-result');
-                    console.log(price, nights);
-                    sum.innerText = price * nights;
-                    const commission =  parseInt($('.book-room__commission-result')[0].innerText);
-                    const extraCommission = parseInt($('.book-room__services-result')[0].innerText);
-                    const finalSum = price * nights - commission - extraCommission;
-                    $('.book-room__final-sum')[0].innerText =  finalSum;
+                    getBookSumBox(inst, nights);
                 }
             }
         })
     });
+
 
     // $('.input__drop-first').datepicker(
     //     {

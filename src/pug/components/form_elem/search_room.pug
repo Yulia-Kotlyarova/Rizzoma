@@ -4,10 +4,10 @@ include ../../mixins/main_mixins.pug
     h2 Найдём номера под ваши пожелания
     .form-elem__date-dropdown
         .form_elem__two-inputs-box
-            +doubleInput("date Dropdown", false, "input__drop-text", "ДД.ММ.ГГГГ", "expand_more", "input__drop-first")
-            +doubleInput("date Dropdown", false, "input__drop-numb", "ДД.ММ.ГГГГ", "expand_more", "input__drop-last")
+            +doubleInput("прибытие", false, "input__drop-text", "ДД.ММ.ГГГГ", "expand_more", "input__drop-first")
+            +doubleInput("выезд", false, "input__drop-numb", "ДД.ММ.ГГГГ", "expand_more", "input__drop-last")
     .form-elem__dropdown-wrapper.form-elem__dropdown-wrapper-guest
-        +input("dropdown", "", false, "Сколько гостей", "expand_more", "active", true)
+        +input("гости", "", false, "Сколько гостей", "expand_more", "active", true)
         .form-elem__dropdown.form-elem__dropdown-guests
             +dropdown_extend_unit("взрослые", "adult", "0")
             +dropdown_extend_unit("дети", "children", "0")
