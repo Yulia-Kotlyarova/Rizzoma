@@ -4,6 +4,7 @@
 @import '../../../components/buttons/buttons.scss';
 @import '../../../components/buttons/toggle.scss';
 @import '../../../components/buttons/radio.scss';
+@import '../../../components/buttons/pagination.scss';
 @import '../../../components/rate/rate.scss';
 @import '../../../components/range/range.scss';
 @import '../../../components/form_elem/actions.scss';
@@ -121,10 +122,6 @@ form {
 
 }
 
-// radio
-
-
-
 // like 
 
 .like {
@@ -186,102 +183,6 @@ form {
 
 .form-elem__button-wrapper {
     min-width: 320px;
-}
-
-// range slider
-
-// button
-
-// pagination
-
-.form-elem__pagination-container {
-    padding-top: 40px;
-    .simple-pagination {
-        padding: 15px 5px 5px 0;
-    }
-    p {
-        color: $DarkShade75;
-        padding: 3px 0 0 6px;
-    }
-}
-
-.light-theme {
-    li {
-        font-size: 1.2rem;
-        width: 40px;
-        height: 40px;
-        position: relative;
-        text-align: center;
-    }
-    .active {
-        span {
-            color: #fff;
-            font-weight: 700;
-        }
-        &::after {
-            @include gradient;
-            @include circle ($width: 40px, $height: 40px);
-            top: 0;
-            right: 0;
-            z-index: -1;
-        }
-    }
-    li:first-child {
-        display: none;
-    }
-    li:last-child{ 
-        &::after {
-            @include gradient($secondary-color, $primary-lightblue);
-            @include circle ($width: 40px, $height: 40px);
-            top: 0;
-            right: 0;
-            z-index: -1;
-        }
-        a {
-            background-color: transparent;
-            i {
-                color: #fff;
-                line-height: 40px;
-            }
-        }
-    }
-}
-
-.light-theme a,
-.light-theme span {
-    border: none;
-    box-shadow: none;
-    text-decoration: none;
-    line-height: 40px;
-    &:hover {
-        padding: 0;
-        box-shadow: none;
-    }
-}
-.light-theme .current {
-    display: block;
-    text-align: center;
-    padding: 0;
-    box-shadow: none;
-    border: none;
-}
-
-.next {
-    i {
-        color: #fff;
-        line-height: 40px;
-    }
-} 
-
-.light-theme .current .prev{
-    display: none;
-}
-
-.list-section {
-    @include flex($align: flex-start);
-    width: 100%;
-    padding-top: 15px;
-    max-width: 1095px;
 }
 
 // expandable

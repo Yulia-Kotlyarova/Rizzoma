@@ -210,6 +210,10 @@
           </div>
           <button class="button__fill button__pay">перейти к оплате<i class="material-icons md-24 ">arrow_forward</i></button>
         </div>
+                <script type="text/javascript" src="../src/jquery/ui_min.js"></script>
+                <script type="text/javascript" src="../src/jquery/ui_touch.js"></script>
+                <script type="text/javascript" src="../src/jquery/jquery.simplePagination.js"></script>
+                <script type="text/javascript" src="../src/pug/components/buttons/pagination.js"></script>
         <div class="form-elem__pagination-container">
           <h3>pagination</h3>
           <div id="light-pagination"></div>
@@ -219,234 +223,233 @@
       <section class="dropdown-section">
         <div class="form-elem__dropdown-container">
           <div class="form-elem__small">
-            <form action="">
-              <div class="input__text-box">
-                <h3>dropdown</h3><span>default</span>
-                <input class="true input__field" placeholder="2 спальни, 2 кровати..."/>
-              </div><i class="material-icons md-24 expand_more">expand_more</i>
-            </form>
+                    <form action="">
+                      <div class="input__text-box">
+                        <h3>dropdown</h3><span>default</span>
+                        <input class="true input__field" placeholder="2 спальни, 2 кровати...">
+                      </div><i class="material-icons md-24 expand_more">expand_more</i>
+                    </form>
           </div>
           <div class="form-elem__dropdown-wrapper form-elem__dropdown-wrapper-room">
             <div class="form-elem__small">
-              <form action="">
-                <div class="input__text-box">
-                  <h3>dropdown</h3><span>expanded</span>
-                  <input class="active input__field" placeholder="2 спальни, 2 кровати..."/>
-                </div><i class="material-icons md-24 expand_more">expand_more</i>
-              </form>
+                      <form action="">
+                        <div class="input__text-box">
+                          <h3>dropdown</h3><span>expanded</span>
+                          <input class="active input__field" placeholder="2 спальни, 2 кровати...">
+                        </div><i class="material-icons md-24 expand_more">expand_more</i>
+                      </form>
               <div class="form-elem__dropdown">
-                <div class="form-elem__dropdown-unit">
-                  <h3>спальни</h3>
-                  <div class="form-elem__change-box">
-                    <div class="circle bedroom-minus">-</div>
-                    <h3 class="quantity">2</h3>
-                    <div class="circle bedroom-plus">+</div>
-                  </div>
-                </div>
-                <div class="form-elem__dropdown-unit">
-                  <h3>кровати</h3>
-                  <div class="form-elem__change-box">
-                    <div class="circle bed-minus">-</div>
-                    <h3 class="quantity">2</h3>
-                    <div class="circle bed-plus">+</div>
-                  </div>
-                </div>
-                <div class="form-elem__dropdown-unit">
-                  <h3>ванные комнаты</h3>
-                  <div class="form-elem__change-box">
-                    <div class="circle bathroom-minus">-</div>
-                    <h3 class="quantity">0</h3>
-                    <div class="circle bathroom-plus">+</div>
-                  </div>
-                </div>
+                        <div class="form-elem__dropdown-unit">
+                          <h3>спальни</h3>
+                          <div class="form-elem__change-box">
+                            <div class="circle bedroom-minus">-</div>
+                            <h3 class="quantity">2</h3>
+                            <div class="circle bedroom-plus">+</div>
+                          </div>
+                        </div>
+                        <div class="form-elem__dropdown-unit">
+                          <h3>кровати</h3>
+                          <div class="form-elem__change-box">
+                            <div class="circle bed-minus">-</div>
+                            <h3 class="quantity">2</h3>
+                            <div class="circle bed-plus">+</div>
+                          </div>
+                        </div>
+                        <div class="form-elem__dropdown-unit">
+                          <h3>ванные комнаты</h3>
+                          <div class="form-elem__change-box">
+                            <div class="circle bathroom-minus">-</div>
+                            <h3 class="quantity">0</h3>
+                            <div class="circle bathroom-plus">+</div>
+                          </div>
+                        </div>
               </div>
             </div>
           </div>
         </div>
         <div class="form-elem__dropdown-wrapper form-elem__dropdown-wrapper-guest form-elem__dropdown-middle">
-          <form action="">
-            <div class="input__text-box">
-              <h3>dropdown</h3>
-              <input class="active input__field" placeholder="Сколько гостей" readonly="readonly"/>
-            </div><i class="material-icons md-24 expand_more">expand_more</i>
-          </form>
+                  <form action="">
+                    <div class="input__text-box">
+                      <h3>dropdown</h3>
+                      <input class="active input__field" placeholder="Сколько гостей" readonly>
+                    </div><i class="material-icons md-24 expand_more">expand_more</i>
+                  </form>
           <div class="form-elem__dropdown form-elem__dropdown-guests">
-            <div class="form-elem__dropdown-unit">
-              <h3>взрослые</h3>
-              <div class="form-elem__change-box">
-                <div class="circle adult-minus">-</div>
-                <h3 class="quantity">0</h3>
-                <div class="circle adult-plus">+</div>
-              </div>
-            </div>
-            <div class="form-elem__dropdown-unit">
-              <h3>дети</h3>
-              <div class="form-elem__change-box">
-                <div class="circle children-minus">-</div>
-                <h3 class="quantity">0</h3>
-                <div class="circle children-plus">+</div>
-              </div>
-            </div>
-            <div class="form-elem__dropdown-unit">
-              <h3>младенцы</h3>
-              <div class="form-elem__change-box">
-                <div class="circle baby-minus">-</div>
-                <h3 class="quantity">0</h3>
-                <div class="circle baby-plus">+</div>
-              </div>
-            </div>
-            <div class="form-elem__action">
-              <h3 class="clear" data-action="clear">очистить</h3>
-              <h3 data-action="set-result">применить</h3>
-            </div>
+                    <div class="form-elem__dropdown-unit">
+                      <h3>взрослые</h3>
+                      <div class="form-elem__change-box">
+                        <div class="circle adult-minus">-</div>
+                        <h3 class="quantity">0</h3>
+                        <div class="circle adult-plus">+</div>
+                      </div>
+                    </div>
+                    <div class="form-elem__dropdown-unit">
+                      <h3>дети</h3>
+                      <div class="form-elem__change-box">
+                        <div class="circle children-minus">-</div>
+                        <h3 class="quantity">0</h3>
+                        <div class="circle children-plus">+</div>
+                      </div>
+                    </div>
+                    <div class="form-elem__dropdown-unit">
+                      <h3>младенцы</h3>
+                      <div class="form-elem__change-box">
+                        <div class="circle baby-minus">-</div>
+                        <h3 class="quantity">0</h3>
+                        <div class="circle baby-plus">+</div>
+                      </div>
+                    </div>
+                    <div class="form-elem__action">
+                      <h3 class="clear" data-action="clear">очистить</h3>
+                      <h3 data-action="set-result">применить</h3>
+                    </div>
           </div>
         </div>
         <div class="form-elem__dropdown-wrapper form-elem__dropdown-wrapper-guest">
-          <form action="">
-            <div class="input__text-box">
-              <h3>dropdown</h3>
-              <input class="active input__field" placeholder="3 гостя" readonly="readonly"/>
-            </div><i class="material-icons md-24 expand_more">expand_more</i>
-          </form>
+                  <form action="">
+                    <div class="input__text-box">
+                      <h3>dropdown</h3>
+                      <input class="active input__field" placeholder="3 гостя" readonly>
+                    </div><i class="material-icons md-24 expand_more">expand_more</i>
+                  </form>
           <div class="form-elem__dropdown form-elem__dropdown-guests">
-            <div class="form-elem__dropdown-unit">
-              <h3>взрослые</h3>
-              <div class="form-elem__change-box">
-                <div class="circle adult-minus">-</div>
-                <h3 class="quantity">2</h3>
-                <div class="circle adult-plus">+</div>
-              </div>
-            </div>
-            <div class="form-elem__dropdown-unit">
-              <h3>дети</h3>
-              <div class="form-elem__change-box">
-                <div class="circle children-minus">-</div>
-                <h3 class="quantity">1</h3>
-                <div class="circle children-plus">+</div>
-              </div>
-            </div>
-            <div class="form-elem__dropdown-unit">
-              <h3>младенцы</h3>
-              <div class="form-elem__change-box">
-                <div class="circle baby-minus">-</div>
-                <h3 class="quantity">0</h3>
-                <div class="circle baby-plus">+</div>
-              </div>
-            </div>
-            <div class="form-elem__action">
-              <h3 class="clear" data-action="clear">очистить</h3>
-              <h3 data-action="set-result">применить</h3>
-            </div>
+                    <div class="form-elem__dropdown-unit">
+                      <h3>взрослые</h3>
+                      <div class="form-elem__change-box">
+                        <div class="circle adult-minus">-</div>
+                        <h3 class="quantity">2</h3>
+                        <div class="circle adult-plus">+</div>
+                      </div>
+                    </div>
+                    <div class="form-elem__dropdown-unit">
+                      <h3>дети</h3>
+                      <div class="form-elem__change-box">
+                        <div class="circle children-minus">-</div>
+                        <h3 class="quantity">1</h3>
+                        <div class="circle children-plus">+</div>
+                      </div>
+                    </div>
+                    <div class="form-elem__dropdown-unit">
+                      <h3>младенцы</h3>
+                      <div class="form-elem__change-box">
+                        <div class="circle baby-minus">-</div>
+                        <h3 class="quantity">0</h3>
+                        <div class="circle baby-plus">+</div>
+                      </div>
+                    </div>
+                    <div class="form-elem__action">
+                      <h3 class="clear" data-action="clear">очистить</h3>
+                      <h3 data-action="set-result">применить</h3>
+                    </div>
           </div>
         </div>
       </section>
       <section class="list-section">
         <div class="expandable__container">
           <div class="expandable__wrapper">
-            <div class="expandable__title ">
-              <h3>expandable checkbox list</h3><i class="material-icons md-24 expand_more">expand_more</i>
-            </div>
+                    <div class="expandable__title ">
+                      <h3>expandable checkbox list</h3><i class="material-icons md-24 expand_more">expand_more</i>
+                    </div>
           </div>
           <div class="expandable__wrapper expandable__wrapper-needs">
-            <div class="expandable__title active">
-              <h3>expandable checkbox list</h3><i class="material-icons md-24 expand_more">expand_more</i>
-            </div>
+                    <div class="expandable__title active">
+                      <h3>expandable checkbox list</h3><i class="material-icons md-24 expand_more">expand_more</i>
+                    </div>
             <div class="expandable__list-box">
-              <div class="expandable__list-item">
-                <input class="form-elem__custom-checkbox" type="checkbox" id="breakfast"/>
-                <label for="breakfast"></label><span>Завтрак</span>
-              </div>
-              <div class="expandable__list-item">
-                <input class="form-elem__custom-checkbox" type="checkbox" id="writing-table" checked="checked"/>
-                <label for="writing-table"></label><span>Письменный стол</span>
-              </div>
-              <div class="expandable__list-item">
-                <input class="form-elem__custom-checkbox" type="checkbox" id="feeding-chair" checked="checked"/>
-                <label for="feeding-chair"></label><span>Стул для кормления</span>
-              </div>
-              <div class="expandable__list-item">
-                <input class="form-elem__custom-checkbox" type="checkbox" id="baby-bed" checked="checked"/>
-                <label for="baby-bed"></label><span>Кроватка</span>
-              </div>
-              <div class="expandable__list-item">
-                <input class="form-elem__custom-checkbox" type="checkbox" id="tv"/>
-                <label for="tv"></label><span>Телевизор</span>
-              </div>
-              <div class="expandable__list-item">
-                <input class="form-elem__custom-checkbox" type="checkbox" id="shampoo"/>
-                <label for="shampoo"></label><span>Шампунь</span>
-              </div>
+                      <div class="expandable__list-item">
+                        <input class="form-elem__custom-checkbox" type="checkbox" id="breakfast">
+                        <label for="breakfast"></label><span>Завтрак</span>
+                      </div>
+                      <div class="expandable__list-item">
+                        <input class="form-elem__custom-checkbox" type="checkbox" id="writing-table" checked>
+                        <label for="writing-table"></label><span>Письменный стол</span>
+                      </div>
+                      <div class="expandable__list-item">
+                        <input class="form-elem__custom-checkbox" type="checkbox" id="feeding-chair" checked>
+                        <label for="feeding-chair"></label><span>Стул для кормления</span>
+                      </div>
+                      <div class="expandable__list-item">
+                        <input class="form-elem__custom-checkbox" type="checkbox" id="baby-bed" checked>
+                        <label for="baby-bed"></label><span>Кроватка</span>
+                      </div>
+                      <div class="expandable__list-item">
+                        <input class="form-elem__custom-checkbox" type="checkbox" id="tv">
+                        <label for="tv"></label><span>Телевизор</span>
+                      </div>
+                      <div class="expandable__list-item">
+                        <input class="form-elem__custom-checkbox" type="checkbox" id="shampoo">
+                        <label for="shampoo"></label><span>Шампунь</span>
+                      </div>
             </div>
           </div>
         </div>
         <div class="rich-list__wrapper">
           <h3>rich Checkbox Buttons</h3>
           <div class="rich-list__item-box">
-            <div class="rich-list__item">
-              <input class="form-elem__custom-checkbox" type="checkbox" id="wide_corridor"/>
-              <label for="wide_corridor"></label>
-              <div class="rich-list__text-box">
-                <p class="rich-list__title">Широкий коридор</p><span>Ширина коридоров в номере не менее 91 см.</span>
-              </div>
-            </div>
-            <div class="rich-list__item">
-              <input class="form-elem__custom-checkbox" type="checkbox" id="helper_for_disabled"/>
-              <label for="helper_for_disabled"></label>
-              <div class="rich-list__text-box">
-                <p class="rich-list__title">Помощник для инвалидов</p><span>На 1 этаже вас встретит специалист  и проводит до номера.</span>
-              </div>
-            </div>
+                    <div class="rich-list__item">
+                      <input class="form-elem__custom-checkbox" type="checkbox" id="wide_corridor">
+                      <label for="wide_corridor"></label>
+                      <div class="rich-list__text-box">
+                        <p class="rich-list__title">Широкий коридор</p><span>Ширина коридоров в номере не менее 91 см.</span>
+                      </div>
+                    </div>
+                    <div class="rich-list__item">
+                      <input class="form-elem__custom-checkbox" type="checkbox" id="helper_for_disabled">
+                      <label for="helper_for_disabled"></label>
+                      <div class="rich-list__text-box">
+                        <p class="rich-list__title">Помощник для инвалидов</p><span>На 1 этаже вас встретит специалист  и проводит до номера.</span>
+                      </div>
+                    </div>
           </div>
         </div>
         <div class="bullet-list___wrapper">
           <h3>bullet list</h3>
           <ul>
-            <li class="bullet-list__item">Нельзя с питомцами</li>
-            <li class="bullet-list__item">Без вечеринок и мероприятий</li>
-            <li class="bullet-list__item">Время прибытия — после 13:00, а выезд до 12:00</li>
+                    <li class="bullet-list__item">Нельзя с питомцами</li>
+                    <li class="bullet-list__item">Без вечеринок и мероприятий</li>
+                    <li class="bullet-list__item">Время прибытия — после 13:00, а выезд до 12:00</li>
           </ul>
         </div>
       </section>
       <section class="benefits-section">
         <div class="benefits__wrapper">
-          <div class="benefits__box"><i class="material-icons md-24">insert_emoticon</i>
-            <div class="benefits__textbox">
-              <p>Комфорт</p><span>Шумопоглощающие стены</span>
-            </div>
-          </div>
-          <div class="benefits__box"><i class="material-icons md-24">location_city</i>
-            <div class="benefits__textbox">
-              <p>Удобство</p><span>Окно в каждой из спален</span>
-            </div>
-          </div>
+                  <div class="benefits__box"><i class="material-icons md-24">insert_emoticon</i>
+                    <div class="benefits__textbox">
+                      <p>Комфорт</p><span>Шумопоглощающие стены</span>
+                    </div>
+                  </div>
+                  <div class="benefits__box"><i class="material-icons md-24">location_city</i>
+                    <div class="benefits__textbox">
+                      <p>Удобство</p><span>Окно в каждой из спален</span>
+                    </div>
+                  </div>
         </div>
         <div class="response__wrapper">
-          <div class="response__user-box">
-            <div class="ava__container"><img src="../src/assets/img/photo.png" alt="ava"/></div>
-            <div class="response__user-info">
-              <p>Мурад Сарафанов</p><span>5 дней назад</span>
-            </div>
-          </div>
-          <div class="response__user-textbox">
-            <div class="like__box like__with"><i class="material-icons md-24 ">favorite</i><span>12</span></div>
-            <p>Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.</p>
-          </div>
+                  <div class="response__user-box">
+                    <div class="ava__container"><img src="../src/assets/img/photo.png" alt="ava"></div>
+                    <div class="response__user-info">
+                      <p>Мурад Сарафанов</p><span>5 дней назад</span>
+                    </div>
+                  </div>
+                  <div class="response__user-textbox">
+                            <div class="like__box like__with"><i class="material-icons md-24 ">favorite</i><span>12</span></div>
+                    <p>Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.</p>
+                  </div>
         </div>
       </section>
     </main>
   </body>
 </html>
-<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-<script type="text/javascript" src="../src/slick-1.8.1/slick/slick.min.js"></script>
-<script type="module" src="../src/pug/components/inputs/drop_helpers.js"></script>
-<script type="module" src="../src/pug/components/inputs/date_drop_numb.js"></script>
-<script type="module" src="../src/pug/components/inputs/drop_down_room.js"></script>
-<script type="module" src="../src/pug/components/inputs/drop_down_guests.js"></script>
-<script type="text/javascript" src="../src/jquery/ui_min.js"></script>
-<script type="text/javascript" src="../src/jquery/ui_touch.js"></script>
-<script type="text/javascript" src="../src/jquery/jquery.simplePagination.js"></script>
-<script type="text/javascript" src="../src/pug/pages/ui_kit/form_elem/range.js"></script>
-<script type="text/javascript" src="../src/pug/pages/ui_kit/form_elem/pagination.js"></script>
-<script type="text/javascript" src="../node_modules/air-datepicker/dist/js/datepicker.min.js"></script>
-<script type="text/javascript" src="../src/pug/components/datepicker/datepicker.js"></script>
+        <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+        <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+        <script type="text/javascript" src="../src/slick-1.8.1/slick/slick.min.js"></script>
+        <script type="module" src="../src/pug/components/inputs/date_drop_numb.js"></script>
+        <script type="module" src="../src/pug/components/inputs/drop_down_room.js"></script>
+        <script type="module" src="../src/pug/components/inputs/drop_down_guests.js"></script>
+        <script type="module" src="../src/pug/pages/ui_kit/form_elem/range.js"></script>
+        <script type="text/javascript" src="../node_modules/air-datepicker/dist/js/datepicker.min.js"></script>
+        <script type="text/javascript" src="../src/pug/components/datepicker/datepicker.js"></script>
+        <script type="text/javascript" src="../src/jquery/ui_min.js"></script>
+        <script type="text/javascript" src="../src/jquery/ui_touch.js"></script>
+        <script type="text/javascript" src="../src/jquery/jquery.simplePagination.js"></script>
+        <script type="text/javascript" src="../src/pug/components/buttons/pagination.js"></script>

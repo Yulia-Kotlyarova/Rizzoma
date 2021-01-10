@@ -7,12 +7,9 @@ include ../../../mixins/cards_mixins.pug
 include ../../../mixins/main_mixins.pug
 
 block append scripts
-    +script("../src/pug/components/inputs/date_drop_numb.js", "module") // TODO below links like there
-    +script("../src/pug/components/inputs/drop_down_guests.js", "module") 
     +script("../src/pug/pages/ui_kit/cards/card.js")
     +script("../node_modules/air-datepicker/dist/js/datepicker.min.js")
     +script("../src/pug/components/datepicker/datepicker.js")
-    
 
 block content
     +links("../src/slick-1.8.1/slick/slick.css")
@@ -39,4 +36,4 @@ block content
             +calendar("card-calendar")
             +card("888", 9990, "../src/assets/img/number_880.png", 145, true, true, 1)
             +card("840", 9990, "../src/assets/img/number_840.jpg", 65, false, false, 2)
-    
+

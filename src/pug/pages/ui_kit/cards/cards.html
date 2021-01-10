@@ -27,17 +27,18 @@
     <link rel="stylesheet" href="../src/pug/components/datepicker/dist/datepicker.css" type="text/css"/>
     <main>
       <div class="card__column">
+                <script type="module" src="../src/pug/components/form_elem/search_room.js"></script>
         <div class="search-room__wrapper">
           <h2>Найдём номера под ваши пожелания</h2>
           <div class="form-elem__date-dropdown">
             <div class="form_elem__two-inputs-box">
                       <div class="input__text-box">
                         <h3>прибытие</h3>
-                        <input class="input__drop-first input__field input__drop-text" placeholder="ДД.ММ.ГГГГ"><i class="material-icons md-24 expand_more">expand_more</i>
+                        <input class="input__drop-first input__drop-first-search input__field input__drop-text" placeholder="ДД.ММ.ГГГГ"><i class="material-icons md-24 expand_more">expand_more</i>
                       </div>
                       <div class="input__text-box">
                         <h3>выезд</h3>
-                        <input class="input__drop-last input__field input__drop-numb" placeholder="ДД.ММ.ГГГГ"><i class="material-icons md-24 expand_more">expand_more</i>
+                        <input class="input__drop-last input__drop-last-search input__field input__drop-numb" placeholder="ДД.ММ.ГГГГ"><i class="material-icons md-24 expand_more">expand_more</i>
                       </div>
             </div>
           </div>
@@ -139,6 +140,7 @@
         </div>
       </div>
       <div class="card__column">
+                <script type="module" src="../src/pug/components/form_elem/book_room.js"></script>
         <div class="book-room__wrapper">
                   <div class="card__up-info">
                     <p><span class="card__number-sign">№&nbsp;</span><span class="card__number">888</span><span class="card__lux">люкс</span>
@@ -147,13 +149,15 @@
                   </div>
           <div class="form-elem__date-dropdown">
             <div class="form_elem__two-inputs-box">
+              <label for="input__drop-first-room"></label>
                       <div class="input__text-box">
                         <h3>прибытие</h3>
-                        <input class="input__drop-first input__field input__drop-text" placeholder="19.08.2019"><i class="material-icons md-24 expand_more">expand_more</i>
+                        <input class="input__drop-first input__drop-first-room datepicker-here input__field input__drop-text" placeholder="19.08.2019"><i class="material-icons md-24 expand_more">expand_more</i>
                       </div>
+              <label for="input__drop-last-room"></label>
                       <div class="input__text-box">
                         <h3>выезд</h3>
-                        <input class="input__drop-last input__field input__drop-numb" placeholder="23.08.2019"><i class="material-icons md-24 expand_more">expand_more</i>
+                        <input class="input__drop-last input__drop-last-room input__field input__drop-numb" placeholder="23.08.2019"><i class="material-icons md-24 expand_more">expand_more</i>
                       </div>
             </div>
           </div>
@@ -200,7 +204,7 @@
             <p><span class="book-room__sum-result">39 960₽</span></p>
           </div>
           <div class="book-room__price-box">
-            <p><span>Сбор за услуги: </span><span class="book-room__commission">скидка 2 179₽ </span></p>
+            <p><span>Сбор за услуги: скидка </span><span class="book-room__commission">2179₽ </span></p>
             <p class="book-room__info-label"> &#9432;</p>
             <p><span class="book-room__commission-result">0₽</span></p>
           </div>
@@ -244,7 +248,7 @@
                           </div>
                 </div>
                 <div class="card__wrapper">
-                  <div class="card__img-slider">
+                  <div class="card__img-slider-arr">
                     <div class="card__img-box"><img src="../src/assets/img/number_880.png" alt="photo"></div>
                     <div class="card__img-box"><img src="../src/assets/img/number_880.png" alt="photo"></div>
                     <div class="card__img-box"><img src="../src/assets/img/number_880.png" alt="photo"></div>
@@ -306,8 +310,8 @@
         <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
         <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
         <script type="text/javascript" src="../src/slick-1.8.1/slick/slick.min.js"></script>
-        <script type="module" src="../src/pug/components/inputs/date_drop_numb.js"></script>
-        <script type="module" src="../src/pug/components/inputs/drop_down_guests.js"></script>
         <script type="text/javascript" src="../src/pug/pages/ui_kit/cards/card.js"></script>
         <script type="text/javascript" src="../node_modules/air-datepicker/dist/js/datepicker.min.js"></script>
         <script type="text/javascript" src="../src/pug/components/datepicker/datepicker.js"></script>
+        <script type="module" src="../src/pug/components/form_elem/search_room.js"></script>
+        <script type="module" src="../src/pug/components/form_elem/book_room.js"></script>
