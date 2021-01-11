@@ -8,9 +8,9 @@ mixin menu-item(title, icon = false, className = "")
         a(href="/#" class ="menu__list-item"+ " " + className + "")= title
         if icon 
             i(class="material-icons md-24" + " "+ icon+ "")= icon
-
-block content 
-    header
+            
+block content
+    header 
         .header-container
             include ./colored_logo.pug
             .header__right
@@ -20,7 +20,6 @@ block content
                     +menu-item("Вакансии")
                     +menu-item("Новости")
                     +menu-item("Соглашения", "expand_more")
-                .log-container
-                    +button-round("войти", fill = false, bordered = true)
-                    +button-round("зарегистрироваться", fill = true)
-
+                .auth-container
+                    p Юлий Цезарь
+                    
