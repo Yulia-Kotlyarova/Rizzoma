@@ -7,24 +7,12 @@ include ../../../mixins/cards_mixins.pug
 include ../../../mixins/main_mixins.pug
 
 block append scripts
-    +script("../src/pug/pages/ui_kit/cards/card.js")
+    +script("./cards.js", "module")
     +script("../node_modules/air-datepicker/dist/js/datepicker.min.js")
     +script("../src/pug/components/datepicker/datepicker.js")
 
 block content
-    +links("../src/slick-1.8.1/slick/slick.css")
-    +links("../src/pug/pages/ui_kit/cards//dist/cards.css")
-    +links("../src/pug/components/inputs/dist/input.css")
-    +links("../src/pug/components/inputs/dist/dropdown.css")
-    +links("../src/pug/components/form_elem/dist/log_in.css")
-    +links("../src/pug/components/form_elem/dist/search_room.css")
-    +links("../src/pug/components/form_elem/dist/book_room.css")
-    +links("../src/pug/components/form_elem/dist/create_account.css")
-    +links("../src/pug/components/buttons/dist/buttons.css")
-    +links("../src/pug/components/buttons/dist/toggle.css")
     +links("https://fonts.googleapis.com/icon?family=Material+Icons") // TODO ICONS doesnt work without link
-    +links("../../../../../../node_modules/air-datepicker/dist/css/datepicker.min.css")
-    +links("../src/pug/components/datepicker/dist/datepicker.css")
     main
         .card__column
             include ../../../components/form_elem/search_room.pug

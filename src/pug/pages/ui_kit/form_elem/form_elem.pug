@@ -6,24 +6,12 @@ include ../../../mixins/color_type_mixins.pug
 include ../../../mixins/main_mixins.pug
 
 block append scripts
-    +script("../src/pug/components/inputs/date_drop_numb.js", "module")
-    +script("../src/pug/components/inputs/drop_down_room.js", "module")
-    +script("../src/pug/components/inputs/drop_down_guests.js", "module")
-    //- +script('../src/jquery/ui_min.js')
-    //- +script('../src/jquery/ui_touch.js')
-    //- +script('../src/jquery/jquery.simplePagination.js')
-    +script('../src/pug/pages/ui_kit/form_elem/range.js', "module")
-    //- +script('../src/pug/pages/ui_kit/form_elem/pagination.js') 
     +script("../node_modules/air-datepicker/dist/js/datepicker.min.js")
     +script("../src/pug/components/datepicker/datepicker.js")
 
 block content
     +links("../src/pug/pages/ui_kit/form_elem/dist/form_elem.css")
     +links("https://fonts.googleapis.com/icon?family=Material+Icons")
-    +links("../src/jquery/simplePagination.css")
-    +links("../node_modules/air-datepicker/dist/css/datepicker.min.css")
-    +links("../src/pug/components/datepicker/dist/datepicker.css")
-    +links("../src/pug/components/inputs/dist/input.css")
     main.form-elem__wrapper
         .form-elem__inputs-wrapper
             .form-elem__input-simple

@@ -1,3 +1,18 @@
+import '../../../../style/style.scss';
+import '../../../../slick-1.8.1/slick/slick.css';
+import '../../../../../node_modules/air-datepicker/dist/css/datepicker.min.css';
+import '../../../components/datepicker/datepicker.scss';
+
+import '../../../pages/ui_kit/cards/cards.scss';
+import '../../../components/inputs/input.scss';
+import '../../../components/inputs/dropdown.scss';
+import '../../../components/form_elem/log_in.scss';
+import '../../../components/form_elem/search_room.scss';
+import '../../../components/form_elem/book_room.scss';
+import '../../../components/form_elem/create_account.scss';
+import '../../../components/buttons/buttons.scss';
+import '../../../components/buttons/toggle.scss';
+
 window.addEventListener("DOMContentLoaded",() => {
     // $slick = jQuery.noConflict();
     $('.card__img-slider').slick({

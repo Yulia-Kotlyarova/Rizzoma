@@ -115,7 +115,7 @@ form {
         }
         &:checked+label::before {
             border: 1px solid $primary-color;
-            background-image: url("../../../../../assets/icons/check.svg");
+            // background-image: url("../../../../../assets/icons/check.svg");
           }
     }
 
@@ -190,7 +190,6 @@ form {
 .expandable{
     &__wrapper {
         h3 {
-            display: inline;
             line-height: 1.5rem;
         }
         &:hover,

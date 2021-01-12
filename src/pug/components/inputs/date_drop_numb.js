@@ -30,7 +30,6 @@ window.addEventListener("DOMContentLoaded", () => {
             days: 'MM yyyy',
           },
         onSelect: function(formattedDate, date, inst) {
-            obj.f = date;
             console.log(inst.el);
         }
     })

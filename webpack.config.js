@@ -12,20 +12,54 @@ const PAGES_DIR = `${PATHS.src}/pug/pages/`
 module.exports = {
   mode: 'development',
   entry: {
-    cards: `${PAGES_DIR}ui_kit/cards/card.js`,
+    color_type: `${PAGES_DIR}ui_kit/color_type/color_type.js`,
+    form_elem: `${PAGES_DIR}ui_kit/form_elem/form_elem.js`,
     headers_and_footers: `${PAGES_DIR}ui_kit/headers_and_footers/headers_and_footers.js`,
+    cards: `${PAGES_DIR}ui_kit/cards/card.js`,
+    vendors: [
+      "webpack-material-design-icons"
+      ]
   } ,
   output: {
     path: path.resolve(__dirname, 'dist')
   },
   module: {
     rules: [
+      // { 
+      //   test: /\.(jpe?g|png|gif|svg|eot|woff|ttf|svg|woff2)$/, 
+      //   loader: 'file-loader',
+      //   options: {
+      //     name: 'fonts/mat_icons/[name].[ext]'
+      //   }
+      // },
       {
         test: /\.scss$/,
         use: [
           'style-loader',
-          'css-loader',
-          'sass-loader'
+          {
+            loader: "css-loader",
+            options: {
+              sourceMap: true,
+            },
+          },
+          {
+            loader: "sass-loader",
+            options: {
+              sourceMap: true, // map for development
+            },
+          },
+        ]
+      },
+      {
+        test: /\.css$/,
+        use: [
+          'style-loader',
+          {
+            loader: "css-loader",
+            options: {
+              sourceMap: true,
+            },
+          },
         ]
       },
       {
@@ -97,8 +131,8 @@ module.exports = {
 
     new CopyPlugin({
       patterns:  [
-        { from: `${PATHS.assets}/fonts/Montserrat`, to: `${PATHS.dist}/fonts` }
+        { from: `${PATHS.assets}/fonts/Montserrat`, to: `${PATHS.dist}/fonts/Montserrat` }
       ]
-    }),
+    })
   ]
 };

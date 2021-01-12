@@ -2,7 +2,6 @@ include ../../mixins/main_mixins.pug
 
 block append scripts
     +script("../src/pug/components/form_elem/search_room.js", "module") 
-    //- +script("../src/pug/components/inputs/drop_down_guests.js", "module") // TODO delete module?
 
 .search-room__wrapper
     h2 Найдём номера под ваши пожелания
@@ -19,4 +18,3 @@ block append scripts
             +input-action
     button(class = "button__fill button__pay") подобрать номер
         i(class="material-icons md-24 ") arrow_forward
-
