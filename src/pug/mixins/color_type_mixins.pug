@@ -5,7 +5,7 @@ mixin color_mode(color, colorText, opacity)
             h2= colorText
             p= color
 
-mixin font_mode(fontType, fontExample)
+mixin font_mode(fontType, fontTypeClass, titleClass, fontExample)
     li.font-box__text-box
-        span= fontType
-        p(class=fontType)= fontExample
+        span(class = titleClass)= fontType
+        p(class=fontTypeClass)= fontExample

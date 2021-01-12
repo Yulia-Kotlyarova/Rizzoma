@@ -1,21 +1,25 @@
-// @import '../../../../style/const.scss';
-// @import '../../../../style/style.scss';
+@import '../../../../style/const.scss';
 
 .color-type__wrapper {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding: 145px 191px 145px 150px;
+    padding: 145px 158px 145px 150px;
 
     .color-box {
         &__text-box {
-            padding: 0 0 0 40px;
+            padding: 10px 0 0 40px;
+            p {
+                font-size: 1.9rem;
+                color: $DarkShade100;
+                line-height: 2.8rem;
+            }
 
         }
         &__item {
             display: flex;
             list-style: none;
-            padding: 20px 0;
+            padding: 0 0 20px 0;
             .square {
                 width: 70px;
                 height: 70px;
@@ -25,7 +29,6 @@
     }
     
     .font-box {
-        width: 403px;
         &__list {
             list-style: none;
         }
@@ -35,8 +38,51 @@
             align-items: center;
             padding-bottom: 50px;
             p {
+                max-width: 370px;
                 padding-left: 30px;
+                margin: 0;
             }
+            &__body {
+                max-width: 340px;
+            }
+        }
+        &__title-h1,
+        &__h1 {
+            font-size: 2.4rem;
+            line-height: 3.0rem;
+        }
+
+        &__title-h2,
+        &__h2 {
+            font-size: 1.9rem;
+            line-height: 2.4rem;
+        }
+
+        &__title-h3,
+        &__h3 {
+            font-size: 1.2rem;
+            line-height: 1.5rem;
+        }
+        &__h1,
+        &__h2,
+        &__h3 {
+            font-weight: 700;
+            color: $DarkShade100;
+        }
+
+        &__h3 {
+            text-transform: uppercase;
+        }
+
+        &__title-h1,
+        &__title-h2,
+        &__title-h3,
+        &__title-body {
+            align-self: start;
+            text-align: right;
+        }
+        span {
+            width: 36px;
         }
     }
 }

@@ -1,17 +1,17 @@
 @import './const.scss';
 @import './mixins';
 
-// @font-face {
-//     font-family: 'Material Icons';
-//     font-style: normal;
-//     font-weight: 400;
-//     src: url('/dist/fonts/mat_icons/MaterialIcons-Regular.eot'); /* For IE6-8 */
-//     src: local('Material Icons'),
-//          local('MaterialIcons-Regular'),
-//          url('/dist/fonts/mat_icons/MaterialIcons-Regular.woff2') format('woff2'),
-//          url('/dist/fonts/mat_icons/MaterialIcons-Regular.woff') format('woff'),
-//          url('/dist/fonts/mat_icons/MaterialIcons-Regular.ttf') format('truetype');
-//  }
+@font-face {
+    font-family: 'Material Icons';
+    font-style: normal;
+    font-weight: 400;
+    src: url('/dist/MaterialIcons-Regular.eot'); /* For IE6-8 */
+    src: local('Material Icons'),
+         local('MaterialIcons-Regular'),
+         url('/dist/MaterialIcons-Regular.woff2') format('woff2'),
+         url('/dist/MaterialIcons-Regular.woff') format('woff'),
+         url('/dist/MaterialIcons-Regular.ttf') format('truetype');
+ }
 
 @font-face{
     font-family: 'Montserrat';
@@ -75,7 +75,7 @@ body, .body {
     font-weight: normal;
 }
 
-h1, .h1 {
+h1 {
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
     font-size: 2.4rem;
@@ -84,7 +84,7 @@ h1, .h1 {
     margin: 0;
 }
 
-h2, .h2 {
+h2 {
     font-family: 'Montserrat', sans-serif;
     font-size: 1.9rem;
     line-height: 2.4rem;
@@ -93,7 +93,7 @@ h2, .h2 {
     margin: 0;
 }
 
-h3, .h3 {
+h3 {
     font-family: 'Montserrat', sans-serif;
     font-style: normal;
     text-transform: uppercase;
@@ -112,6 +112,11 @@ a {
         font-style: normal;
         color: inherit;
     }
+}
+
+ul {
+    margin: 0;
+    padding: 0;
 }
 
 p {
