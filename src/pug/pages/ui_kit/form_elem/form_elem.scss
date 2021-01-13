@@ -1,16 +1,6 @@
 @import '../../../../style/const.scss';
 @import '../../../../style/style.scss';
 @import '../../../../style/mixins';
-// @import '../../../components/buttons/buttons.scss';
-// @import '../../../components/buttons/toggle.scss';
-// @import '../../../components/buttons/radio.scss';
-// @import '../../../components/buttons/pagination.scss';
-// @import '../../../components/rate/rate.scss';
-// @import '../../../components/range/range.scss';
-// @import '../../../components/form_elem/actions.scss';
-// @import '../../../components/inputs/input.scss';
-// @import '../../../components/inputs/dropdown.scss';
-// @import '../../../components/inputs/date_drop.scss';
 
 .kit-main {
     @include flex;
@@ -32,10 +22,10 @@
     .form-elem {
         &__small {
             position: relative;
-            width: 266px;
+            max-width: 266px;
             form {
                 width: 100%;
-                padding: 20px 0;
+                padding: 42px 0 0 0;
             }
             .form-elem__dropdown {
                 width: 100%;
@@ -50,16 +40,12 @@
     }
 }
 
-form {
-    padding-bottom: 19.56px; // TODO inspect a page about form padding
-}
-
 // dropdown
 
 .dropdown-section {
     @include flex($align: flex-start);
     width: 100%;
-    padding: 64px 0 0 0;
+    padding: 80px 0 0 0;
 }
 
 .form-elem__button-wrapper {

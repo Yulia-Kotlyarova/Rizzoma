@@ -23,6 +23,7 @@ import '../../../components/inputs/input.scss';
 import '../../../components/inputs/dropdown.scss';
 import '../../../components/inputs/date_drop.scss';
 import '../../../components/inputs/checkbox.scss';
+import '../../../components/inputs/expandable.scss';
 
 
 import '../../../components/range/range.js';

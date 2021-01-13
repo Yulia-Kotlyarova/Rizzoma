@@ -1,5 +1,5 @@
-window.addEventListener("DOMContentLoaded",() => {
-    const calendarSetBTN = document.querySelector('.card-calendar').nextElementSibling.querySelector(`[data-action = 'set-result']`);
+$(document).ready(function() {
+    // const calendarSetBTN = document.querySelector('.card-calendar').nextElementSibling.querySelector(`[data-action = 'set-result']`);
     $('.card-calendar').datepicker({
         // Можно выбрать тольо даты, идущие за сегодняшним днем, включая сегодня
         // minDate: new Date(),

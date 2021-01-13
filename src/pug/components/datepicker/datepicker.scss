@@ -143,11 +143,14 @@
     .input__field {
         max-width: 150px;
     }
+    .input__field::placeholder {
+        color: $DarkShade75;
+    }
     .input__text-box {
         position: relative;
         .material-icons {
             position: absolute;
-            top: 24px;
+            top: 30px;
             right: 10px;
         }
     }

@@ -23,8 +23,8 @@ mixin input(title, subtitle, style = false, innerText, icon, className = "defaul
                 input(class = ""+className+" " +"input__field" + " "+ style+"" placeholder = "" + innerText + "" readonly = read)
             else 
                 input(class = ""+className+" " +"input__field"  placeholder = "" + innerText + "" readonly = read)
-        if icon
-            i(class="material-icons md-24" + " "+ icon+ "")= icon
+            if icon
+                i(class="material-icons md-24" + " "+ icon+ "")= icon
 
 mixin doubleInput(title, subtitle, style = false, innerText, icon, className = "default", read = false)
         .input__text-box

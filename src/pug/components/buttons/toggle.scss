@@ -2,7 +2,6 @@
 @import '../../../style/mixins.scss';
 
 .form-elem__toggle-container {
-    padding-top: 7px;
     .toggle__wrapper {
         padding-bottom: 0;
     }
@@ -10,7 +9,11 @@
 
 .toggle__box {
     @include flex($justify: start);
-    width: 260px;
+    max-width: 260px;
+
+    &:last-child {
+        padding: 10px 0 0 0;
+    }
     input[type="checkbox"] {
         position: relative;
         width: 40px;

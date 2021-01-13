@@ -75,8 +75,9 @@ block content
 
         section.dropdown-section
             .form-elem__dropdown-container
-                .form-elem__small
-                    +input("dropdown", "default", false, "2 спальни, 2 кровати...", "expand_more", true)
+                .form-elem__dropdown-wrapper.form-elem__dropdown-wrapper-room
+                    .form-elem__small
+                        +input("dropdown", "default", false, "2 спальни, 2 кровати...", "expand_more", true)
                 .form-elem__dropdown-wrapper.form-elem__dropdown-wrapper-room
                     .form-elem__small
                         +input("dropdown", "expanded", false, "2 спальни, 2 кровати...", "expand_more", "active")

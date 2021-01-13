@@ -1,10 +1,14 @@
 @import '../../../style/const.scss';
 @import '../../../style/mixins.scss';
 
-.form-elem {
-    &__radio-container {
-        margin-top: 10px;
+.form-elem__checkbox-wrapper {
+    .form-elem {
+        &__radio-container {
+            padding-bottom: 36px;
+        }
     }
+}
+.form-elem {
     &__custom-radio {
         display: none;
         &+label {
@@ -31,9 +35,7 @@
 
 .radio__wrapper {
     @include flex;
-    width: 220px!important;
-    // padding-bottom: 0!important;
-    padding: 5px 0 0 0!important;
+    max-width: 220px!important;
 }
 
 .radio__box {

@@ -10,8 +10,7 @@
     }
     &__dropdown-wrapper{
         position: relative;
-        // width: 320px;
-        // height: 221.5px;
+        padding-bottom: 20px;
         transition: $transition;
         form > input {
             border-radius:4px 4px 0 0 ;
