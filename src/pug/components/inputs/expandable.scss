@@ -1,0 +1,36 @@
+@import '../../../style/mixins.scss';
+
+.expandable{
+    &__wrapper {
+        h3 {
+            line-height: 1.5rem;
+        }
+        &:hover,
+        &:focus {
+            @include expand;
+        }
+    }
+    &__wrapper-needs {
+        padding-top: 48px;
+    }
+    &__title {
+        @include flex($align: start);
+        width: 256px;
+        i {
+            line-height: 17px;
+        }
+    }
+    &__title .active {
+        i {
+            transform: rotate(180deg);
+        }
+    }
+    &__list-box {
+        padding-top: 9px;
+    }
+    &__list-item {
+        @include flex($justify: start);
+        padding: 5px 0;
+        line-height: 1.5rem;
+    }
+}

@@ -1,0 +1,25 @@
+@import '../../../style/mixins.scss';
+
+.response {
+    &__wrapper {
+        max-width: 711px;
+    }
+    &__user-textbox {
+        @include flex($justify: start, $align: flex-start, $wrap: nowrap);
+        padding: 8px 0 0 3px;
+        p {
+            padding-left: 14.3px;
+        }
+    }
+    &__user-box {
+        @include flex($justify: start, $wrap: nowrap);
+        height: 51px;
+        padding: 10px 0 0 0;
+    }
+    &__user-info {
+        padding-left: 10px;
+        p {
+            font-weight: 700;
+        }
+    }
+}

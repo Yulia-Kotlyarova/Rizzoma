@@ -1,0 +1,22 @@
+@import '../../../style/mixins.scss';
+
+.bullet-list{
+    &___wrapper {
+        max-width: 255px;
+        ul {
+            padding: 0 0 0 20px;
+            margin: 10px 0 0 0;
+        }
+    }
+    &__item{
+        position: relative;
+        list-style: none;
+        padding: 5px 0;
+        &:before {
+            @include circle($width: 10px, $height: 10px);
+            background-color: $DarkShade25;
+            top: 11px;
+            left: -19px;
+        }
+    }
+}

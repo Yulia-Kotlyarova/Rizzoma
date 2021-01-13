@@ -1,0 +1,56 @@
+@import '../../../style/mixins.scss';
+
+.like {
+    &__wrapper {
+        @include flex;
+        width: 90px;
+    }
+    &__box {
+        @include flex($justify: space-around, $wrap: nowrap);
+        @include cursor-style;
+        position: relative;
+        min-width: 40px;
+        height: 20px;
+        box-sizing: border-box;
+        border-radius: 10px;
+        background: #fff;
+        background-clip: padding-box;
+        border: solid 1px transparent;
+        &:before {
+            // @include gradient;
+            content: '';
+            position: absolute;
+            top: 0; 
+            right: 0; 
+            bottom: 0; 
+            left: 0;
+            z-index: -1;
+            margin: -1px;
+            border-radius: inherit;
+          }
+        span {
+            font-size: 1rem;
+            line-height: 0;
+        }
+    }
+
+    &__with {
+        &:before {
+            @include gradient;
+          }
+        i {
+        color: $primary-color;
+        font-size: 1rem;
+        }
+    }
+    
+    &__without {
+        &:before {
+            background: $DarkShade25;
+            }
+        i {
+            color: $DarkShade25;
+            font-size: 1rem;
+        }
+    }
+}

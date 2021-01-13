@@ -1,0 +1,25 @@
+@import '../../../style/mixins.scss';
+
+.rich-list {
+    &__wrapper {
+        width: 255px;
+        padding-left: 52px;
+    }
+    &__box {
+        padding-top: 15px;
+    }
+    &__item {
+        @include flex($align: flex-start, $wrap: nowrap);
+        padding: 0 0 10px 0;
+    }
+    &__text-box {
+        span {
+            font-size: 1.2rem;
+            line-height: 1.4rem;
+        }
+    }
+    &__title {
+        font-weight: 700;
+        color: $DarkShade75;
+    }
+}

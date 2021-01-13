@@ -1,0 +1,52 @@
+@import '../../../style/mixins.scss';
+
+.form-elem{
+    &__checkbox-wrapper {
+        padding-left: 53px;
+        & > div {
+            padding-bottom: 30px;
+        }
+        h3 {
+            padding-bottom: 16.56px;
+        }
+        .checkbox {
+            &__box {
+                @include flex($justify: start, $wrap: nowrap, $align: flex-start);
+                padding-bottom: 11px;
+                max-width: 222px;
+                &:last-child {
+                    padding-bottom: 0;
+                }
+                span {
+                    line-height: 1.8rem;
+                }
+            }
+        }
+    }
+    &__custom-checkbox {
+        display: none;
+        &+label {
+            display: inline-flex;
+            align-items: center;
+            user-select: none;
+            padding-right: 9.74px;
+            &::before {
+                content: '';
+                display: inline-block;
+                width: 20px;
+                height: 20px;
+                box-sizing: border-box;
+                border: 1px solid $DarkShade25;
+                border-radius: 4px;
+                background-repeat: no-repeat;
+                background-position: center center;
+            }
+        }
+        &:checked+label::before {
+            border: 1px solid $primary-color;
+            // background-image: url("../../../../../assets/icons/check.svg");
+          }
+    }
+
+
+}
