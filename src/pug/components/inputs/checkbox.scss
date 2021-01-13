@@ -44,7 +44,7 @@
         }
         &:checked+label::before {
             border: 1px solid $primary-color;
-            // background-image: url("../../../../../assets/icons/check.svg");
+            background-image: url("/dist/icons/check.svg");
           }
     }
 

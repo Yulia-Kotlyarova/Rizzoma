@@ -128,10 +128,14 @@ module.exports = {
       template: `${PAGES_DIR}website/landing_page/landing_page.pug`,
       chunks: ['landing_page']
     }),
-
     new CopyPlugin({
       patterns:  [
         { from: `${PATHS.assets}/fonts/Montserrat`, to: `${PATHS.dist}/fonts/Montserrat` }
+      ]
+    }),
+    new CopyPlugin({
+      patterns:  [
+        { from: `${PATHS.assets}/icons`, to: `${PATHS.dist}/icons` }
       ]
     })
   ]
