@@ -39,14 +39,28 @@ header {
 
 .log-container {
     @include flex;
+    height: 34px;
+    margin-left: 20px;
     button {
+        height: 100%;
         &:first-child {
-            margin: 0 20px 0 20px;
+            padding: 0 10px;
+            line-height: 0;
+            min-width: 83px;
         }
+    }
+    .button__bordered-box {
+        height: 100%;
+    }
+    .button__fill {
+        padding: 0px 20px;
+        margin-left: 20px;
+        line-height: 0;
     }
 }
 
 .auth-container {
     border-left: 1px solid $DarkShade25;
     padding-left: 20px;
+    margin: 0 0 0 20px;
 }
