@@ -26,10 +26,11 @@
 }
 
 .datepicker {
-    width: 293px;
-    padding: 20px 6px 23px 19px;
+    width: 320px;
+    padding: 20px 20px 23px 20px;
     margin: auto;
     border: none;
+    box-sizing: border-box;
 }
 .datepicker--nav {
     align-items: flex-start;
@@ -40,6 +41,11 @@
 .datepicker--cells {
     padding-top: 7px;
 }
+
+.-focus- {
+    border-radius: 50%!important;
+}
+
 .datepicker--days-names {
     text-transform: uppercase;
     margin: 0;
@@ -50,15 +56,8 @@
     font-size: 1.9rem;
     line-height: 2.316rem;
     text-align: center;
-    &::hover {
-        
-    }
 }
-.datepicker--nav-action {
-    &::hover {
-    
-    }
-}
+
 .datepicker--content {
     padding: 0;
     .datepicker--cells {
@@ -132,9 +131,6 @@
 .material-icons {
     @include gradient-icon;
 }
-.form-elem__action {
-    padding: 0 20px 18px;
-}
 
 .form_elem__two-inputs-box {
     width: 100%;
@@ -154,5 +150,4 @@
             right: 10px;
         }
     }
-
 }

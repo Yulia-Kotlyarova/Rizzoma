@@ -8,6 +8,11 @@
         h2 {
             padding-bottom: 20px;
         }
+
+        .button__go-in {
+            width: 100%;
+            margin: 22px 0 0 0;
+        }
     }
     &__create {
         @include flex;
@@ -21,6 +26,6 @@
 .input__wrapper {
     // padding: 25px 0;
     form:first-child {
-        padding-bottom: 6px;
+        padding-bottom: 10px;
     }
 }

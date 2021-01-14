@@ -19,9 +19,10 @@ const getBookSumBox = (inst, nights) => {
         nights = 4;
         
     }
-    const finalSum = (price * nights) - commission + extraCommission;
+    let finalSum = (price * nights) - commission + extraCommission;
+    finalSum = finalSum.toLocaleString('ru') + '₽';
     howMuchDays.innerText = `${nights} суток`;
-    sum.innerText = price * nights;
+    sum.innerText = (price * nights).toLocaleString('ru') + '₽';
     $('.book-room__final-sum')[0].innerText =  finalSum;
 };
 

@@ -14,8 +14,11 @@ $(document).ready(function() {
           },
         onSelect: function(formattedDate, date, inst) {
             console.log();
-        }
-        //   clearButton: true,
+        },
+        onShow(inst, animationCompleted) {
+            inst.$datepicker.append(datepickerAction);
+            datepickerAction.querySelector('.clear').onclick = () =>  this.clear();
+            datepickerAction.querySelector('.set-result').onclick = () => this.hide();
+        },
     });
-    
 });

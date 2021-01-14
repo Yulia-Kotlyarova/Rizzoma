@@ -100,8 +100,8 @@ main {
     @include flex;
     position: absolute;
     width: 35px;
-    top: 114px;
-    left: 173px;
+    bottom: 22px;
+    right: 20px;
     list-style: none;
     li {
         &:before {
@@ -119,5 +119,11 @@ main {
         &:before {
             background-color: #fff;
         }
+    }
+}
+
+.calendar__wrapper {
+    .form-elem__action {
+        padding: 0 20px 18px;
     }
 }

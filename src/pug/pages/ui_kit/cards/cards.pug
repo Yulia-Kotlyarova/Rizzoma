@@ -9,10 +9,9 @@ include ../../../mixins/main_mixins.pug
 block append scripts
     +script("./cards.js", "module")
     +script("../node_modules/air-datepicker/dist/js/datepicker.min.js")
-    +script("../src/pug/components/datepicker/datepicker.js")
+    +script("../src/pug/components/datepicker/datepicker.js", "module")
 
 block content
-    //- +links("https://fonts.googleapis.com/icon?family=Material+Icons") // TODO ICONS doesnt work without link
     main
         .card__column
             include ../../../components/form_elem/search_room.pug
@@ -22,6 +21,5 @@ block content
             include ../../../components/form_elem/log_in.pug
         .card__column
             +calendar("card-calendar")
-            +card("888", 9990, "../src/assets/img/number_880.png", 145, true, true, 1)
-            +card("840", 9990, "../src/assets/img/number_840.jpg", 65, false, false, 2)
-
+            +card("888", "9990", "../src/assets/img/number_880.png", 145, true, true, 1)
+            +card("840", "9990", "../src/assets/img/number_840.jpg", 65, false, false, 2)
