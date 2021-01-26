@@ -1,0 +1,77 @@
+extend ../../../website_main.pug
+block variables
+
+include ../../../mixins/color_type_mixins.pug
+include ../../../mixins/cards_mixins.pug
+include ../../../mixins/main_mixins.pug
+
+block append scripts
+    +script("../node_modules/air-datepicker/dist/js/datepicker.min.js")
+    +script("../src/pug/components/inputs/date_drop_numb.js")
+    +script("../src/pug/components/number_cards/number_cards.js")
+
+block content
+    include ../../../components/header.pug
+    main.search-filter__main
+        aside.search-filter__aside-wrapper
+            +input("filter date dropdown", false, "input__drop-filter", "19 авг - 23 авг", "expand_more")
+
+            .form-elem__dropdown-wrapper.form-elem__dropdown-wrapper-guest
+                +input("dropdown", "",  false,"3 гостя", "expand_more", "active", true)
+
+                .form-elem__dropdown.form-elem__dropdown-guests
+                    +dropdown_extend_unit("взрослые", "adult", "2")
+                    +dropdown_extend_unit("дети", "children", "1")
+                    +dropdown_extend_unit("младенцы", "baby", "0")
+                    +input-action
+
+            .search-filter__range-wrapper   
+                +range-slider("диапазон цены")
+                p.search-filter__range-p Стоимость за сутки пребывания в номере
+
+            .search-filter__checkbox-wrapper
+                h3 правила дома
+                +checkbox("Можно курить", "smoking")
+                +checkbox("Можно с питомцами", "pets", true)
+                +checkbox("Можно пригласить гостей (до 10 человек)", "guest", true)
+
+            .search-filter__rich-wrapper
+                h3 доступность
+                .rich-list__item-box
+                    +rich-list("Широкий коридор", "Ширина коридоров в номере не менее 91 см.", "wide_corridor")
+                    +rich-list("Помощник для инвалидов", "На 1 этаже вас встретит специалист  и проводит до номера.", "helper_for_disabled")
+
+            .form-elem__dropdown-wrapper.form-elem__dropdown-wrapper-room
+                .form-elem__small
+                    +input("удобства номера", "", false, "2 спальни, 2 кровати...", "expand_more", "active")
+                    .form-elem__dropdown
+                        +dropdown_extend_unit("спальни", "bedroom", "2")
+                        +dropdown_extend_unit("кровати", "bed", "2")
+                        +dropdown_extend_unit("ванные комнаты", "bathroom", "0")
+
+            .expandable__wrapper
+                +list("дополнительные удобства", "","expand_more")
+
+        div.search-filter__variants-box
+            h2 Номера, которые мы для вас подобрали
+            .search-filter__variants-cards-box
+                +card("888", "9990", "../src/assets/img/number_880.png", 145, true, true, 1)
+                +card("840", "9990", "../src/assets/img/number_840.jpg", 65, false, false, 2)
+                +card("980", "8500", "../src/assets/img/number_980.png", 35, false, false, 3)
+
+                +card("856", "7300", "../src/assets/img/number_856.png", 19, false, false, 1)
+                +card("740", "6000", "../src/assets/img/number_740.png", 44, false, false, 1)
+                +card("982", "5800", "../src/assets/img/number_982.png", 56, false, false, 1)
+
+                +card("678", "5500", "../src/assets/img/number_678.png", 45, false, false, 1)
+                +card("450", "5300", "../src/assets/img/number_450.png", 39, false, false, 1)
+                +card("350", "5000", "../src/assets/img/number_350.png", 77, false, false, 1)
+
+                +card("666", "5000", "../src/assets/img/number_666.png", 25, false, false, 1)
+                +card("444", "5000", "../src/assets/img/number_444.png", 15, false, false, 1)
+                +card("352", "5000", "../src/assets/img/number_352.png", 55, false, false, 1)
+            .search-filter__pagination-box
+                include ../../../components/buttons/pagination.pug
+                p 1 – 12 из 100+ вариантов аренды
+
+    include ../../../components/footer.pug

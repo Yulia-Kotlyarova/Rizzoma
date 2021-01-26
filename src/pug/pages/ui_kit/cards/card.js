@@ -11,23 +11,7 @@ import '../../../components/form_elem/search_room.scss';
 import '../../../components/form_elem/book_room.scss';
 import '../../../components/form_elem/create_account.scss';
 import '../../../components/buttons/buttons.scss';
+import '../../../components/number_cards/number_cards.scss';
 import '../../../components/buttons/toggle.scss';
 
-window.addEventListener("DOMContentLoaded",() => {
-    // $slick = jQuery.noConflict();
-    $('.card__img-slider').not('.slick-initialized').slick({
-        dots: true,
-        slidesToShow: 1,
-        infinite: true,
-        prevArrow: false,
-        nextArrow: false,
-    });
-
-    $('.card__img-slider-arr').not('.slick-initialized').slick({
-        dots: true,
-        slidesToShow: 1,
-        infinite: true,
-        prevArrow: $('.card__left-arr'),
-        nextArrow: $('.card__right-arr'),
-    });
-  });
+import '../../../components/number_cards/number_cards.js';

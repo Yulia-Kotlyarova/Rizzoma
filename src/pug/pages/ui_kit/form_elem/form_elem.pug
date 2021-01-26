@@ -71,7 +71,10 @@ block content
                     +button-text("CLICK ME", "active")
                 button(class = "button__fill button__pay") перейти к оплате
                     i(class="material-icons md-24 ") arrow_forward
-            include ../../../components/buttons/pagination.pug
+            .form-elem__pagination-container
+                h3 pagination
+                include ../../../components/buttons/pagination.pug
+                p 1 – 12 из 100+ вариантов аренды
 
         section.dropdown-section
             .form-elem__dropdown-container

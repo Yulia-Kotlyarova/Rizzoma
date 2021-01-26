@@ -2,7 +2,7 @@ import { disabledButton } from './drop_helpers.js';
 
 // book room counter
 
-window.addEventListener("DOMContentLoaded", () => {
+$(document).ready(function() {
     let $room = jQuery.noConflict();
     console.log('room');
     const roomForm = $room('.form-elem__dropdown-wrapper-room');

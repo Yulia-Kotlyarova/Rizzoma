@@ -16,6 +16,8 @@ module.exports = {
     form_elem: `${PAGES_DIR}ui_kit/form_elem/form_elem.js`,
     headers_and_footers: `${PAGES_DIR}ui_kit/headers_and_footers/headers_and_footers.js`,
     cards: `${PAGES_DIR}ui_kit/cards/card.js`,
+    landing_page: `${PAGES_DIR}website/landing_page/landing_page.js`,
+    search_room_filter: `${PAGES_DIR}website/search_room_filter/search_room_filter.js`,
     vendors: [
       "webpack-material-design-icons"
       ]
@@ -127,6 +129,11 @@ module.exports = {
       filename: 'landing_page.html',
       template: `${PAGES_DIR}website/landing_page/landing_page.pug`,
       chunks: ['landing_page']
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'search_room_filter.html',
+      template: `${PAGES_DIR}website/search_room_filter/search_room_filter.pug`,
+      chunks: ['search_room_filter']
     }),
     new CopyPlugin({
       patterns:  [

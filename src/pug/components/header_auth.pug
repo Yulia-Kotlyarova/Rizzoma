@@ -1,7 +1,7 @@
 include ../mixins/main_mixins.pug
 
 block append scripts
-  script(src='../src/pug/components/header.js')
+  script(src='../src/pug/components/header.js', 'module')
 
 mixin menu-item(title, icon = false, className = "")
     li.menu__list-box

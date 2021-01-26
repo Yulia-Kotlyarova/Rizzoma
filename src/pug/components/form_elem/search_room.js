@@ -1,6 +1,6 @@
 import { getBookSumBox, doubleDatepickerOptions, datepickerAction } from '../datepicker/datepicker_helper.js';
 
-window.addEventListener("DOMContentLoaded", () => {
+$(document).ready(() => {
 
     $('.input__drop-first-search').datepicker(
         {

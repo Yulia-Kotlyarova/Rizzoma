@@ -1,8 +1,7 @@
 import { disabledButton, onMinus, onPlus } from './drop_helpers.js';
 
-window.addEventListener("DOMContentLoaded", () => {
+$(document).ready(() => {
     let $guest = jQuery.noConflict();
-    // console.log('guest');
     const clearBtn = $guest(`[data-action = 'clear']`);
     const setResultBtn = $guest(`[data-action = 'set-result']`);
     const guestsForm = $guest('.form-elem__dropdown-wrapper-guest');
