@@ -1,0 +1,16 @@
+extend ../../../website_main.pug
+block variables
+
+include ../../../mixins/color_type_mixins.pug
+include ../../../mixins/cards_mixins.pug
+include ../../../mixins/main_mixins.pug
+
+block append scripts
+    +script("../node_modules/chart.js/dist/Chart.min.js")
+    +script("../src/pug/components/diagram/diagram.js")
+
+block content
+    include ../../../components/header.pug
+    .impression-chart__wrapper
+        canvas(id = "myChart")
+    include ../../../components/footer.pug

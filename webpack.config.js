@@ -18,6 +18,7 @@ module.exports = {
     cards: `${PAGES_DIR}ui_kit/cards/card.js`,
     landing_page: `${PAGES_DIR}website/landing_page/landing_page.js`,
     search_room_filter: `${PAGES_DIR}website/search_room_filter/search_room_filter.js`,
+    room_details: `${PAGES_DIR}website/room_details/room_details.js`,
     vendors: [
       "webpack-material-design-icons"
       ]
@@ -134,6 +135,11 @@ module.exports = {
       filename: 'search_room_filter.html',
       template: `${PAGES_DIR}website/search_room_filter/search_room_filter.pug`,
       chunks: ['search_room_filter']
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'room_details.html',
+      template: `${PAGES_DIR}website/room_details/room_details.pug`,
+      chunks: ['room_details']
     }),
     new CopyPlugin({
       patterns:  [
