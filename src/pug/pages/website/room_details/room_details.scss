@@ -1,5 +1,95 @@
+@import '../../../../style/mixins.scss';
+
 .impression-chart__wrapper {
     position: relative;
     width: 311px;
     height: 126px;
+    margin-right: 4.4%;
+}
+
+.room-details {
+    &__img-wrapper {
+        display: grid;
+        height: 485px;
+        overflow: hidden;
+    }
+    
+    &__img-wrap-1{
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 3;
+    }
+    &__img-wrap-2 {
+        grid-column-start: 3;
+        grid-column-end: 4;
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
+    
+    &__img-wrap-3 {
+        grid-column-start: 3;
+        grid-column-end: 4;
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+    
+    &__img {
+        width: 100%;
+        object-fit: contain;
+    }
+
+    &__describe-wrapper {
+        @include flex($align: start);
+        padding: 70px 140px 70px;
+    }
+
+    &__info-wrapper {
+        @include flex($align: start);
+        max-width: 702px;
+    }
+
+    &__benefit-wrapper {
+        max-width: 291px;
+    }
+    &__response-wrapper {
+        padding: 10px 0;
+        .room-details__title-box {
+            @include flex($align: baseline);
+            padding-bottom: 9px;
+        }
+    }
+
+    &__rules-wrapper {
+        max-width: 240px;
+        margin-left: 20px;
+        h2 {
+            padding-bottom: 13px;
+        }
+    }
+
+    &__chancel-wrapper {
+        max-width: 341px;
+        h2 {
+            padding-bottom: 18px;
+        }
+    }
+} 
+
+.impression-chart__wrapper {
+    span {
+        font-weight: 700;
+        font-size: 2.4rem;
+        color: $primary-color;
+        position: absolute;
+        top: 82px;
+        left: 31px;
+        text-align: center;
+        letter-spacing: 0.5px;
+        i {
+            font-weight: normal;
+            font-size: 1.4rem;
+            font-style: normal;
+        }
+    }
 }

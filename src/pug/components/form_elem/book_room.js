@@ -1,6 +1,6 @@
 import { getBookSumBox, doubleDatepickerOptions, datepickerAction } from '../datepicker/datepicker_helper.js';
-
-window.addEventListener("DOMContentLoaded", () => {
+import '../inputs/drop_down_guests.js';
+$(document).ready(function() {
 
     $('.input__drop-first-room').datepicker(
         {

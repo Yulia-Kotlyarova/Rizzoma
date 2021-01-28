@@ -11,6 +11,48 @@ block append scripts
 
 block content
     include ../../../components/header.pug
-    .impression-chart__wrapper
-        canvas(id = "myChart")
+    main.room-details__main
+        .room-details__img-wrapper
+            .room-details__img-wrap-1
+                img( class = "room-details__img" src="../src/assets/img/number_888_1.png", alt="photo")
+            .room-details__img-wrap-2
+                img( class = "room-details__img" src="../src/assets/img/number_888_2.png", alt="photo")
+            .room-details__img-wrap-3
+                img( class = "room-details__img" src="../src/assets/img/number_888_3.png", alt="photo")
+                
+        .room-details__describe-wrapper
+            .room-details__info-wrapper
+                .room-details__benefit-wrapper
+                    h2 Сведения о номере
+                    +benefit("Комфорт", "Шумопоглощающие стены", "insert_emoticon")
+                    +benefit("Удобство", "Окно в каждой из спален", "location_city")
+                    +benefit("Уют", "Номер оснащён камином", "whatshot")
+
+                .impression-chart__wrapper
+                    h2 Впечатления от номера
+                    span 260
+                        br
+                        i голосов
+                    canvas(id = "myChart")
+
+                .room-details__response-wrapper
+                    .room-details__title-box
+                        h2 Отзывы посетителей номера
+                        p 2 отзыва
+                    +response("favorite", "12", "like__with", "../src/assets/img/photo.png", "Мурад Сарафанов", "5 дней назад", "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.")
+                    +response("favorite_border", "2", "like__without", "../src/assets/img/patrisia.png", "Патрисия Стёклышкова", "Неделю назад", "Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент")
+            
+                .room-details__rules-wrapper
+                    h2 Правила
+                    ul
+                        +bullet-item("Нельзя с питомцами")
+                        +bullet-item("Без вечеринок и мероприятий")
+                        +bullet-item("Время прибытия — после 13:00, а выезд до 12:00")
+
+                .room-details__chancel-wrapper
+                    h2 Отмена
+                    p Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги.
+            
+            .room-details__book-wrapper
+                include ../../../components/form_elem/book_room.pug
     include ../../../components/footer.pug

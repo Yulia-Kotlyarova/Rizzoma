@@ -12,9 +12,14 @@
         }
     }
     &__user-box {
+        padding: 10px 0 12px;
+    }
+    &__user-box:last-child {
+        padding: 10px 0 22px;
+    }
+    &__user {
         @include flex($justify: start, $wrap: nowrap);
         height: 51px;
-        padding: 10px 0 0 0;
     }
     &__user-info {
         padding-left: 10px;

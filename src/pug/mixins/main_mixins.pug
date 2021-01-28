@@ -126,16 +126,17 @@ mixin benefit(title, subtitle, icon)
             p= title
             span= subtitle
 
-mixin response(path, name, time, text)
+mixin response(icon, likes, className, path, name, time, text)
     .response__user-box
-        .ava__container
-            img(src= ""+path +"" alt="ava")
-        .response__user-info
-            p= name
-            span= time
-    .response__user-textbox
-        +like("favorite", "12", "like__with")
-        p= text
+        .response__user
+            .ava__container
+                img(src= ""+path +"" alt="ava")
+            .response__user-info
+                p= name
+                span= time
+        .response__user-textbox
+            +like(icon, likes, className)
+            p= text
 
 mixin calendar(name)
     .calendar__wrapper
