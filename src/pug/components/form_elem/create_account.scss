@@ -1,10 +1,13 @@
 @import '../../../style/const.scss';
 @import '../../../style/mixins.scss';
 @import '../../components/inputs/date_drop.scss';
+@import '../../components/buttons/radio.scss';
+@import '../../components/buttons/toggle.scss';
+@import '../../components/form_elem/log_in.scss';
 
 .create-account__wrapper {
     @include card-wrapper;
-    padding: 44px 30px 11px;
+    padding: 44px 34px 11px;
     > div, > form {
         padding-bottom: 20px;
     }

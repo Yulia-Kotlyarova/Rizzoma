@@ -1,0 +1,16 @@
+extend ../../../website_main.pug
+block variables
+
+include ../../../mixins/color_type_mixins.pug
+include ../../../mixins/cards_mixins.pug
+include ../../../mixins/main_mixins.pug
+
+block content
+    include ../../../components/header.pug
+    main.sign-in__main
+        .landing-photo__wrapper
+            img(src="../src/assets/img/registration.png", alt="sign-in-photo")
+        .sign-in__create-account-wrap
+            include ../../../components/form_elem/log_in.pug
+
+    include ../../../components/footer.pug

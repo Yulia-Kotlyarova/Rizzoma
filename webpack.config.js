@@ -19,6 +19,8 @@ module.exports = {
     landing_page: `${PAGES_DIR}website/landing_page/landing_page.js`,
     search_room_filter: `${PAGES_DIR}website/search_room_filter/search_room_filter.js`,
     room_details: `${PAGES_DIR}website/room_details/room_details.js`,
+    registration: `${PAGES_DIR}website/registration/registration.js`,
+    sign_in: `${PAGES_DIR}website/sign_in/sign_in.js`,
     vendors: [
       "webpack-material-design-icons"
       ]
@@ -141,6 +143,17 @@ module.exports = {
       template: `${PAGES_DIR}website/room_details/room_details.pug`,
       chunks: ['room_details']
     }),
+    new HtmlWebpackPlugin({
+      filename: 'registration.html',
+      template: `${PAGES_DIR}website/registration/registration.pug`,
+      chunks: ['registration']
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'sign_in.html',
+      template: `${PAGES_DIR}website/sign_in/sign_in.pug`,
+      chunks: ['sign_in']
+    }),
+
     new CopyPlugin({
       patterns:  [
         { from: `${PATHS.assets}/fonts/Montserrat`, to: `${PATHS.dist}/fonts/Montserrat` }

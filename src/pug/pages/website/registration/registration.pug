@@ -1,0 +1,20 @@
+extend ../../../website_main.pug
+block variables
+
+include ../../../mixins/color_type_mixins.pug
+include ../../../mixins/cards_mixins.pug
+include ../../../mixins/main_mixins.pug
+
+block append scripts
+    +script("../node_modules/air-datepicker/dist/js/datepicker.min.js")
+    +script("../src/pug/components/datepicker/datepicker.js")
+
+block content
+    include ../../../components/header.pug
+    main.registration__main
+        .landing-photo__wrapper
+            img(src="../src/assets/img/registration.png", alt="registration-photo")
+        .registration__create-account-wrap
+            include ../../../components/form_elem/create_account.pug
+
+    include ../../../components/footer.pug

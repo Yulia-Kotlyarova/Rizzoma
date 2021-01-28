@@ -1,0 +1,33 @@
+@import '../../../../style/const.scss';
+@import '../../../../style/mixins.scss';
+
+.registration__main {
+    position: relative;
+    
+    .landing-photo__wrapper {
+        position: relative;
+        width: 100%;
+        height: 0px;
+        overflow: hidden;
+        padding-top: 684px;
+        img {
+            position: absolute;
+            width: 100%;
+            height: auto;
+            left: 0;
+            top: 50%;
+            transform: translateY(-54.5%);
+        }
+    }
+
+    .registration__create-account-wrap {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        @include flex($justify: space-around);
+    }
+}
+
+
