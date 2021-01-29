@@ -31,6 +31,13 @@
     margin: auto;
     border: none;
     box-sizing: border-box;
+    .datepicker--pointer {
+        display: none;
+    }
+}
+
+.datepicker--cell.-range-from-.-range-to- {
+    border-radius: 50%;
 }
 .datepicker--nav {
     align-items: flex-start;

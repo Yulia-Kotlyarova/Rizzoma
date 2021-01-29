@@ -1,4 +1,6 @@
-window.addEventListener("DOMContentLoaded", () => {
+import { addDatepickerAction } from '../datepicker/datepicker_helper.js';
+
+$(document).ready(function() {
 
     $('.input__drop-first').datepicker(
         {
@@ -53,5 +55,8 @@ window.addEventListener("DOMContentLoaded", () => {
         nextHtml: `<i class = 'material-icons md-24 '> arrow_forward </i>`,
         dateFormat: 'dd M',
         multipleDatesSeparator: " - ",
+        onShow(inst, animationCompleted) {
+            addDatepickerAction(this, inst)
+        },
     })
 })

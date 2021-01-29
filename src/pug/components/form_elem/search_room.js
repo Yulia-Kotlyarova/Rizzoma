@@ -1,18 +1,13 @@
-import { getBookSumBox, doubleDatepickerOptions, datepickerAction } from '../datepicker/datepicker_helper.js';
+import { getBookSumBox, doubleDatepickerOptions, addDatepickerAction } from '../datepicker/datepicker_helper.js';
 
-$(document).ready(() => {
+$(document).ready(function() {
 
     $('.input__drop-first-search').datepicker(
         {
         ...doubleDatepickerOptions,
 
         onShow(inst, animationCompleted) {
-            inst.$datepicker.append(datepickerAction);
-            datepickerAction.querySelector('.clear').onclick = () =>  {
-
-                this.clear();
-            };
-            datepickerAction.querySelector('.set-result').onclick = () => this.hide();
+            addDatepickerAction(this, inst)
         },
 
         onSelect: function (fd, date, inst) { 

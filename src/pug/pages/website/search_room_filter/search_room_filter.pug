@@ -7,17 +7,18 @@ include ../../../mixins/main_mixins.pug
 
 block append scripts
     +script("../node_modules/air-datepicker/dist/js/datepicker.min.js")
-    +script("../src/pug/components/inputs/date_drop_numb.js")
-    +script("../src/pug/components/number_cards/number_cards.js")
+    +script("../src/pug/components/inputs/date_drop_numb.js", "module")
+    //- +script("../src/pug/components/form_elem/search_room.js", "module")
+    +script("../src/pug/components/number_cards/number_cards.js", "module")
 
 block content
     include ../../../components/header.pug
     main.search-filter__main
         aside.search-filter__aside-wrapper
-            +input("filter date dropdown", false, "input__drop-filter", "19 авг - 23 авг", "expand_more")
+            +input("даты пребывания в отеле", false, "input__drop-filter", "19 авг - 23 авг", "expand_more")
 
             .form-elem__dropdown-wrapper.form-elem__dropdown-wrapper-guest
-                +input("dropdown", "",  false,"3 гостя", "expand_more", "active", true)
+                +input("гости", "",  false,"3 гостя", "expand_more", "active", true)
 
                 .form-elem__dropdown.form-elem__dropdown-guests
                     +dropdown_extend_unit("взрослые", "adult", "2")

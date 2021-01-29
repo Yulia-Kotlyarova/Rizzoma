@@ -22,6 +22,7 @@ import '../../../components/range/range.scss';
 import '../../../components/inputs/drop_down_room.js';
 import '../../../components/range/range.js';
 import '../../../components/inputs/drop_down_guests.js';
+// import '../../../components/form_elem/search_room.js';
 // import '../../../../slick-1.8.1/slick/slick.min.js';
 
 const numbersData = [

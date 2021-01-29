@@ -14,5 +14,4 @@ import '../../../components/buttons/buttons.scss';
 import '../../../components/number_cards/number_cards.scss';
 import '../../../components/buttons/toggle.scss';
 
-import '../../../components/number_cards/number_cards.js';
 import '../../../components/datepicker/datepicker.js';

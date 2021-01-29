@@ -30,15 +30,14 @@ const datepickerAction = document.createElement('div');
 datepickerAction.classList.add('form-elem__action');
 datepickerAction.innerHTML = `<h3 class="clear" data-action="clear">очистить</h3>
                                 <h3 class = "set-result" data-action="set-result">применить</h3>`;
-                                
-    // const getDatePickerAction = (that) => {
-    //     const datepickerAction = document.createElement('div');
-    //     datepickerAction.classList.add('form-elem__action');
-    //     datepickerAction.innerHTML = `<h3 class="clear" data-action="clear">очистить</h3>
-    //                                     <h3 class = "set-result" data-action="set-result">применить</h3>`;
-    //     datepickerAction.querySelector('.clear').onclick = () =>  that.clear();
-    //     datepickerAction.querySelector('.set-result').onclick = () => that.hide();
-    //     return datepickerAction;
-    // }
 
-export { getBookSumBox, doubleDatepickerOptions, datepickerAction };
+const addDatepickerAction = (that, inst) => {
+    inst.$datepicker.append(datepickerAction);
+    datepickerAction.querySelector('.clear').onclick = () =>  {
+
+        that.clear();
+    };
+    datepickerAction.querySelector('.set-result').onclick = () => that.hide();
+}
+
+export { getBookSumBox, doubleDatepickerOptions, addDatepickerAction};
