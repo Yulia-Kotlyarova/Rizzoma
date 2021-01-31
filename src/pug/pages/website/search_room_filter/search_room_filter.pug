@@ -15,7 +15,8 @@ block content
     include ../../../components/header.pug
     main.search-filter__main
         aside.search-filter__aside-wrapper
-            +input("даты пребывания в отеле", false, "input__drop-filter", "19 авг - 23 авг", "expand_more")
+            div
+                +input("даты пребывания в отеле", false, "input__drop-filter", "19 авг - 23 авг", "expand_more")
 
             .form-elem__dropdown-wrapper.form-elem__dropdown-wrapper-guest
                 +input("гости", "",  false,"3 гостя", "expand_more", "active", true)
@@ -30,7 +31,7 @@ block content
                 +range-slider("диапазон цены")
                 p.search-filter__range-p Стоимость за сутки пребывания в номере
 
-            .search-filter__checkbox-wrapper
+            .form-elem__checkbox-wrapper
                 h3 правила дома
                 +checkbox("Можно курить", "smoking")
                 +checkbox("Можно с питомцами", "pets", true)
@@ -52,6 +53,13 @@ block content
 
             .expandable__wrapper
                 +list("дополнительные удобства", "","expand_more")
+                .expandable__list-box
+                    +list-item("Завтрак", "breakfast")
+                    +list-item("Письменный стол", "writing-table", true)
+                    +list-item("Стул для кормления", "feeding-chair", true)
+                    +list-item("Кроватка", "baby-bed", true)
+                    +list-item("Телевизор", "tv")
+                    +list-item("Шампунь", "shampoo")
 
         div.search-filter__variants-box
             h2 Номера, которые мы для вас подобрали

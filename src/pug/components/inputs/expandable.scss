@@ -8,6 +8,9 @@
         &:hover,
         &:focus {
             @include expand;
+            .expandable__list-box {
+                display: block;
+            }
         }
     }
     &__wrapper-needs {
@@ -32,5 +35,13 @@
         @include flex($justify: start);
         padding: 5px 0;
         line-height: 1.5rem;
+    }
+}
+
+.expandable__list-box {
+    display: none;
+    z-index: 999;
+    &:hover {
+        display: block;
     }
 }

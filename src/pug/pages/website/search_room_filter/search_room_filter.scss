@@ -36,6 +36,24 @@
     &__range-p {
         font-size: 1.2rem;
     }
+    &__aside-wrapper > div {
+        padding: 0 0 30px;
+    }
+    &__aside-wrapper > div:first-child {
+            padding: 0 0 20px;
+        }
 
+}
+
+.search-filter__main {
+    .range__wrapper {
+        padding: 24.44px 0 14.56px 0;
+    }
+    .search-filter__checkbox-wrapper h3 {
+        padding-bottom: 16.56px;
+    }
+    .search-filter__range-p {
+        line-height: 1.4rem;
+    }
 }
 
