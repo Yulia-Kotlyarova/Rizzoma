@@ -5,7 +5,7 @@
         display: grid;
         grid-template-columns: 266px 1fr;
         column-gap: 60px;
-        padding: 30px 140px 74px;
+        padding: 30px 140px 71px;
         .search-filter__aside-wrapper {
             position: relative;
             form {
@@ -17,7 +17,7 @@
     &__variants-cards-box {
         @include flex;
         .card__wrapper {
-            margin-bottom: 20px;
+            margin-bottom: 22px;
         }
     }
     &__variants-box {
@@ -54,6 +54,15 @@
     }
     .search-filter__range-p {
         line-height: 1.4rem;
+    }
+    .simple-pagination {
+        padding: 0px 16px 7px 0;
+    }
+}
+
+.search-filter__pagination-box {
+    p {
+        padding-left: 5px;
     }
 }
 

@@ -1,5 +1,65 @@
-// "use strict";
-// console.log(pagination());
+// const numbersData = [
+//   {
+//       number: 888,
+//       price: 9900,
+//       photo: '../src/assets/img/number_880.png',
+//       response_number: 145,
+//       arrows: true,
+//       lux: true,
+//       rate: 5,
+//   },
+//   {
+//       number: 840,
+//       price: 9900,
+//       photo: '../src/assets/img/number_840.png',
+//       response_number: 65,
+//       arrows: false,
+//       lux: false,
+//       rate: 4,
+//   },
+//   {
+//       number: 980,
+//       price: 8500,
+//       photo: '../src/assets/img/number_980.png',
+//       response_number: 35,
+//       arrows: false,
+//       lux: false,
+//       rate: 3,
+//   },
+//   {
+//       number: 856,
+//       price: 8500,
+//       photo: '../src/assets/img/number_980.png',
+//       response_number: 35,
+//       arrows: false,
+//       lux: false,
+//       rate: 3,
+//   },
+
+// ]
+
+// let pagesQuantity = function(numbersData, pageSize = 5){
+//   let pages = numbersData.length / pageSize;
+//   let result = [];
+//   for (let i = 1; i < pages; i +1) {
+//       result.push(i);
+//   }
+//   return result;
+// }
+
+// function simpleTemplate(data) {
+//   let cardTemplate = '<ul>';
+//   $.each(data, function(index, item){
+//     console.log(data, item);
+//       cardTemplate += '<li>'+ item.number +'</li>';
+//   });
+//   cardTemplate += '</ul>';
+//   return cardTemplate;
+// }
+
+
+// // "use strict";
+// // console.log(pagination());
 // $("#pagination__wrapper").pagination({
 //   items: 100,
 //   itemsOnPage: 12
@@ -7,7 +67,7 @@
 // $("#pagination__wrapper").pagination('selectPage', pageNumber = 1);
 // $("#pagination__wrapper").pagination('getCurrentPage');
 
-// import './pagination.scss';
+// // import './pagination.scss';
 
 $(document).ready(function() {
 

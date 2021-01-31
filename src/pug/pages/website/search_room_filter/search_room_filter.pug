@@ -8,8 +8,10 @@ include ../../../mixins/main_mixins.pug
 block append scripts
     +script("../node_modules/air-datepicker/dist/js/datepicker.min.js")
     +script("../src/pug/components/inputs/date_drop_numb.js", "module")
-    //- +script("../src/pug/components/form_elem/search_room.js", "module")
     +script("../src/pug/components/number_cards/number_cards.js", "module")
+    +script("../src/jquery/pagination.js", "module")
+    +script("../src/pug/components/buttons/pagination.js", "module")
+    //- +script("../src/pug/components/range/range.js", "module")
 
 block content
     include ../../../components/header.pug

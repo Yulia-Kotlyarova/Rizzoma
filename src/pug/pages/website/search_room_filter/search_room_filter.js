@@ -25,42 +25,42 @@ import '../../../components/inputs/drop_down_guests.js';
 // import '../../../components/form_elem/search_room.js';
 // import '../../../../slick-1.8.1/slick/slick.min.js';
 
-const numbersData = [
-    {
-        number: 888,
-        price: 9900,
-        photo: '../src/assets/img/number_880.png',
-        response_number: 145,
-        arrows: true,
-        lux: true,
-        rate: 5,
-    },
-    {
-        number: 840,
-        price: 9900,
-        photo: '../src/assets/img/number_840.png',
-        response_number: 65,
-        arrows: false,
-        lux: false,
-        rate: 4,
-    },
-    {
-        number: 980,
-        price: 8500,
-        photo: '../src/assets/img/number_980.png',
-        response_number: 35,
-        arrows: false,
-        lux: false,
-        rate: 3,
-    },
-    {
-        number: 856,
-        price: 8500,
-        photo: '../src/assets/img/number_980.png',
-        response_number: 35,
-        arrows: false,
-        lux: false,
-        rate: 3,
-    },
+// const numbersData = [
+//     {
+//         number: 888,
+//         price: 9900,
+//         photo: '../src/assets/img/number_880.png',
+//         response_number: 145,
+//         arrows: true,
+//         lux: true,
+//         rate: 5,
+//     },
+//     {
+//         number: 840,
+//         price: 9900,
+//         photo: '../src/assets/img/number_840.png',
+//         response_number: 65,
+//         arrows: false,
+//         lux: false,
+//         rate: 4,
+//     },
+//     {
+//         number: 980,
+//         price: 8500,
+//         photo: '../src/assets/img/number_980.png',
+//         response_number: 35,
+//         arrows: false,
+//         lux: false,
+//         rate: 3,
+//     },
+//     {
+//         number: 856,
+//         price: 8500,
+//         photo: '../src/assets/img/number_980.png',
+//         response_number: 35,
+//         arrows: false,
+//         lux: false,
+//         rate: 3,
+//     },
 
-]
+// ]

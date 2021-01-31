@@ -1,4 +1,4 @@
-const disabledButton = () => {
+const disabledButton = () => { // class disabled for button
     document.querySelectorAll('.quantity').forEach((el) => {
         if (el.innerText == '0'){
             el.previousElementSibling.classList.add('disabled');

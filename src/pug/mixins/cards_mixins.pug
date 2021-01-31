@@ -8,7 +8,7 @@ mixin card-up-info (card_number, price, lux = false)
             span.card__number-sign №&nbsp;
             span.card__number= card_number
             if lux
-                span.card__lux люкс
+                span.card__lux &nbsp;люкс
         p
             span.card__price= priceLocal
             span &nbsp;в сутки
@@ -29,8 +29,7 @@ mixin card(card_number,price, path, response_quantity, arrows = false, lux = fal
                 i(class="material-icons md-24 card__left-arr ") expand_more
                 i(class="material-icons md-24 card__right-arr ") expand_more
             .card__info-box
-                .card__up-info
-                    +card-up-info(card_number,price,lux)
+                +card-up-info(card_number,price,lux)
                 .card__down-info
                     +rate(card_number,rate_points)
                     p
