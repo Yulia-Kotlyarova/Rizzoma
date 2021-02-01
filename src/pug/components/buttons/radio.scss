@@ -25,11 +25,14 @@
                 border-radius: 50%;
             }
         }
-        &:checked+label::after {
+        &:checked + label::after {
             @include circle;
             @include gradient;
             left: 4px;
           }
+        &:checked ~ span{
+            color: $DarkShade75;
+        }
     }
 }
 

@@ -2,8 +2,19 @@
 
 .expandable{
     &__wrapper {
+        position: relative;
         h3 {
             line-height: 1.5rem;
+        }
+        
+        .expandable__list-box {
+            position: absolute;
+            width: 100%;
+            top: 66px;
+            left: 0;
+            display: none;
+            z-index: 999;
+            background-color: #ffffff;
         }
         &:hover,
         &:focus {
@@ -35,13 +46,5 @@
         @include flex($justify: start);
         padding: 5px 0;
         line-height: 1.5rem;
-    }
-}
-
-.expandable__list-box {
-    display: none;
-    z-index: 999;
-    &:hover {
-        display: block;
     }
 }

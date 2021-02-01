@@ -1,13 +1,11 @@
 extend ../../../main.pug
 
-block variables
-
 include ../../../mixins/color_type_mixins.pug
 include ../../../mixins/main_mixins.pug
 
 block append scripts
-    +script("../node_modules/air-datepicker/dist/js/datepicker.min.js")
-    +script("../src/pug/components/datepicker/datepicker.js")
+    //- +script("../node_modules/air-datepicker/dist/js/datepicker.min.js")
+    //- +script("../src/pug/components/datepicker/datepicker.js")
 
 block content
     main.form-elem__wrapper
@@ -27,8 +25,8 @@ block content
                     +doubleInput("date Dropdown", false, "input__drop-text", "ДД.ММ.ГГГГ", "expand_more", "input__drop-first")
                     +doubleInput("date Dropdown", false, "input__drop-numb", "19.08.2019", "expand_more", "input__drop-last")
                 .form-elem__small
-                    +input("filter date dropdown", false, "input__drop-filter", "19 авг - 23 авг", "expand_more")
-                .form-elem__small
+                    +input("filter date dropdown", false, "input__drop-filter", "19 авг - 23 авг", "expand_more", "active")
+                .form-elem__small.form-elem__email-subscribe
                     +input("subscription text field", false, false, "Email", "arrow_forward")
         .form-elem__checkbox-wrapper
             .form-elem__checkbox-container

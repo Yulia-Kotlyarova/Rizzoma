@@ -40,4 +40,7 @@
             left: 22px;
         }
     }
+    .form-elem__custom-toggle + span {
+        color: $DarkShade75;
+    }
 }

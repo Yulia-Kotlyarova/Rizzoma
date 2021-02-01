@@ -136,7 +136,7 @@
     font-family: 'Montserrat', sans-serif;
 }
 .material-icons {
-    @include gradient-icon;
+    color: $DarkShade50;
 }
 
 .form_elem__two-inputs-box {

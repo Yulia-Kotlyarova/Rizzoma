@@ -3,11 +3,15 @@
 
 .input__field .active {
     @include input-active();
-}    
+} 
+
+.form-elem__date-dropdown{
+    
+}
 
 .input__field {
-    border: 1px solid $DarkShade25;
-    color: $DarkShade25;
+    border: 1px solid $DarkShade50;
+    color: $DarkShade50;
     border-radius: 4px;
     padding: 13px 15px;
     width: 100%;
@@ -18,11 +22,16 @@
         @include placeholder-input;
         color: $DarkShade25;
         transition: $transition;
+        // &:focus, 
+        // &:hover {
+        //     color: $DarkShade75;
+        // }
     }
     &:focus, 
     &:hover {
         @include input-active();
     }
+
 }
 
 form {
@@ -32,13 +41,13 @@ form {
     .input__text-box {
         position: relative;
         @include flex;
-        color: $DarkShade25;
+        color: $DarkShade50;
         h3 {
             margin-bottom: 5px;
         }
         span {
             text-transform: uppercase;
-            color: $DarkShade25;
+            color: $DarkShade50;
             line-height: 0;
             font-size: 1.2rem;
         }
@@ -47,21 +56,18 @@ form {
         position: absolute;
         right: 10px;
         bottom: 14px;
-        color: $DarkShade50;
+        color: $DarkShade75;
     }
+    .arrow_forward {
+        color: $DarkShade75;
+    }
+}
+
+.form-elem__email-subscribe {
     .arrow_forward {
         @include gradient-icon;
     }
-
-
 }
-
-// input + .material-icons {
-//     position: absolute;
-//     right: 10px;
-//     bottom: 14px;
-//     color: $DarkShade50;
-// }
 
 .input__text-box {
     h3 {

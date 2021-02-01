@@ -27,8 +27,6 @@ import '../../../components/inputs/expandable.scss';
 
 
 import '../../../components/range/range.js';
-import '../../../components/inputs/date_drop_numb.js';
+// import '../../../components/inputs/date_drop_numb.js';
 import '../../../components/inputs/drop_down_room.js';
 import '../../../components/inputs/drop_down_guests.js';
-// import '../../../../../node_modules/air-datepicker/dist/js/datepicker.min.js';
-// import '../../../components/datepicker/datepicker.js';
