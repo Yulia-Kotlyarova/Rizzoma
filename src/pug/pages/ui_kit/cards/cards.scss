@@ -1,14 +1,12 @@
 @import '../../../../style/const.scss';
 @import '../../../../style/style.scss';
 @import '../../../../style/mixins';
-@import '../../../components/rate/rate.scss';
-@import '../../../components/buttons/radio.scss';
 
 body {
     background-color: $colored-back;
 }
 
-main {
+.cards__main-wrapper {
     @include container($padding: 150px 140px 140px);
     @include flex($align: start);
 }
@@ -16,5 +14,11 @@ main {
 .calendar__wrapper {
     .form-elem__action {
         padding: 0 20px 18px;
+    }
+}
+
+@media (max-width: 700px) {
+    .cards__main-wrapper {
+        @include container($padding: 150px 30px 140px);
     }
 }

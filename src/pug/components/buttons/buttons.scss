@@ -14,8 +14,15 @@
         @include gradient;
         @include btn-rounded;
         border: none;
+        position: relative;
         &:hover {
             opacity: 50%;
+        }
+        i {
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            color: #ffffff;
         }
     }
 
@@ -66,7 +73,6 @@
                 color: #ffffff;
             }
     }
-
 }
 
 .button__fill-active {

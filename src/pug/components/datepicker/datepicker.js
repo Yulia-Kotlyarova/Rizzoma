@@ -1,3 +1,5 @@
+import { addDatepickerAction } from '../datepicker/datepicker_helper.js';
+
 $(document).ready(function() {
     // const calendarSetBTN = document.querySelector('.card-calendar').nextElementSibling.querySelector(`[data-action = 'set-result']`);
     $('.card-calendar').datepicker({
@@ -14,11 +16,6 @@ $(document).ready(function() {
           },
         onSelect: function(formattedDate, date, inst) {
             console.log();
-        },
-        onShow(inst, animationCompleted) {
-            inst.$datepicker.append(datepickerAction);
-            datepickerAction.querySelector('.clear').onclick = () =>  this.clear();
-            datepickerAction.querySelector('.set-result').onclick = () => this.hide();
         },
     });
 });

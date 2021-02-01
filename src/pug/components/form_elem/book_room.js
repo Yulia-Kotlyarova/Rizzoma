@@ -7,7 +7,7 @@ $(document).ready(function() {
         ...doubleDatepickerOptions,
 
         onShow(inst, animationCompleted) {
-            addDatepickerAction(inst)
+            addDatepickerAction(this, inst)
         },
 
         onSelect: function (fd, date, inst) { 

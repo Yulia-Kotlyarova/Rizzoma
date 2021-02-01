@@ -6,7 +6,7 @@
         @include card-wrapper;
         padding: 43px 30px 32px;
         h2 {
-            padding-bottom: 20px;
+            padding-bottom: 22px;
         }
 
         .button__go-in {
@@ -16,7 +16,7 @@
     }
     &__create {
         @include flex;
-        padding-top: 30px;
+        padding-top: 32px;
         p {
             color: $DarkShade100;
         }

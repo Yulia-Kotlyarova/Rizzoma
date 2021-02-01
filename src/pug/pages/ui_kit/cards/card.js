@@ -1,4 +1,3 @@
-// import '../../../../style/style.scss';
 import '../../../../slick-1.8.1/slick/slick.css';
 import '../../../../../node_modules/air-datepicker/dist/css/datepicker.min.css';
 import '../../../components/datepicker/datepicker.scss';
@@ -13,5 +12,5 @@ import '../../../components/form_elem/create_account.scss';
 import '../../../components/buttons/buttons.scss';
 import '../../../components/number_cards/number_cards.scss';
 import '../../../components/buttons/toggle.scss';
-
-import '../../../components/datepicker/datepicker.js';
+import '../../../components/rate/rate.scss';
+import '../../../components/buttons/radio.scss';
