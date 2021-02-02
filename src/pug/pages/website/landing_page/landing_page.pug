@@ -10,10 +10,10 @@ block append scripts
     +script("../src/pug/components/datepicker/datepicker.js")
 
 block content
-    include ../../../components/header.pug
+    include ../../../components/header/header.pug
     main.landing-page__main
         img(src="../src/assets/img/landing_photo.png" class = "landing-page__photo", alt="photo")
         p.landing-page__img-line Лучшие номера для вашей работы, отдыха и просто вдохновения
         include ../../../components/form_elem/search_room.pug
 
-    include ../../../components/footer.pug
+    include ../../../components/footer/footer.pug

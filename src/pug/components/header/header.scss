@@ -1,0 +1,132 @@
+@import '../../../style/mixins';
+@import '../../../style/const';
+// @import '../components/buttons/buttons.scss';
+
+header {
+    box-shadow: $box-shadow;
+    width: 100%;
+    background-color: #fff;
+}
+
+.header-container {
+    @include flex;
+    position: relative;
+    padding: 15px 140px;
+    margin: 0 auto;
+    .menu_icon {
+        display: none;
+        color: $primary-color;
+        margin-left: auto;
+        z-index: 99;
+        transition: 0.5s;
+    }
+    .menu-icon_open {
+        position: absolute;
+        top: 22px;
+        right: 30px;
+        margin: 0;
+    }
+}
+
+.header__right {
+    @include flex;
+
+}
+
+
+.menu {
+    &__list {
+        @include flex;
+        width: 447px;
+    }
+    &__list-box {
+        @include flex;
+        list-style: none;
+        transition: $transition;
+        &:hover,.active {
+            font-weight: 700;
+            color: $DarkShade75;
+        }
+    }
+}
+
+.log-container {
+    @include flex;
+    height: 34px;
+    margin-left: 20px;
+    button {
+        height: 100%;
+        &:first-child {
+            padding: 0 10px;
+            line-height: 0;
+            min-width: 83px;
+        }
+    }
+    .button__bordered-box {
+        height: 100%;
+    }
+    .button__fill {
+        padding: 0px 20px;
+        margin-left: 20px;
+        line-height: 0;
+    }
+}
+
+.auth-container {
+    border-left: 1px solid $DarkShade25;
+    padding-left: 20px;
+    margin: 0 0 0 20px;
+}
+
+@media(max-width: 1200px) {
+    .header-container {
+        .menu_icon {
+            display: inline-block;
+        }
+    }
+    .menu__list {
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: #ffffff;
+        flex-direction: column;
+        width: 100vw;
+        z-index: 98;
+        padding: 22px 0;
+    }
+
+    .hidden {
+        display: none!important;
+    }
+}
+
+@media(max-width: 768px) {
+    .header-container {
+        padding: 15px 30px;
+    }
+}
+
+@media(max-width: 512px) {
+    .log-container {
+        margin: 0;
+        width: 100%;
+        padding: 15px 0 0;
+        .button__fill {
+            margin: 0;
+            padding: 0px 11px;
+        }
+        button:first-child {
+            padding: 0 0px;
+            min-width: 75px;
+        }
+    }
+
+    .header__right {
+        width: 100%;
+    }
+
+    .auth-container {
+        margin: 15px 0 0 20px;
+    }
+
+}

@@ -10,11 +10,11 @@ block append scripts
     +script("../src/pug/components/datepicker/datepicker.js")
 
 block content
-    include ../../../components/header.pug
+    include ../../../components/header/header.pug
     main.registration__main
         .landing-photo__wrapper
             img(src="../src/assets/img/registration.png", alt="registration-photo")
         .registration__create-account-wrap
             include ../../../components/form_elem/create_account.pug
 
-    include ../../../components/footer.pug
+    include ../../../components/footer/footer.pug

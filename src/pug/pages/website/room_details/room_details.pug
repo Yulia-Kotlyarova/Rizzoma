@@ -10,7 +10,7 @@ block append scripts
     +script("../src/pug/components/diagram/diagram.js")
 
 block content
-    include ../../../components/header.pug
+    include ../../../components/header/header.pug
     main.room-details__main
         .room-details__img-wrapper
             .room-details__img-wrap-1
@@ -55,4 +55,4 @@ block content
             
             .room-details__book-wrapper
                 include ../../../components/form_elem/book_room.pug
-    include ../../../components/footer.pug
+    include ../../../components/footer/footer.pug

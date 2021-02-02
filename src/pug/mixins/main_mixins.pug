@@ -142,3 +142,18 @@ mixin calendar(name)
     .calendar__wrapper
         div(class= name)
         +input-action
+
+mixin links-icon 
+    .links__wrapper
+        a(href="/#")
+            include ../../assets/icons/twitter.svg
+        a(href="/#")
+            include ../../assets/icons/facebook.svg
+        a(href="/#")
+            include ../../assets/icons/instagram.svg
+
+mixin menu-item(title, icon = false, className = "")
+    li.menu__list-box
+        a(href="/#" class ="menu__list-item"+ " " + className + "")= title
+        if icon 
+            i(class="material-icons md-24" + " "+ icon+ "")= icon

@@ -11,12 +11,6 @@
     padding: 144px 141px 131px;
     form .active {
         @include input-active();
-        // border-radius: 4px 4px 0 0 ;
-    }
-    form {
-        .material-icons {
-            top: 30px;
-        }
     }
 
     .form-elem__inputs-wrapper {
@@ -77,9 +71,7 @@
     @include flex($align: flex-start);
     width: 100%;
     padding: 80px 0 138px 0;
-    // display: grid;
-    // grid-template-columns: 262px 1fr 1fr;
-    // gap: 6.3%;
+
     .form-elem__dropdown-container {
         flex: 0 0 375px;
     }
@@ -98,7 +90,6 @@
 .benefits-section {
     @include flex($align: flex-start);
     width: 100%;
-    // padding: 97px 0 0 0;
 }
 
 @media (max-width: 700px) {

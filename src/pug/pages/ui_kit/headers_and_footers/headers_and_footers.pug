@@ -1,16 +1,11 @@
 extend ../../../main.pug
 
-block variables
-
 include ../../../mixins/color_type_mixins.pug
 include ../../../mixins/main_mixins.pug
 
 block content
-    +script("./headers_and_footers.js")
-    //- link(rel="stylesheet" href="../src/pug/pages/ui_kit/headers_and_footers/dist/headers_and_footers.css")
-    link(rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons")
     main.header-and-footer-wrapper
-        include ../../../components/header.pug
-        include ../../../components/header_auth.pug
-        include ../../../components/footer.pug
-        include ../../../components/footer_sm.pug
+        include ../../../components/header/header.pug
+        include ../../../components/header/header_auth.pug
+        include ../../../components/footer/footer.pug
+        include ../../../components/footer/footer_sm.pug

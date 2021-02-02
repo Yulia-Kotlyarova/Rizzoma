@@ -11,6 +11,14 @@ body {
     @include flex;
     flex-direction: column;
     box-sizing: border-box;
-    height: 1350px;
     padding: 140px 0;
+    .header__auth-wrap {
+        margin: 40px 0;
+    }
+
+    .footer__full-wrap {
+        margin: 0 0 40px;
+    }
 }
+
+

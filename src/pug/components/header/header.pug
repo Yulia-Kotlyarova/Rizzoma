@@ -1,20 +1,12 @@
-include ../mixins/main_mixins.pug
-
-block append scripts
-//-   script(src='../src/pug/components/header.js', 'module')
-
-mixin menu-item(title, icon = false, className = "")
-    li.menu__list-box
-        a(href="/#" class ="menu__list-item"+ " " + className + "")= title
-        if icon 
-            i(class="material-icons md-24" + " "+ icon+ "")= icon
+include ../../mixins/main_mixins.pug
 
 block content 
     header
         .header-container
-            include ./colored_logo.pug
+            include ../colored_logo.pug
+            i(class="material-icons md-24 menu_icon") menu
             .header__right
-                ul.menu__list
+                ul.menu__list.hidden
                     +menu-item("О нас", false, "active")
                     +menu-item("Услуги", "expand_more")
                     +menu-item("Вакансии")
@@ -23,4 +15,3 @@ block content
                 .log-container
                     +button-round("войти", fill = false, bordered = true)
                     +button-round("зарегистрироваться", fill = true)
-

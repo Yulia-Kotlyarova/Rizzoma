@@ -1,0 +1,11 @@
+include ../../mixins/main_mixins.pug
+
+mixin footer-list(title, ...rest)
+    ul= title
+
+block content 
+    footer
+        .footer__container.footer__creative
+            include ../colored_logo.pug
+            p Copyright © 2018 Toxin отель. Все права зачищены.
+            +links-icon 
