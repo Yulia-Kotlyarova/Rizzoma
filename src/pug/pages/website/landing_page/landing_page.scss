@@ -33,13 +33,27 @@
     }
 }
 
-@media (max-width: 1200px) {
-
-}
-
 @media (max-width: 768px) {
     .search-room__wrapper {
         right: calc(50vw - 190px);
         left: unset;
+    }
+}
+
+@media (max-width: 380px) {
+    .landing-page__main {
+        .search-room__wrapper {
+            position: relative;
+            box-shadow: none;
+            right: unset;
+            padding: 40px 20px 27px;
+            button {
+                max-width: 260px;
+            }
+        }
+        .landing-page__photo {
+            min-height: unset;
+        }
+        
     }
 }
