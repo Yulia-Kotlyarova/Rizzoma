@@ -22,3 +22,29 @@ body {
         @include container($padding: 150px 30px 140px);
     }
 }
+
+@media (max-width: 380px) {
+    .cards__main-wrapper {
+        @include flex;
+        padding: 150px 0 140px;
+
+        .card__column {
+            width: 100%;
+            > div {
+                @include flex($justify: center);
+                box-shadow: none;
+            }
+            .cards__with-plugin {
+                display: block;
+            }
+        }
+        .search-room__wrapper {
+            width: 100%;
+            padding: 40px 10px 27px;
+            > div {
+                width: 100%;
+            }
+        }
+    }
+
+}

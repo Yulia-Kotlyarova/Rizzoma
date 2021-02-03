@@ -29,3 +29,9 @@
         padding-bottom: 10px;
     }
 }
+
+@media (max-width: 380px) {
+    .log-in__create {
+        justify-content: center;
+    }
+}

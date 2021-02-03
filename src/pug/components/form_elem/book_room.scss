@@ -7,6 +7,9 @@
     padding: 43px 30px 30px 31px;
     color: $DarkShade75;
     line-height: 2.4rem;
+    > div {
+        width: 100%;
+    }
     h3 {
         margin: 0 0 5px 0;
     }

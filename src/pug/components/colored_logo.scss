@@ -3,10 +3,7 @@
 .colored-logo{
     &__wrapper {
         @include flex;
-        min-width: 106px;
+        width: 106px;
         height: 40px;
-        .colored-logo__text {
-            margin-right: auto;
-        }
     }
 }

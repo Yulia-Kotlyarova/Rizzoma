@@ -15,7 +15,7 @@ mixin card-up-info (card_number, price, lux = false)
 
 mixin card(card_number,price, path, response_quantity, arrows = false, lux = false, rate_points = 0)
     if arrows
-        .card__wrapper
+        .card__wrapper.cards__with-plugin
             .card__img-slider-arr
                 .card__img-box
                     img(src=""+ path+ "", alt="photo")
@@ -37,7 +37,7 @@ mixin card(card_number,price, path, response_quantity, arrows = false, lux = fal
                         span &nbsp;Отзывов
     
     else 
-        .card__wrapper
+        .card__wrapper.cards__with-plugin
             .card__img-slider
                 .card__img-box
                     img(src=""+ path+ "", alt="photo")
