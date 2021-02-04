@@ -4,55 +4,42 @@
     position: relative;
     width: 311px;
     height: 126px;
-    margin-right: 4.4%;
+    margin: 0 4.4% 70px 0;
 }
 
 .room-details {
     &__img-wrapper {
-        display: grid;
-        height: 485px;
-        overflow: hidden;
+        @include flex;
+        img {
+            object-fit: cover;
+            width: 100%;
+        }
     }
     
     &__img-wrap-1{
-        grid-column-start: 1;
-        grid-column-end: 3;
-        grid-row-start: 1;
-        grid-row-end: 3;
+        width: 68.1%;
     }
-    &__img-wrap-2 {
-        grid-column-start: 3;
-        grid-column-end: 4;
-        grid-row-start: 1;
-        grid-row-end: 2;
-    }
-    
-    &__img-wrap-3 {
-        grid-column-start: 3;
-        grid-column-end: 4;
-        grid-row-start: 2;
-        grid-row-end: 3;
-    }
-    
-    &__img {
-        width: 100%;
-        object-fit: contain;
+    &__img-column {
+        width: 31.9%;
     }
 
     &__describe-wrapper {
         @include flex($align: start);
-        padding: 70px 140px 70px;
+        padding: 70px 140px 0;
     }
 
     &__info-wrapper {
         @include flex($align: start);
         max-width: 702px;
+        padding-bottom: 70px;
+        width: 100%;
     }
 
     &__benefit-wrapper {
         max-width: 291px;
     }
     &__response-wrapper {
+        max-width: 100%;
         padding: 10px 0;
         .room-details__title-box {
             @include flex($align: baseline);
@@ -74,6 +61,10 @@
             padding-bottom: 18px;
         }
     }
+    &__book-wrapper {
+        position: relative;
+        max-width: 100%;
+    }
 } 
 
 .impression-chart__wrapper {
@@ -91,5 +82,29 @@
             font-size: 1.4rem;
             font-style: normal;
         }
+    }
+}
+
+@media(max-width: 768px) {
+    .room-details__describe-wrapper {
+        padding: 50px 10px 0;
+    }
+    .room-details__img-wrap-1 {
+        width: 100%;
+    }
+    .room-details__img-column {
+        @include flex;
+        width: 100%;
+        .room-details__img-wrap-2,
+        .room-details__img-wrap-3 {
+            width: 50%;
+        }
+    }
+}
+
+@media(max-width: 380px) {
+    .book-room__wrapper {
+        @include card-380;
+        padding: 0;
     }
 }

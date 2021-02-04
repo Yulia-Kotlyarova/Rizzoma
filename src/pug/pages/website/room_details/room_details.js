@@ -18,7 +18,4 @@ import '../../../components/form_elem/book_room.scss';
 import '../../../components/inputs/dropdown.scss';
 import './room_details.scss';
 
-// import '../../../components/form_elem/book_room.js';
-// import '../../../../../node_modules/chart.js/dist/Chart.min.js';
-// import '../../../components/diagram/diagram.js';
-
+import '../../../components/header/header.js';
