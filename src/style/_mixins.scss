@@ -16,6 +16,7 @@
 
 @mixin input-active () {
     border: 1px solid $DarkShade50;
+    color: $DarkShade75;
     &::placeholder {
         color: $DarkShade75;
         outline: none;

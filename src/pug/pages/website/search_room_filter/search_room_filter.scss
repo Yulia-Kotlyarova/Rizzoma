@@ -8,6 +8,7 @@
         padding: 30px 140px 71px;
         .search-filter__aside-wrapper {
             position: relative;
+            max-width: 320px;
             form {
                 max-width: 100%;
             }
@@ -58,11 +59,23 @@
     .simple-pagination {
         padding: 0px 16px 7px 0;
     }
+    .search-filter__rich-wrapper {
+        padding: 2px 0 24px;
+    }
 }
 
 .search-filter__pagination-box {
     p {
         padding-left: 5px;
+    }
+}
+
+@media(max-width: 768px) {
+    .search-filter__main {
+        @include flex($justify: center);
+    }
+    .card__wrapper {
+        margin: 0 auto 22px;
     }
 }
 

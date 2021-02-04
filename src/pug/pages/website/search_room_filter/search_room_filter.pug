@@ -11,14 +11,13 @@ block append scripts
     +script("../src/pug/components/number_cards/number_cards.js", "module")
     +script("../src/jquery/pagination.js", "module")
     +script("../src/pug/components/buttons/pagination.js", "module")
-    //- +script("../src/pug/components/range/range.js", "module")
 
 block content
     include ../../../components/header/header.pug
     main.search-filter__main
         aside.search-filter__aside-wrapper
             div
-                +input("даты пребывания в отеле", false, "input__drop-filter", "19 авг - 23 авг", "expand_more")
+                +input("даты пребывания в отеле", false, "input__drop-filter", "19 авг - 23 авг", "expand_more" , "active")
 
             .form-elem__dropdown-wrapper.form-elem__dropdown-wrapper-guest
                 +input("гости", "",  false,"3 гостя", "expand_more", "active", true)
@@ -68,7 +67,7 @@ block content
             .search-filter__variants-cards-box
                 +card("888", "9990", "../src/assets/img/number_880.png", 145, true, true, 1)
                 +card("840", "9990", "../src/assets/img/number_840.jpg", 65, false, false, 2)
-                +card("980", "8500", "../src/assets/img/number_980.png", 35, false, false, 3)
+                +card("980", "8500", "../src/assets/img/number_980.png", 35, false, true, 3)
 
                 +card("856", "7300", "../src/assets/img/number_856.png", 19, false, false, 1)
                 +card("740", "6000", "../src/assets/img/number_740.png", 44, false, false, 1)

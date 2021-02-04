@@ -17,14 +17,15 @@ mixin card(card_number,price, path, response_quantity, arrows = false, lux = fal
     if arrows
         .card__wrapper.cards__with-plugin
             .card__img-slider-arr
-                .card__img-box
+                .card__img-box.card__img-filter
                     img(src=""+ path+ "", alt="photo")
-                .card__img-box
+                .card__img-box.card__img-filter
                     img(src=""+ path+ "", alt="photo")
-                .card__img-box
+                .card__img-box.card__img-filter
                     img(src=""+ path+ "", alt="photo")
-                .card__img-box
+                .card__img-box.card__img-filter
                     img(src=""+ path+ "", alt="photo")
+                    
             if arrows
                 i(class="material-icons md-24 card__left-arr ") expand_more
                 i(class="material-icons md-24 card__right-arr ") expand_more

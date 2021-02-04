@@ -1,8 +1,10 @@
 @import '../../../style/const.scss';
 @import '../../../style/mixins.scss';
 
-.input__field .active {
-    @include input-active();
+.input__text-box {
+    .active {
+        @include input-active();
+    }
 }
 
 .input__field {

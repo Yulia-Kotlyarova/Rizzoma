@@ -10,7 +10,7 @@
         .expandable__list-box {
             position: absolute;
             width: 100%;
-            top: 66px;
+            top: 17px;
             left: 0;
             display: none;
             z-index: 999;
@@ -25,7 +25,7 @@
         }
     }
     &__wrapper-needs {
-        padding-top: 48px;
+        margin-top: 48px;
     }
     &__title {
         @include flex($align: start);
