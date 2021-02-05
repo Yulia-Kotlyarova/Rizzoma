@@ -104,7 +104,16 @@
 
 @media(max-width: 380px) {
     .book-room__wrapper {
-        @include card-380;
-        padding: 0;
+        @include card-380($padding: 0);
     }
+
+    .impression-chart__wrapper {
+        margin: 0 0 70px 0;
+    }
+
+    .book-room__price-box {
+        .book-room__info-label {
+            right: 53px;
+        }
+    } 
 }

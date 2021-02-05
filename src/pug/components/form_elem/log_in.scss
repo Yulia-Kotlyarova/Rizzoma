@@ -4,6 +4,7 @@
 .log-in {
     &__wrapper {
         @include card-wrapper;
+        width: 380px;
         padding: 43px 30px 32px;
         h2 {
             padding-bottom: 22px;

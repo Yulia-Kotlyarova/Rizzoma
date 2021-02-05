@@ -99,12 +99,12 @@
     }
 }
 
-@mixin card-380 {
+@mixin card-380($padding: 40px 10px 27px) {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
     box-shadow: none;
     width: 100%;
-    padding: 40px 10px 27px;
+    padding: $padding;
 }

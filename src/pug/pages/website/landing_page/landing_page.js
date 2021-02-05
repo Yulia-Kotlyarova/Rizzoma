@@ -12,3 +12,4 @@ import '../../../components/form_elem/search_room.scss';
 import '../../../components/inputs/dropdown.scss';
 
 import '../../../components/inputs/drop_down_guests.js';
+import '../../../components/header/header.js';

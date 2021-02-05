@@ -6,8 +6,8 @@ include ../../../mixins/cards_mixins.pug
 include ../../../mixins/main_mixins.pug
 
 block append scripts
-    +script("../node_modules/air-datepicker/dist/js/datepicker.min.js")
-    +script("../src/pug/components/datepicker/datepicker.js")
+    +script("../node_modules/air-datepicker/dist/js/datepicker.min.js", "module")
+    +script("../src/pug/components/datepicker/datepicker.js", "module")
 
 block content
     include ../../../components/header/header.pug

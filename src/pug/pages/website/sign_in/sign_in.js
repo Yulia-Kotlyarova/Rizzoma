@@ -1,4 +1,3 @@
-
 import '../../../../style/style.scss';
 import '../../../components/colored_logo.scss';
 import '../../../components/buttons/buttons.scss';
