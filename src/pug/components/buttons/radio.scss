@@ -44,7 +44,6 @@
 .radio__box {
     @include flex($justify: start, $wrap: nowrap);
     position: relative;
-    // margin-top: -5px;
     span {
         padding-left: 10px;
     }

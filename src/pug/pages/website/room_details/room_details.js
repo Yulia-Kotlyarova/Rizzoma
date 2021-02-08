@@ -2,7 +2,7 @@ import '../../../../../node_modules/air-datepicker/dist/css/datepicker.min.css';
 import '../../../components/datepicker/datepicker.scss';
 
 import '../../../../style/style.scss';
-import '../../../components/colored_logo.scss';
+import '../../../components/logo/colored_logo.scss';
 import '../../../components/buttons/buttons.scss';
 import '../../../components/response/response.scss';
 import '../../../components/avatar/avatar.scss';

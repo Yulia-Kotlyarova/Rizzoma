@@ -1,5 +1,4 @@
 $(document).ready(function() {
-    // $slick = jQuery.noConflict();
     $('.card__img-slider').not('.slick-initialized').slick({
         dots: true,
         slidesToShow: 1,

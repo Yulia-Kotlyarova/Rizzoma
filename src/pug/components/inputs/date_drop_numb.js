@@ -49,8 +49,8 @@ $(document).ready(function() {
     })
     
     $('.input__drop-filter').datepicker({
-        range: true, //выбор периода
-        toggleSelected: false, // возможость выбрать одну дату
+        range: true,
+        toggleSelected: false,
         prevHtml: `<i class = 'material-icons md-24 '> arrow_back </i>`,
         nextHtml: `<i class = 'material-icons md-24 '> arrow_forward </i>`,
         dateFormat: 'dd M',

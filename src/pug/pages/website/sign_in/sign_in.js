@@ -1,5 +1,5 @@
 import '../../../../style/style.scss';
-import '../../../components/colored_logo.scss';
+import '../../../components/logo/colored_logo.scss';
 import '../../../components/buttons/buttons.scss';
 
 import '../../../components/header/header.scss';

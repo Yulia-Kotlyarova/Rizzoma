@@ -1,6 +1,5 @@
 @import '../../../style/mixins';
 @import '../../../style/const';
-// @import '../components/buttons/buttons.scss';
 
 header {
     box-shadow: $box-shadow;
@@ -128,5 +127,4 @@ header {
     .auth-container {
         margin: 15px 0 0 20px;
     }
-
 }

@@ -2,8 +2,6 @@ $(document).ready(function() {
     let ctx = document.getElementById('myChart').getContext('2d');
     document.getElementById('myChart').style.width = '100%';
     document.getElementById('myChart').style.height = '100%';
-    // ctx.textAlign = 'center';
-    // ctx.textBaseline = 'middle';
 
     let excellent = ['#FFE39C', '#FFBA9C'];
     let good = ['#6FCF97', '#66D2EA'];
@@ -31,9 +29,6 @@ $(document).ready(function() {
             data: [50, 25, 25, 0],
             backgroundColor: [gradientExcellent, gradientGood, gradientPassably, gradientDisappointed],
             borderWidth: 2,
-            // borderAlign: 'inner',
-            // weight: 4
-
         }],
         labels: [
             'Великолепно',

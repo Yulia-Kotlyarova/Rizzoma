@@ -1,4 +1,4 @@
-import '../../../components/colored_logo.scss';
+import '../../../components/logo/colored_logo.scss';
 import '../../../components/buttons/buttons.scss';
 import '../../../components/header/header.scss';
 import '../../../components/footer/footer.scss';

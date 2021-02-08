@@ -1,7 +1,6 @@
 import { addDatepickerAction } from '../datepicker/datepicker_helper.js';
 
 $(document).ready(function() {
-    // const calendarSetBTN = document.querySelector('.card-calendar').nextElementSibling.querySelector(`[data-action = 'set-result']`);
     $('.card-calendar').datepicker({
         // Можно выбрать тольо даты, идущие за сегодняшним днем, включая сегодня
         // minDate: new Date(),
@@ -15,7 +14,7 @@ $(document).ready(function() {
             days: 'MM </br> yyyy',
           },
         onSelect: function(formattedDate, date, inst) {
-            console.log();
+            console.log(date);
         },
     });
 });
