@@ -7,44 +7,44 @@ block content
     main.form-elem__wrapper
         .form-elem__inputs-wrapper
             .form-elem__input-simple
-                +input("Text Field", "default",false, "Email")
-                +input("Text Field", "hover/focus",false, "This is pretty awesome", "", "active")
-                +input("Dropdown", "",false ,"Сколько гостей", "expand_more", "active")
+                +input('Text Field', "default",false, 'Email')
+                +input('Text Field', 'hover/focus',false, 'This is pretty awesome', "", "active")
+                +input('Dropdown', "",false ,'Сколько гостей', "expand_more", "active")
                 .form-elem__dropdown.form-elem__dropdown-guests
-                    +dropdown_extend_unit("взрослые", "adult", "0")
-                    +dropdown_extend_unit("дети", "children", "0")
-                    +dropdown_extend_unit("младенцы", "baby", "0")
+                    +dropdown_extend_unit('взрослые', "adult", '0')
+                    +dropdown_extend_unit('дети', "children", '0')
+                    +dropdown_extend_unit('младенцы', "baby", '0')
                     +input-action
-                +input("masked text field", "",false, "ДД.ММ.ГГГГ")
+                +input('masked text field', "",false, 'ДД.ММ.ГГГГ')
             .form-elem__date-dropdown
                 .form_elem__two-inputs-box
-                    +doubleInput("date Dropdown", false, "input__drop-text", "ДД.ММ.ГГГГ", "expand_more", "input__drop-first")
-                    +doubleInput("date Dropdown", false, "input__drop-numb", "19.08.2019", "expand_more", "input__drop-last")
+                    +doubleInput('date Dropdown', false, "input__drop-text", 'ДД.ММ.ГГГГ', "expand_more", "input__drop-first")
+                    +doubleInput('date Dropdown', false, "input__drop-numb", '19.08.2019', "expand_more", "input__drop-last")
                 .form-elem__small
-                    +input("filter date dropdown", false, "input__drop-filter", "19 авг - 23 авг", "expand_more", "active")
+                    +input('filter date dropdown', false, "input__drop-filter", '19 авг - 23 авг', "expand_more", "active")
                 .form-elem__small.form-elem__email-subscribe
-                    +input("subscription text field", false, false, "Email", "arrow_forward")
+                    +input('subscription text field', false, false, 'Email', "arrow_forward")
         .form-elem__checkbox-wrapper
             .form-elem__checkbox-container
                 h3 Checkbox Buttons
-                +checkbox("Можно курить", "smoking")
-                +checkbox("Можно с питомцами", "pets", true)
-                +checkbox("Можно пригласить гостей (до 10 человек)", "guest", true)
+                +checkbox('Можно курить', 'smoking')
+                +checkbox('Можно с питомцами', 'pets', true)
+                +checkbox('Можно пригласить гостей (до 10 человек)', 'guest', true)
             .form-elem__radio-container
                 h3 radio buttons
                 form.radio__wrapper
-                    +radio-btn("Мужчина", "man", true)
-                    +radio-btn("Женщина", "women")
+                    +radio-btn('Мужчина', "man", true)
+                    +radio-btn('Женщина', "women")
             .form-elem__toggle-container
                 h3 toggle
-                form.toggle__wrapper(action="")
-                    +toggle("Получать спецпредложения", true)
-                    +toggle("Получать спецпредложения")
+                form.toggle__wrapper
+                    +toggle('Получать спецпредложения', true)
+                    +toggle('Получать спецпредложения')
             .form-elem__like-container
                 h3 like button 
                 .like__wrapper
-                    +like("favorite_border", "2", "like__without")
-                    +like("favorite", "12", "like__with")
+                    +like("favorite_border", '2', "like__without")
+                    +like("favorite", '12', "like__with")
             .form-elem__rate-container
                 h3 rate button
                 .rate__wrapper
@@ -56,13 +56,13 @@ block content
             .form-elem__buttons-container
                 h3 buttons
                 .button__wrapper
-                    +button-round("CLICK ME", true)
-                    +button-round("CLICK ME", true, false, "active")
-                    +button-round("CLICK ME", false, true)
-                    +button-round("CLICK ME", false, true, "active")
+                    +button-round('CLICK ME', true)
+                    +button-round('CLICK ME', true, false, "active")
+                    +button-round('CLICK ME', false, true)
+                    +button-round('CLICK ME', false, true, "active")
                 .button__text-box
-                    +button-text("CLICK ME")
-                    +button-text("CLICK ME", "active")
+                    +button-text('CLICK ME')
+                    +button-text('CLICK ME', "active")
                 button(class = "button__fill button__pay") перейти к оплате
                     i(class="material-icons md-24 ") arrow_forward
             .form-elem__pagination-container
@@ -74,57 +74,57 @@ block content
             .form-elem__dropdown-container
                 .form-elem__dropdown-wrapper.form-elem__dropdown-wrapper-room
                     .form-elem__small
-                        +input("dropdown", "default", false, "2 спальни, 2 кровати...", "expand_more", true)
+                        +input("dropdown", "default", false, '2 спальни, 2 кровати...', "expand_more", true)
                 .form-elem__dropdown-wrapper.form-elem__dropdown-wrapper-room
                     .form-elem__small
-                        +input("dropdown", "expanded", false, "2 спальни, 2 кровати...", "expand_more", "active")
+                        +input("dropdown", "expanded", false, '2 спальни, 2 кровати...', "expand_more", "active")
                         .form-elem__dropdown
-                            +dropdown_extend_unit("спальни", "bedroom", "2")
-                            +dropdown_extend_unit("кровати", "bed", "2")
-                            +dropdown_extend_unit("ванные комнаты", "bathroom", "0")
+                            +dropdown_extend_unit('спальни', "bedroom", '2')
+                            +dropdown_extend_unit('кровати', "bed", '2')
+                            +dropdown_extend_unit('ванные комнаты', "bathroom", '0')
 
             .form-elem__dropdown-wrapper.form-elem__dropdown-wrapper-guest.form-elem__dropdown-middle
-                +input("dropdown", "", false, "Сколько гостей", "expand_more", "active", true)
+                +input("dropdown", "", false, 'Сколько гостей', "expand_more", "active", true)
                 .form-elem__dropdown.form-elem__dropdown-guests
-                    +dropdown_extend_unit("взрослые", "adult", "0")
-                    +dropdown_extend_unit("дети", "children", "0")
-                    +dropdown_extend_unit("младенцы", "baby", "0")
+                    +dropdown_extend_unit('взрослые', "adult", '0')
+                    +dropdown_extend_unit('дети', "children", '0')
+                    +dropdown_extend_unit('младенцы', "baby", '0')
                     +input-action
 
             .form-elem__dropdown-wrapper.form-elem__dropdown-wrapper-guest
                 +input("dropdown", "",  false,"3 гостя", "expand_more", "active", true)
                 .form-elem__dropdown.form-elem__dropdown-guests
-                    +dropdown_extend_unit("взрослые", "adult", "2")
-                    +dropdown_extend_unit("дети", "children", "1")
-                    +dropdown_extend_unit("младенцы", "baby", "0")
+                    +dropdown_extend_unit('взрослые', "adult", '2')
+                    +dropdown_extend_unit('дети', "children", '1')
+                    +dropdown_extend_unit('младенцы', "baby", '0')
                     +input-action
         section.list-section
             .expandable__container
                 .expandable__wrapper
-                    +list("expandable checkbox list", "","expand_more")
+                    +list('expandable checkbox list', "","expand_more")
                 .expandable__wrapper.expandable__wrapper-needs
-                    +list("expandable checkbox list", "","expand_more", "active")
+                    +list('expandable checkbox list', "","expand_more", "active")
                     .expandable__list-box
-                        +list-item("Завтрак", "breakfast")
-                        +list-item("Письменный стол", "writing-table", true)
-                        +list-item("Стул для кормления", "feeding-chair", true)
-                        +list-item("Кроватка", "baby-bed", true)
-                        +list-item("Телевизор", "tv")
-                        +list-item("Шампунь", "shampoo")
+                        +list-item('Завтрак', "breakfast")
+                        +list-item('Письменный стол', "writing-table", true)
+                        +list-item('Стул для кормления', "feeding-chair", true)
+                        +list-item('Кроватка', "baby-bed", true)
+                        +list-item('Телевизор', "tv")
+                        +list-item('Шампунь', "shampoo")
             .rich-list__wrapper
                 h3 rich Checkbox Buttons
                 .rich-list__item-box
-                    +rich-list("Широкий коридор", "Ширина коридоров в номере не менее 91 см.", "wide_corridor")
-                    +rich-list("Помощник для инвалидов", "На 1 этаже вас встретит специалист  и проводит до номера.", "helper_for_disabled")
+                    +rich-list('Широкий коридор', 'Ширина коридоров в номере не менее 91 см.', "wide_corridor")
+                    +rich-list('Помощник для инвалидов', 'На 1 этаже вас встретит специалист  и проводит до номера.', "helper_for_disabled")
             .bullet-list___wrapper
                 h3 bullet list
                 ul
-                    +bullet-item("Нельзя с питомцами")
-                    +bullet-item("Без вечеринок и мероприятий")
-                    +bullet-item("Время прибытия — после 13:00, а выезд до 12:00")
+                    +bullet-item('Нельзя с питомцами')
+                    +bullet-item('Без вечеринок и мероприятий')
+                    +bullet-item('Время прибытия — после 13:00, а выезд до 12:00')
         section.benefits-section
             .benefits__wrapper
-                +benefit("Комфорт", "Шумопоглощающие стены", "insert_emoticon")
-                +benefit("Удобство", "Окно в каждой из спален", "location_city")
+                +benefit('Комфорт', 'Шумопоглощающие стены', 'insert_emoticon')
+                +benefit('Удобство", "Окно в каждой из спален', 'location_city')
             .response__wrapper
-                +response("favorite", "12", "like__with", "../src/assets/img/photo.png", "Мурад Сарафанов", "5 дней назад", "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.")
+                +response("favorite", '12', "like__with", "../src/assets/img/photo.png", 'Мурад Сарафанов', '5 дней назад', 'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.')

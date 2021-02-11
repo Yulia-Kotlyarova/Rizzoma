@@ -9,14 +9,14 @@ block append scripts
     +card-up-info(888, 9990, true)
     .form-elem__date-dropdown
         .form_elem__two-inputs-box
-            +doubleInput("прибытие", false, "input__drop-text", "19.08.2019", "expand_more", "input__drop-first input__drop-first-room datepicker-here")
-            +doubleInput("выезд", false, "input__drop-numb", "23.08.2019", "expand_more", "input__drop-last input__drop-last-room")
+            +doubleInput('прибытие', false, "input__drop-text", '19.08.2019', "expand_more", "input__drop-first input__drop-first-room datepicker-here")
+            +doubleInput('выезд', false, "input__drop-numb", '23.08.2019', "expand_more", "input__drop-last input__drop-last-room")
     .form-elem__dropdown-wrapper.form-elem__dropdown-wrapper-guest
-        +input("гости", "",  false,"3 гостя", "expand_more", "active")
+        +input('гости', "",  false,"3 гостя", "expand_more", "active")
         .form-elem__dropdown.form-elem__dropdown-guests
-            +dropdown_extend_unit("взрослые", "adult", "2")
-            +dropdown_extend_unit("дети", "children", "1")
-            +dropdown_extend_unit("младенцы", "baby", "0")
+            +dropdown_extend_unit('взрослые', "adult", "2")
+            +dropdown_extend_unit('дети', "children", "1")
+            +dropdown_extend_unit('младенцы', "baby", "0")
             +input-action
     .book-room__price-box
         p
