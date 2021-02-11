@@ -8,8 +8,11 @@ block title
 include mixins/main_mixins.pug
 
 block prepend scripts
-  script(src= "../node_modules/jquery/dist/jquery.js")
-  script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js")
+  +script("../node_modules/jquery/dist/jquery.js")
+  +script("https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js")
+  +script("../src/assets/favicons/favicons.js", "module")
+  link(rel="apple-touch-icon" href="../src/assets/favicons/apple-touch-icon.png" sizes="180x180")
+  link(rel="icon" type="image/png" href="../src/assets/favicons/favicon-32x32.png" sizes="32x32")
 
 block append scripts
   
