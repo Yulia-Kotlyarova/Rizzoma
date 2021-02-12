@@ -8,9 +8,6 @@ include mixins/main_mixins.pug
 block prepend scripts
     +script("../node_modules/jquery/dist/jquery.js")
     +script("https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js")
-    +script("../src/assets/favicons/favicons.js", "module")
-    link(rel="apple-touch-icon" href="../src/assets/favicons/apple-touch-icon.png" sizes="180x180")
-    link(rel="icon" type="image/png" href="../src/assets/favicons/favicon-32x32.png" sizes="32x32")
 
 block append scripts
 
@@ -19,6 +16,13 @@ html(lang="ru")
     head
         meta(charset="utf-8")
         meta(name="viewport", content="width=device-width, initial-scale=1, maximum-scale=1")
+        link(rel="apple-touch-icon" sizes="180x180" href="/dist/favicons/apple-touch-icon.png")
+        link(rel="icon" type="image/png" sizes="32x32" href="/dist/favicons/favicon-32x32.png")
+        link(rel="icon" type="image/png" sizes="16x16" href="/dist/favicons/favicon-16x16.png")
+        link(rel="manifest" href="/dist/favicons/site.webmanifest")
+        link(rel="mask-icon" href="/dist/favicons/safari-pinned-tab.svg" color="#5bbad5")
+        meta(name="msapplication-TileColor" content="#da532c")
+        meta(name="theme-color" content="#ffffff")
 
     body
         +logo("../src/assets/icons/logo.svg")

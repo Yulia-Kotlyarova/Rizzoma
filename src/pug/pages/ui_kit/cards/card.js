@@ -14,4 +14,3 @@ import '../../../components/number_cards/number_cards.scss';
 import '../../../components/buttons/toggle.scss';
 import '../../../components/rate/rate.scss';
 import '../../../components/buttons/radio.scss';
-// import '../../../../assets/favicons/favicons.js';

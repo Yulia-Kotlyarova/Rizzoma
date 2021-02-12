@@ -7,7 +7,7 @@ const PATHS = {
   dist: path.join(__dirname, './dist'),
   assets: path.join(__dirname, './src/assets'),
 }
-const PAGES_DIR = `${PATHS.src}/pug/pages/`
+const PAGES_DIR = `${PATHS.src}/pug/pages/`;
 
 module.exports = {
   mode: 'development',
@@ -87,6 +87,13 @@ module.exports = {
         options: {
           name: '[name].[ext]'
         }
+      },
+      {
+        test: /\.(svg|png|ico|xml|json)$/,
+        loader: 'file-loader',
+        options: {
+          name: `[name].[ext].`
+        }
       }
     ]
   },
@@ -162,6 +169,11 @@ module.exports = {
     new CopyPlugin({
       patterns:  [
         { from: `${PATHS.assets}/icons`, to: `${PATHS.dist}/icons` }
+      ]
+    }),
+    new CopyPlugin({
+      patterns:  [
+        { from: `${PATHS.assets}/favicons`, to: `${PATHS.dist}/favicons` }
       ]
     })
   ]
